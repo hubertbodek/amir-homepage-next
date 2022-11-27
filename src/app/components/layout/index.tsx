@@ -9,7 +9,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <>
       <Header />
-      {children}
+      <main className="min-h-screen">{children}</main>
       <Footer />
     </>
   )

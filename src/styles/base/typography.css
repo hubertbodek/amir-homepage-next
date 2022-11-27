@@ -1,0 +1,17 @@
+@layer base {
+  .text-h1 {
+    @apply;
+  }
+
+  .underline-animation {
+    @apply relative;
+
+    &::before {
+      @apply content-[''] absolute w-full h-[3px] rounded bg-secondary bottom-0 left-0 origin-right scale-x-0 transition duration-300;
+    }
+
+    &:hover::before {
+      @apply origin-left scale-x-100;
+    }
+  }
+}

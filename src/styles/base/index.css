@@ -1,0 +1,9 @@
+@import './typography.css';
+
+@layer base {
+  body {
+    & > * {
+      @apply bg-primary text-light;
+    }
+  }
+}
