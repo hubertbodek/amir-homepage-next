@@ -1,5 +1,21 @@
 @layer utilities {
   .amir-container {
-    @apply max-w-7xl mx-auto px-4;
+    @apply container mx-auto px-4 lg:px-16;
+  }
+
+  .v-shape {
+    clip-path: polygon(100% 0, 100% 25%, 50% 100%, 0 25%, 0 0);
+
+    @apply relative;
+
+    &-overlay::before {
+      content: '';
+      @apply absolute h-full w-full bg-black;
+    }
+  }
+
+  .image-overlay::before {
+    content: '';
+    @apply block absolute h-full w-full max-md:bg-primary/90 md:bg-gradient-to-r from-transparent to-primary z-20;
   }
 }

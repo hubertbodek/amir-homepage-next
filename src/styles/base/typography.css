@@ -1,17 +1,43 @@
 @layer base {
   .text-h1 {
-    @apply;
+    @apply text-3xl lg:text-4xl;
+  }
+
+  .text-h2 {
+    @apply text-2xl lg:text-3xl;
+  }
+
+  .text-h3 {
+    @apply text-xl lg:text-2xl;
+  }
+
+  .text-h4 {
+    @apply text-lg lg:text-xl;
+  }
+
+  .subtitle {
+    @apply text-base leading-7;
   }
 
   .underline-animation {
     @apply relative;
 
     &::before {
-      @apply content-[''] absolute w-full h-[3px] rounded bg-secondary bottom-0 left-0 origin-right scale-x-0 transition duration-300;
+      @apply content-[''] absolute w-full h-[2px] rounded bg-secondary-100 bottom-0 left-0 origin-right scale-x-0 transition duration-300;
     }
 
     &:hover::before {
       @apply origin-left scale-x-100;
     }
+  }
+
+  .text-hover-effect {
+    @apply inline bg-gradient-to-r from-secondary-100 to-secondary bg-no-repeat bg-left-bottom;
+    transition: background-size 200ms ease-out;
+    background-size: 0% 0.5em;
+  }
+
+  .text-hover-effect:hover {
+    background-size: 100% 0.5em;
   }
 }

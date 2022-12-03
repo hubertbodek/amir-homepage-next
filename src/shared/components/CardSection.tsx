@@ -22,7 +22,7 @@ export default function CardSection({
 }: CardSectionProps) {
   return (
     <section className={`container mx-auto lg:px-16 relative ${className}`}>
-      <div className="bg-primary-100 px-8 py-12 relative z-10 shadow-lg">
+      <div className="md:bg-primary-100 md:shadow-lg px-8 py-12 relative z-10">
         {children}
       </div>
       {decorations?.map((item, idx) => (
@@ -30,7 +30,7 @@ export default function CardSection({
           key={idx}
           className={`${item.position} ${
             item.z === 'over' ? 'z-20' : 'z-0'
-          }  absolute`}
+          }  absolute hidden md:block`}
         >
           <Image
             src={item.image.url}

@@ -1,0 +1,8 @@
+.btn-secondary {
+  @apply relative;
+
+  &::before {
+    content: '';
+    @apply absolute left-0 bottom-2 h-[2px] w-1/5 bg-secondary-100;
+  }
+}

@@ -11,10 +11,17 @@ function Header() {
       <div className="flex justify-between items-center">
         <div className="aspect-[256/62] relative h-9">
           <Link href="/">
-            <Image src={logo} alt="Logo" fill />
+            <Image
+              src={logo}
+              alt="Logo"
+              sizes="(max-width: 768px) 25vw,
+              (max-width: 1200px) 15vw,
+              10vw"
+              fill
+            />
           </Link>
         </div>
-        <ul className="flex gap-x-8">
+        <ul className="hidden md:flex gap-x-8">
           {sitemap.map((item) => (
             <li
               key={item.title}
@@ -23,7 +30,7 @@ function Header() {
               <MyLink
                 href={item.link}
                 className="underline-animation"
-                activeClassName="text-secondary"
+                activeClassName="text-secondary-100"
               >
                 {item.title}
               </MyLink>
