@@ -170,7 +170,7 @@ export default function Home({ pageData: { products } }: HomePageProps) {
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iure natus ea nesciunt,
           quos quis?
         </p>
-        <div className="grid grid-cols-3 gap-6 my-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
           <VerticalOverlayCard
             image={{ src: '/images/marketing/brama2.jpeg', alternativeText: 'Brama' }}
             title="Wpis 1"

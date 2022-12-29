@@ -7,36 +7,36 @@ const offers = [
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.jpeg',
+    imageUrl: '/images/marketing/perf-sheet-2.webp',
   },
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.jpeg',
-  },
-  ,
-  {
-    title: 'Siatki zgrzewane',
-    url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.jpeg',
+    imageUrl: '/images/marketing/perf-sheet-2.webp',
   },
   ,
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.jpeg',
+    imageUrl: '/images/marketing/perf-sheet-2.webp',
   },
   ,
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.jpeg',
+    imageUrl: '/images/marketing/perf-sheet-2.webp',
   },
   ,
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.jpeg',
+    imageUrl: '/images/marketing/perf-sheet-2.webp',
+  },
+  ,
+  {
+    title: 'Siatki zgrzewane',
+    url: '/oferta',
+    imageUrl: '/images/marketing/perf-sheet-2.webp',
   },
 ]
 
