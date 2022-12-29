@@ -3,7 +3,7 @@ import useButtonTheme from '@/src/shared/hooks/useButtonTheme'
 import { ArrowSmallRightIcon } from '@heroicons/react/24/solid'
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
-  theme: 'primary' | 'secondary' | 'filled'
+  theme: 'primary' | 'secondary' | 'filled' | 'light'
   children: React.ReactNode
   href?: string
   arrow?: boolean
@@ -24,7 +24,7 @@ export default function Button({
         <span
           className={`${
             theme === 'secondary' && 'text-hover-effect'
-          } inline-flex items-center gap-x-2 uppercase`}
+          } inline-flex items-center gap-x-2`}
         >
           {children}
           {arrow && <ArrowSmallRightIcon className="h-5 w-5" />}
@@ -34,12 +34,6 @@ export default function Button({
   )
 }
 
-function Wrapper({
-  href,
-  children,
-}: {
-  href: string
-  children: React.ReactNode
-}) {
+function Wrapper({ href, children }: { href: string; children: React.ReactNode }) {
   return href ? <Link href={href}>{children}</Link> : <>{children}</>
 }

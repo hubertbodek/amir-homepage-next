@@ -1,9 +1,5 @@
 const sitemap = [
   {
-    title: 'O nas',
-    link: '/o-nas',
-  },
-  {
     title: 'Oferta',
     link: '/oferta',
   },
@@ -14,6 +10,10 @@ const sitemap = [
   {
     title: 'Realizacje',
     link: '/realizacje',
+  },
+  {
+    title: 'O nas',
+    link: '/o-nas',
   },
   {
     title: 'Blog',

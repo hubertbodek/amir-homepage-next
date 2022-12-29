@@ -16,6 +16,20 @@
 
   .image-overlay::before {
     content: '';
-    @apply block absolute h-full w-full max-md:bg-primary/90 md:bg-gradient-to-r from-transparent to-primary z-20;
+    @apply block absolute h-full w-full max-md:bg-primary/90 md:bg-gradient-to-r from-transparent to-primary-100 z-20;
+  }
+
+  .image-overlay::after {
+    content: '';
+    @apply block absolute h-full w-full max-md:bg-primary/90 md:bg-gradient-to-t from-transparent to-primary z-20;
+  }
+
+  .gradient-primary {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(1, 119, 179, 1) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ) !important;
   }
 }

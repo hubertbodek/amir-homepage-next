@@ -1,2 +1,13 @@
 @import './slider.css';
 @import './btn.css';
+@import './carousel.css';
+
+@layer components {
+  .featured-section {
+    @apply border border-light text-secondary-100 p-4;
+  }
+
+  .service-card svg {
+    @apply fill-secondary;
+  }
+}

@@ -1,14 +1,14 @@
 @layer base {
   .text-h1 {
-    @apply text-3xl lg:text-4xl;
+    @apply text-5xl lg:text-6xl;
   }
 
   .text-h2 {
-    @apply text-2xl lg:text-3xl;
+    @apply text-3xl lg:text-4xl;
   }
 
   .text-h3 {
-    @apply text-xl lg:text-2xl;
+    @apply text-2xl lg:text-3xl;
   }
 
   .text-h4 {
@@ -16,7 +16,7 @@
   }
 
   .subtitle {
-    @apply text-base leading-7;
+    @apply text-base leading-7 text-neutral-300;
   }
 
   .underline-animation {
@@ -32,12 +32,28 @@
   }
 
   .text-hover-effect {
-    @apply inline bg-gradient-to-r from-secondary-100 to-secondary bg-no-repeat bg-left-bottom;
+    @apply bg-gradient-to-r from-secondary-100 to-secondary bg-no-repeat bg-left-bottom;
     transition: background-size 200ms ease-out;
-    background-size: 0% 0.5em;
+    background-size: 0% 2px;
   }
 
   .text-hover-effect:hover {
-    background-size: 100% 0.5em;
+    background-size: 100% 2px;
+  }
+
+  .text-outline-1 {
+    -webkit-text-stroke-width: 2px;
+  }
+
+  .text-outline-2 {
+    -webkit-text-stroke-width: 4px;
+  }
+
+  .text-outline-primary {
+    -webkit-text-stroke-color: #0a2130;
+  }
+
+  .text-outline-light {
+    -webkit-text-stroke-color: #ededed;
   }
 }

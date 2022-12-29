@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <footer className="py-8 bg-primary-100">
+    <footer className="py-8 bg-primary-100 text-light">
       <div className="amir-container flex flex-wrap gap-x-16 gap-y-8 justify-between">
         <div>
           <h4 className="text-h4 font-bold mb-2">Amir-Metal</h4>

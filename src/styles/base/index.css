@@ -1,9 +1,13 @@
 @import './typography.css';
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     & > * {
-      @apply bg-primary text-light;
+      @apply bg-light;
     }
   }
 }

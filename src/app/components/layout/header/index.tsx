@@ -7,8 +7,8 @@ import logo from '@/public/images/logo.png'
 
 function Header() {
   return (
-    <nav className="py-8 px-4 container mx-auto">
-      <div className="flex justify-between items-center">
+    <nav className="absolute top-0 left-0 z-30 py-8 bg-transperent text-light w-full">
+      <div className="amir-container mx-auto flex justify-between items-center">
         <div className="aspect-[256/62] relative h-9">
           <Link href="/">
             <Image
@@ -23,10 +23,7 @@ function Header() {
         </div>
         <ul className="hidden md:flex gap-x-8">
           {sitemap.map((item) => (
-            <li
-              key={item.title}
-              className="lg:text-lg font-light tracking-wider uppercase"
-            >
+            <li key={item.title} className="lg:text-lg font-light tracking-wide capitalize">
               <MyLink
                 href={item.link}
                 className="underline-animation"

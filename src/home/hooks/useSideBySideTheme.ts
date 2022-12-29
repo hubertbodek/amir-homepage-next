@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react'
 
 const theme = {
-  regular: {
+  reversed: {
     text: 'md:text-right',
     image: 'md:-mr-12',
-    textContainer: 'md:col-start-1',
-    imageContainer: 'md:col-start-2',
+    textContainer: 'md:col-start-1 col-span-7',
+    imageContainer: 'md:col-start-8 md:col-span-6 md:row-start-1',
     // imageOffset: '-right-20',
   },
-  reversed: {
+  regular: {
     text: 'md:text-left',
     image: 'md:-lr-12',
-    textContainer: 'md:col-start-2',
-    imageContainer: 'md:col-start-1 md:row-start-1',
+    textContainer: 'md:col-start-6 md:col-span-7',
+    imageContainer: 'md:col-start-1 md:col-span-5 md:row-start-1',
     // imageOffset: '-left-20',
   },
 }

@@ -1,30 +1,30 @@
 {
   "products": {
-    "headline": "Nasze Produkty",
+    "headline": "Lorem ipsum dolor sit amet consectetur elit.",
     "items": [
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
-        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.Wykorzystuje się ją zarówno w celach technicznych, jak również dekoracyjnych. Blacha perforowana to estetyka i funkcjonalność w niewygórowanej cenie.Dowiedz się więcej",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
         "learnMoreUrl": "/",
-        "imageUrl": "/images/marketing/tkanina.png"
+        "imageUrl": "/images/marketing/corten.jpeg"
       },
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
-        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.Wykorzystuje się ją zarówno w celach technicznych, jak również dekoracyjnych. Blacha perforowana to estetyka i funkcjonalność w niewygórowanej cenie.Dowiedz się więcej",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
         "learnMoreUrl": "/",
-        "imageUrl": "/images/marketing/tkanina.png"
+        "imageUrl": "/images/marketing/corten02.jpeg"
       },
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
-        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.Wykorzystuje się ją zarówno w celach technicznych, jak również dekoracyjnych. Blacha perforowana to estetyka i funkcjonalność w niewygórowanej cenie.Dowiedz się więcej",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
         "learnMoreUrl": "/",
-        "imageUrl": "/images/marketing/tkanina.png"
+        "imageUrl": "/images/marketing/perf-sheet-2.jpeg"
       },
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
-        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.Wykorzystuje się ją zarówno w celach technicznych, jak również dekoracyjnych. Blacha perforowana to estetyka i funkcjonalność w niewygórowanej cenie.Dowiedz się więcej",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
         "learnMoreUrl": "/",
-        "imageUrl": "/images/marketing/tkanina.png"
+        "imageUrl": "/images/marketing/perf-sheet.jpeg"
       }
     ]
   }

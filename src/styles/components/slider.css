@@ -12,11 +12,5 @@
 }
 
 .mySwiper {
-  @apply mx-auto;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(1, 119, 179, 1) 50%,
-    rgba(255, 255, 255, 0) 100%
-  ) !important;
+  @apply mx-auto gradient-primary;
 }
