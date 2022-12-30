@@ -102,7 +102,7 @@ export default function Home({ pageData: { products } }: HomePageProps) {
           </div>
           <div className="md:col-span-2 grid sm:grid-cols-2 gap-x-6 gap-y-12">
             <div className="flex flex-col">
-              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg mb-4">
+              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg mb-4 rounded border border-gray-100">
                 <ChartBarSquareIcon className="h-full w-full text-sky-700" />
               </span>
               <span className="text-h4 font-semibold text-gray-800 mb-2 inline-block">
@@ -115,7 +115,7 @@ export default function Home({ pageData: { products } }: HomePageProps) {
               </p>
             </div>
             <div className="flex flex-col">
-              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg mb-4">
+              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg mb-4 rounded border border-gray-100">
                 <PuzzlePieceIcon className="h-full w-full text-sky-700" />
               </span>
               <span className="text-h4 font-semibold text-gray-800 mb-2 inline-block">
@@ -127,7 +127,7 @@ export default function Home({ pageData: { products } }: HomePageProps) {
               </p>
             </div>
             <div className="flex flex-col">
-              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg mb-4">
+              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg mb-4 rounded border border-gray-100">
                 <Cog8ToothIcon className="h-full w-full text-sky-700" />
               </span>
               <span className="text-h4 font-semibold text-gray-800 mb-2 inline-block">
@@ -140,7 +140,7 @@ export default function Home({ pageData: { products } }: HomePageProps) {
               </p>
             </div>
             <div className="flex flex-col">
-              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg mb-4">
+              <span className="inline-block w-12 h-12 bg-white p-2 shadow-inner-lg rounded mb-4 border border-gray-100">
                 <WrenchScrewdriverIcon className="h-full w-full text-sky-700" />
               </span>
               <span className="text-h4 font-semibold text-gray-800 mb-2 inline-block">
