@@ -26,7 +26,7 @@ export default function Home({ pageData: { products } }: HomePageProps) {
   return (
     <>
       <Teaser
-        image={{ src: '/images/marketing/perforation.webp', alternativeText: 'Perforacja' }}
+        image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
         title="Lorem ipsum dolor sit, amet consectetur."
       >
         <Button theme="light" href="/oferta" className="mt-5">
