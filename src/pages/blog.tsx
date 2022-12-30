@@ -8,7 +8,7 @@ export default function Blog() {
     <>
       <>
         <Teaser
-          image={{ src: '/images/marketing/corten.jpeg', alternativeText: 'Perforacja' }}
+          image={{ src: '/images/marketing/corten.webp', alternativeText: 'Perforacja' }}
           title="Blog"
           specific
         />
