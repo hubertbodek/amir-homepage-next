@@ -1,9 +1,8 @@
-import OfferCard from '@/src/offer/components/OfferCard'
-import CardSection from '@/src/shared/components/CardSection'
-import Teaser from '@/src/shared/components/Teaser'
+import Teaser from 'shared/components/Teaser'
+import type { InferGetStaticPropsType } from 'next'
 import React from 'react'
 
-export default function Offer() {
+export default function Offer({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Teaser
@@ -13,4 +12,10 @@ export default function Offer() {
       />
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  return {
+    props: { pageData: {} },
+  }
 }

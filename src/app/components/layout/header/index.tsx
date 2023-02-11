@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import sitemap from '@/src/app/constants/sitemap'
-import MyLink from '@/src/app/components/MyLink'
-import logo from '@/public/images/logo.png'
+import sitemap from 'app/constants/sitemap'
+import MyLink from 'app/components/MyLink'
+import logo from '@public/images/logo.png'
 
 function Header() {
   return (

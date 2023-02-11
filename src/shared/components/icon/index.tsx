@@ -1,6 +1,6 @@
-import Welding from '@/src/shared/components/icon/icons/Welding'
-import WeldingMachine from '@/src/shared/components/icon/icons/WeldingMachine'
-import Laser from '@/src/shared/components/icon/icons/Laser'
+import Welding from 'shared/components/icon/icons/Welding'
+import WeldingMachine from 'shared/components/icon/icons/WeldingMachine'
+import Laser from 'shared/components/icon/icons/Laser'
 
 const icons = {
   laser: () => <Laser />,

@@ -1,6 +1,6 @@
 const styles = {
   primary:
-    'bg-gray-900 text-gray-100 text-light transition hover:opacity-90 px-4 shadow-xl shadow-sky-900/40',
+    'bg-gray-900 text-gray-100 text-light transition hover:opacity-90 px-4 shadow-lg shadow-sky-900/20',
   light: 'bg-gray-100 text-gray-900 transition hover:opacity-90 px-4 shadow-inner',
   secondary: 'btn-secondary text-light',
   filled:

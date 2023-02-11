@@ -6,9 +6,9 @@ import 'swiper/css/pagination'
 import {
   NavigationArrowNext,
   NavigationArrowPrev,
-} from '@/src/shared/components/carousel/CustomNavigation'
-import renderSlides from '@/src/shared/components/carousel/RenderSlides'
-import { CarouselProps } from '@/src/shared/components/carousel/Carousel'
+} from 'shared/components/carousel/CustomNavigation'
+import renderSlides from 'shared/components/carousel/RenderSlides'
+import type { CarouselProps } from 'shared/components/carousel/Carousel'
 
 export default function MobileCarousel({ children: slides, options }: CarouselProps) {
   const slideWidth = options?.autoWidth ? 'auto' : '87vw'

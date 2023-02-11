@@ -16,7 +16,6 @@ export default function PerforationPattern({ fill = 'fill-black' }: SvgProps) {
       >
         <circle id="pattern-circle" cx="10" cy="10" r="1.5" className={fill}></circle>
       </pattern>
-
       <rect id="rect" x="0" y="0" width="100%" height="100%" fill="url(#pattern-circles)"></rect>
     </svg>
   )

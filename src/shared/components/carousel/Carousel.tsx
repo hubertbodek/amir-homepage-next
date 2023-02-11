@@ -1,5 +1,5 @@
-import MobileCarousel from '@/src/shared/components/carousel/responsive/MobileCarousel'
-import DesktopCarousel from '@/src/shared/components/carousel/responsive/DesktopCarousel'
+import MobileCarousel from 'shared/components/carousel/responsive/MobileCarousel'
+import DesktopCarousel from 'shared/components/carousel/responsive/DesktopCarousel'
 
 export interface CarouselProps {
   children: React.ReactNode[]

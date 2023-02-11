@@ -1,4 +1,5 @@
-import Link, { LinkProps } from 'next/link'
+import Link from 'next/link'
+import type { LinkProps } from 'next/link'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
@@ -8,12 +9,7 @@ interface MyLinkProps extends LinkProps {
   children: React.ReactNode
 }
 
-function MyLink({
-  className = '',
-  activeClassName,
-  children,
-  ...props
-}: MyLinkProps) {
+function MyLink({ className = '', activeClassName, children, ...props }: MyLinkProps) {
   const { pathname } = useRouter()
   const [activeClass, setActiveClass] = useState<string>('')
 
@@ -22,9 +18,7 @@ function MyLink({
       return
     }
 
-    pathname === props.href
-      ? setActiveClass(activeClassName)
-      : setActiveClass('')
+    pathname === props.href ? setActiveClass(activeClassName) : setActiveClass('')
   }, [activeClassName, pathname, props.href])
 
   return (

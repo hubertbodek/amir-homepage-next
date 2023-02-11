@@ -1,5 +1,4 @@
 import React from 'react'
-import ServiceCard from '@/src/services/components/ServiceCard'
 import Teaser from '../shared/components/Teaser'
 
 export default function Services() {
@@ -12,4 +11,10 @@ export default function Services() {
       />
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  return {
+    props: { pageData: {} },
+  }
 }

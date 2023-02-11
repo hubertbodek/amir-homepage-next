@@ -1,15 +1,14 @@
 import Image from 'next/image'
 import React from 'react'
 
-import heroImg from '@/public/images/marketing/perforation.webp'
-import Button from './Button'
-import { ImageModel } from '../types/ImageModel'
+import type { ImageModel } from '../types/ImageModel'
 
 export interface TeaserProps {
   image: ImageModel
   title: string
   description?: string
   specific?: boolean
+  faded?: boolean
   children?: React.ReactNode
 }
 
@@ -18,11 +17,16 @@ export default function Teaser({
   title,
   description,
   specific = false,
+  faded = false,
   children,
 }: TeaserProps) {
   return (
     <div className={`relative w-full ${specific ? 'h-96' : 'h-[600px]'}`}>
-      <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-primary/90 to-primary-100"></div>
+      {faded ? (
+        <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-b from-primary/90 via-primary-100/95 to-primary-100"></div>
+      ) : (
+        <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-primary/90 to-primary-100"></div>
+      )}
       <Image
         src={image.src}
         alt={image.alternativeText}

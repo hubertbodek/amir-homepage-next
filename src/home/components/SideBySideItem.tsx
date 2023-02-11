@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
-import Button from '@/src/shared/components/Button'
-import useSideBySideTheme from '@/src/home/hooks/useSideBySideTheme'
+import Button from 'shared/components/Button'
+import useSideBySideTheme from 'home/hooks/useSideBySideTheme'
 
 export interface SideBySideItemProps {
   title: string
@@ -19,6 +19,7 @@ export default function SideBySideItem({
   index,
 }: SideBySideItemProps) {
   const styles = useSideBySideTheme(index)
+
   return (
     <div
       className={`grid grid-cols-1 items-center md:grid-cols-12 gap-8 min-h-[240px] text-left ${styles.text}`}

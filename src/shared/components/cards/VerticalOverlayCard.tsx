@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ImageModel } from '../../types/ImageModel'
+import type { ImageModel } from '../../types/ImageModel'
 
 export interface VerticalOverlayCardProps {
   image: ImageModel

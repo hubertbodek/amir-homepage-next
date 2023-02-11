@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import useButtonTheme from '@/src/shared/hooks/useButtonTheme'
+import useButtonTheme from 'shared/hooks/useButtonTheme'
 import { ArrowSmallRightIcon } from '@heroicons/react/24/solid'
 
 interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
@@ -20,10 +20,10 @@ export default function Button({
 
   return (
     <Wrapper href={href}>
-      <button {...props} className={`${buttonTheme} ${props.className} py-2`}>
+      <button {...props} className={`${buttonTheme} ${props.className ?? ''} py-2`}>
         <span
           className={`${
-            theme === 'secondary' && 'text-hover-effect'
+            theme === 'secondary' ? 'text-hover-effect' : ''
           } inline-flex items-center gap-x-2`}
         >
           {children}

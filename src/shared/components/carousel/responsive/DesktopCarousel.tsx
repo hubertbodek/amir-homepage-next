@@ -6,9 +6,9 @@ import {
   NavigationArrowNext,
   NavigationArrowPrev,
   NavigationBottom,
-} from '@/src/shared/components/carousel/CustomNavigation'
-import renderSlides from '@/src/shared/components/carousel/RenderSlides'
-import { CarouselProps } from '@/src/shared/components/carousel/Carousel'
+} from 'shared/components/carousel/CustomNavigation'
+import renderSlides from 'shared/components/carousel/RenderSlides'
+import type { CarouselProps } from 'shared/components/carousel/Carousel'
 
 export default function DesktopCarousel({ children: slides, options }: CarouselProps) {
   return (

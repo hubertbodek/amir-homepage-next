@@ -1,9 +1,9 @@
-import CardSection from '@/src/shared/components/CardSection'
-import SideBySideItem, { SideBySideItemProps } from '@/src/home/components/SideBySideItem'
+import SideBySideItem from 'home/components/SideBySideItem'
+import type { SideBySideItemProps } from 'home/components/SideBySideItem'
 
 export interface SideBySideProps {
   headline: string
-  items: Array<SideBySideItemProps>
+  items: SideBySideItemProps[]
 }
 
 export default function SideBySide({ headline, items }: SideBySideProps) {

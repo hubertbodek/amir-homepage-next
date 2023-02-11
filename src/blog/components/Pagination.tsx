@@ -16,7 +16,7 @@ const Pagination = ({ pagination: { page, pageCount } }: PaginationProps) => {
     }
     const params = new URLSearchParams(window.location.search)
     params.set('p', String(selectedPage))
-    window.location.href = `${window.location.pathname}?${params}`
+    window.location.href = `${window.location.pathname}?${params.toString()}`
   }
 
   return (
@@ -86,7 +86,7 @@ const PaginationArrow = ({ type, disabled }: { type: 'previous' | 'next'; disabl
 
     params.set('p', String(page))
 
-    window.location.href = `${window.location.pathname}?${params}`
+    window.location.href = `${window.location.pathname}?${params.toString()}`
   }
 
   return (

@@ -1,6 +1,7 @@
-import Teaser from '../shared/components/Teaser'
+import type { InferGetStaticPropsType } from 'next'
+import Teaser from 'shared/components/Teaser'
 
-export default function kontakt() {
+export default function Contact({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
       <Teaser
@@ -10,4 +11,10 @@ export default function kontakt() {
       />
     </>
   )
+}
+
+export const getStaticProps = async () => {
+  return {
+    props: { pageData: {} },
+  }
 }

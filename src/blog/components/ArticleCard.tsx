@@ -1,38 +1,59 @@
+import type { StrapiImageModel } from 'app/types/strapi'
+import Button from 'shared/components/Button'
 import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
 
-export default function ArticleCard() {
+export interface ArticleCardProps {
+  image: {
+    data: {
+      attributes: Omit<StrapiImageModel, 'caption'>
+    }
+  }
+  description: string
+  title: string
+  slug: string
+  isLatest?: boolean
+}
+
+export default function ArticleCard({
+  image,
+  title,
+  description,
+  slug,
+  isLatest = false,
+}: ArticleCardProps) {
+  const { url, alternativeText } = image.data.attributes
+  const articleUrl = `/blog/${slug}`
+
   return (
-    <article className="p-4 bg-primary-100 rounded shadow-md">
-      <div className="relative aspect-[15/9] mb-4">
-        <Link href="/">
-          <Image
-            src="/images/marketing/uslugi.webp"
-            alt="Test"
-            fill
-            sizes="(max-width: 768px) 90vw,
-              (max-width: 1200px) 45vw,
-              25vw"
-            className="object-cover object-center"
-          />
-        </Link>
+    <article className="h-96 first-of-type:min-h-[480px] first-of-type:col-span-full first-of-type:mb-12 relative shadow-lg group col-span-3 article-card">
+      <div
+        className={`duration-200 absolute h-full w-full top-0 left-0 bg-primary/80 group-hover:bg-primary/70 transition z-10 flex flex-col py-6 px-4 items-start ${
+          isLatest ? 'justify-center' : ''
+        }`}
+      >
+        <div
+          className={`text-h2 text-neutral-50 group-hover:drop-shadow-2xl transition duration-200 article-title ${
+            isLatest ? 'max-w-3xl mb-8' : 'max-w-lg mb-5'
+          }`}
+        >
+          {title}
+        </div>
+        <p
+          className={`text-subtitle text-neutral-100 article-description ${
+            !isLatest ? 'flex-1 max-w-md' : 'mb-6 max-w-lg'
+          }`}
+        >
+          {description}
+        </p>
+        <Button
+          theme={isLatest ? 'light' : 'secondary'}
+          href={articleUrl}
+          className={isLatest ? 'min-w-[200px]' : undefined}
+        >
+          Czytaj
+        </Button>
       </div>
-      <h4 className="text-h4 font-semibold mb-4">
-        <Link href="/">
-          <span className="text-hover-effect">
-            Lorem ipsum, dolor sit amet consectetur adipisicing.
-          </span>
-        </Link>
-      </h4>
-      <p className="text-subtitle text-neutral-400 mb-4 font-light">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium voluptates ex
-        perferendis? Magni nihil dolor dignissimos facilis.
-      </p>
-      <div className="flex gap-x-4">
-        <span className="font-semibold text-subtitle">Gosia</span>
-        <span className="font-light">4 grudnia 2021</span>
-      </div>
+      <Image src={url} alt={alternativeText} fill className="object-cover object-center z-0" />
     </article>
   )
 }
