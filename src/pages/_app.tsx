@@ -6,6 +6,7 @@ import Layout from 'app/components/layout'
 
 const sora = Sora({
   subsets: ['latin', 'latin-ext'],
+  display: 'swap',
 })
 
 export default function App({ Component, pageProps }: AppProps) {
