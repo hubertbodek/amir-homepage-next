@@ -1,13 +1,12 @@
 import Button from 'shared/components/Button'
 import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 
 const offers = [
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.webp',
+    imageUrl: '/images/marketing/perf-sheet.webp',
   },
   {
     title: 'Siatki zgrzewane',
@@ -17,54 +16,64 @@ const offers = [
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.webp',
+    imageUrl: '/images/marketing/corten.webp',
   },
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.webp',
+    imageUrl: '/images/marketing/siatka.png',
   },
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.webp',
+    imageUrl: '/images/marketing/siatki.jpeg',
   },
   {
     title: 'Siatki zgrzewane',
     url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.webp',
+    imageUrl: '/images/marketing/wall.jpeg',
   },
 ]
 
 export default function OfferSection() {
+  const [activeItem, setActiveItem] = useState<number>(0)
+
   return (
     <section className="amir-container mx-auto py-24 px-4">
-      <h2 className="text-h2 text-left uppercase font-bold text-neutral-800 mb-8">
+      <h2 className="text-h2 text-left uppercase font-bold text-primary-100 mb-8 flex items-center space-x-6">
         Nasze produkty
+        <span className="h-0.5 bg-primary-100/20 flex-1 ml-8" />
       </h2>
-      <div className="grid md:grid-cols-2 gap-x-9 gap-y-8">
-        {offers.map((offer, idx) => (
-          <div
-            key={idx}
-            className="min-h-40 grid grid-cols-3 border-neutral-100 shadow-lg hover:shadow-xl transition rounded-sm"
-          >
-            <div className="col-span-1 h-full relative">
-              <Image src={offer.imageUrl} alt="Test" fill className="object-cover object-center" />
+      <div className="grid md:grid-cols-12 gap-x-9 gap-y-8 py-4">
+        <aside className="col-span-3 flex flex-col justify-between items-start">
+          <ul className="space-y-2">
+            {offers.map((offer, idx) => (
+              <li key={`${idx}--${offer.title}`}>
+                <button
+                  onClick={() => setActiveItem(idx)}
+                  className={`btn-secondary py-2 ${idx === activeItem ? 'btn-active' : ''}`}
+                >
+                  {offer.title}
+                </button>
+              </li>
+            ))}
+          </ul>
+          <Button theme="primary" className="px-6" href="/oferta">
+            Zobacz więcej
+          </Button>
+        </aside>
+        <div className="col-span-9 relative h-[440px] overflow-hidden">
+          {offers.map((offer, idx) => (
+            <div
+              key={`offerimage-${idx}`}
+              className={`absolute top-0 py-2 left-0 h-full w-full duration-700 transition ${
+                activeItem === idx ? 'translate-x-0' : 'translate-x-[150%]'
+              }`}
+            >
+              <Image src={offer.imageUrl} alt={offer.title} fill className="shadow-xl y-4" />
             </div>
-            <div className="px-4 py-2 flex flex-col col-span-2 h-full items-start">
-              <Link href={offer.url}>
-                <span className="text-h3 mb-4 inline-block">{offer.title}</span>
-              </Link>
-              <p className="text-subtitle">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum fugiat tenetur
-                aut.
-              </p>
-              <Button theme="secondary" className="!text-neutral-800" href={offer?.url}>
-                Zobacz ofertę
-              </Button>
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

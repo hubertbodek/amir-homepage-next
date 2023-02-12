@@ -1,5 +1,4 @@
 import type { InferGetStaticPropsType } from 'next'
-import Image from 'next/image'
 import {
   ChartBarSquareIcon,
   // Cog8ToothIcon,
@@ -19,6 +18,8 @@ import Button from 'shared/components/Button'
 import PerforationPattern from 'shared/components/patterns/PerforationPattern'
 
 import homeData from 'home/data/homeData.json'
+import SideTeaser from 'shared/components/sections/SideTeaser'
+import ContactFormWithMap from 'shared/components/sections/ContactFormWithMap'
 
 export default function Home({
   pageData: { products, sideTeaser, perks, realisations, blog },
@@ -33,32 +34,8 @@ export default function Home({
           Sprawdź ofertę
         </Button>
       </Teaser>
-      <section className="amir-container my-32 grid grid-cols-2 gap-x-12 items-center">
-        <div className="relative h-[600px]">
-          <Image
-            src="/images/marketing/orange-fence.jpeg"
-            alt="Cutter"
-            fill
-            className="object-cover max-w-sm object-center -mt-12 mr-auto rounded shadow-lg"
-          />
-          <Image
-            src="/images/marketing/siatki.jpeg"
-            alt="Cutter"
-            fill
-            className="object-cover max-w-sm object-center ml-auto rounded shadow-lg"
-          />
-        </div>
-        <div className="flex flex-col items-start pl-6">
-          <span className="text-orange-700 uppercase text-sm">{sideTeaser.label}</span>
-          <h2 className="text-h2 font-semibold mt-2 mb-8 max-w-lg -ml-6">{sideTeaser.title}</h2>
-          <p className="text-lg text-gray-800">{sideTeaser.description}</p>
-          <Button className="my-8" theme="primary">
-            {sideTeaser.buttonText}
-          </Button>
-        </div>
-      </section>
+      <SideTeaser {...sideTeaser} />
       <OfferSection />
-      {/* bg-gradient-to-b from-neutral-900 to-primary */}
       <div className="py-24 bg-[url('/images/abstracts/flux-bg.svg')] bg-no-repeat bg-cover">
         <SideBySide {...(products as SideBySideProps)} />
       </div>
@@ -90,22 +67,24 @@ export default function Home({
         </div>
       </section>
       <ServicesSection />
-      <h2 className="relative amir-container text-h2 text-center uppercase font-bold text-neutral-800 mt-24">
-        <div className="absolute -top-6 right-0 md:right-1/4 h-16 md:h-36 w-32 md:w-56 z-0 text-primary-100">
-          <PerforationPattern fill="fill-sky-600/30" />
+      <section className="my-36">
+        <h2 className="relative amir-container text-h2 text-center uppercase font-bold text-neutral-800">
+          <div className="absolute -top-6 right-0 md:right-1/4 h-16 md:h-36 w-32 md:w-56 z-0 text-primary-100">
+            <PerforationPattern fill="fill-sky-600/30" />
+          </div>
+          {realisations.title}
+        </h2>
+        <p className=" mx-auto text-center max-w-xl mb-16">{realisations.description}</p>
+        <DesktopCarousel options={{ isLooped: true }}>
+          {realisations.cards.map((card, idx) => (
+            <VerticalOverlayCard key={`card--${idx}`} {...card} overlay />
+          ))}
+        </DesktopCarousel>
+        <div className="mx-auto flex justify-center items-center mb-12">
+          <Button theme="primary">Zobacz pozostałe</Button>
         </div>
-        {realisations.title}
-      </h2>
-      <p className=" mx-auto text-center max-w-xl mb-16">{realisations.description}</p>
-      <DesktopCarousel options={{ isLooped: true }}>
-        {realisations.cards.map((card, idx) => (
-          <VerticalOverlayCard key={`card--${idx}`} {...card} overlay />
-        ))}
-      </DesktopCarousel>
-      <div className="mx-auto flex justify-center items-center mb-12">
-        <Button theme="primary">Zobacz pozostałe</Button>
-      </div>
-      <section className="max-w-7xl mx-auto px-4">
+      </section>
+      <section className="max-w-7xl mx-auto px-4 my-40">
         <h4 className="text-h2 text-center mb-3 font-semibold uppercase">{blog.title}</h4>
         <p className="max-w-xl text-center mx-auto">{blog.description}</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
@@ -118,6 +97,7 @@ export default function Home({
           ))}
         </div>
       </section>
+      <ContactFormWithMap />
     </>
   )
 }

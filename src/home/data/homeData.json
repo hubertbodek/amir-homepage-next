@@ -3,7 +3,17 @@
     "label": "Lorem ipsum dolor sit amet.",
     "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quaerat.",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia at dolore tenetur? Minima modi debitis id et blanditiis, sunt corrupti quibusdam nobis obcaecati. Quo alias quibusdam quod fuga reprehenderit praesentium, doloribus voluptates. Corrupti repudiandae pariatur sapiente quasi rerum rem, porro quisquam minima eaque officia.",
-    "buttonText": "Dowiedz się więcej"
+    "buttonText": "Dowiedz się więcej",
+    "images": [
+      {
+        "src": "/images/marketing/orange-fence.jpeg",
+        "alternativeText": "Cutter"
+      },
+      {
+        "src": "/images/marketing/siatki.jpeg",
+        "alternativeText": "Cutter"
+      }
+    ]
   },
   "products": {
     "headline": "Lorem ipsum dolor sit amet consectetur elit.",
