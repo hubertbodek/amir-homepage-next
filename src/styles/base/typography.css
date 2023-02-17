@@ -31,6 +31,10 @@
     }
   }
 
+  .text-link {
+    @apply hover:text-secondary transition;
+  }
+
   .text-hover-effect {
     @apply bg-gradient-to-r from-secondary-100 to-secondary bg-no-repeat bg-left-bottom;
     transition: background-size 200ms ease-out;

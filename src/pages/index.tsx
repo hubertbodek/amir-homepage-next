@@ -10,7 +10,7 @@ import type { SideBySideProps } from 'components/home/SideBySide'
 
 import SideBySide from 'components/home/SideBySide'
 import ServicesSection from 'components/home/ServicesSection'
-import Teaser from 'components/shared/Teaser'
+import Hero from 'components/shared/Hero'
 import OfferSection from 'components/home/OfferSection'
 import DesktopCarousel from 'components/shared/carousel/Carousel'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
@@ -26,14 +26,14 @@ export default function Home({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>
-      <Teaser
+      <Hero
         image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
         title="Lorem ipsum dolor sit, amet consectetur."
       >
         <Button theme="light" href="/oferta" className="mt-5">
           Sprawdź ofertę
         </Button>
-      </Teaser>
+      </Hero>
       <SideTeaser {...sideTeaser} />
       <OfferSection />
       <div className="py-24 bg-[url('/images/abstracts/flux-bg.svg')] bg-no-repeat bg-cover">

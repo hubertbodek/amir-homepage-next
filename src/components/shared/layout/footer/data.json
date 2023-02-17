@@ -1,0 +1,71 @@
+{
+  "columns": [
+    {
+      "headline": "Ogólne",
+      "items": [
+        {
+          "title": "Realizacje",
+          "link": "/"
+        },
+        {
+          "title": "O nas",
+          "link": "/"
+        },
+        {
+          "title": "Blog",
+          "link": "/"
+        },
+        {
+          "title": "Kontakt",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "headline": "Usługi",
+      "items": [
+        {
+          "title": "Laserowe cięcie blach",
+          "link": "/"
+        },
+        {
+          "title": "Spawanie",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "headline": "Oferta",
+      "items": [
+        {
+          "title": "Siatki zgrzewane",
+          "link": "/"
+        },
+        {
+          "title": "Siatki plecione",
+          "link": "/"
+        },
+        {
+          "title": "Siatki cięto-ciągnione",
+          "link": "/"
+        },
+        {
+          "title": "Blacha perforowana",
+          "link": "/"
+        },
+        {
+          "title": "Dennice",
+          "link": "/"
+        },
+        {
+          "title": "Tkaniny metalowe",
+          "link": "/"
+        },
+        {
+          "title": "Sprężyny",
+          "link": "/"
+        }
+      ]
+    }
+  ]
+}
