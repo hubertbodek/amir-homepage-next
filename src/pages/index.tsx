@@ -6,20 +6,20 @@ import {
   // WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline'
 
-import type { SideBySideProps } from 'home/components/SideBySide'
+import type { SideBySideProps } from 'components/home/SideBySide'
 
-import SideBySide from 'home/components/SideBySide'
-import ServicesSection from 'home/components/ServicesSection'
-import Teaser from 'shared/components/Teaser'
-import OfferSection from 'home/components/OfferSection'
-import DesktopCarousel from 'shared/components/carousel/Carousel'
-import VerticalOverlayCard from 'shared/components/cards/VerticalOverlayCard'
-import Button from 'shared/components/Button'
-import PerforationPattern from 'shared/components/patterns/PerforationPattern'
+import SideBySide from 'components/home/SideBySide'
+import ServicesSection from 'components/home/ServicesSection'
+import Teaser from 'components/shared/Teaser'
+import OfferSection from 'components/home/OfferSection'
+import DesktopCarousel from 'components/shared/carousel/Carousel'
+import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
+import Button from 'components/shared/Button'
+import PerforationPattern from 'components/shared/patterns/PerforationPattern'
 
-import homeData from 'home/data/homeData.json'
-import SideTeaser from 'shared/components/sections/SideTeaser'
-import ContactFormWithMap from 'shared/components/sections/ContactFormWithMap'
+import homeData from 'data/home.json'
+import SideTeaser from 'components/shared/sections/SideTeaser'
+import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
 export default function Home({
   pageData: { products, sideTeaser, perks, realisations, blog },

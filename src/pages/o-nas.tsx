@@ -1,6 +1,6 @@
 import React from 'react'
 import type { InferGetStaticPropsType } from 'next'
-import Teaser from 'shared/components/Teaser'
+import Teaser from 'components/shared/Teaser'
 
 export default function About({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
   console.log(items)

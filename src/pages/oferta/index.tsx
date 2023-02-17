@@ -1,4 +1,4 @@
-import Teaser from 'shared/components/Teaser'
+import Teaser from 'components/shared/Teaser'
 import type { InferGetStaticPropsType } from 'next'
 import React from 'react'
 

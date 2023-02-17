@@ -1,5 +1,5 @@
 import React from 'react'
-import Teaser from '../shared/components/Teaser'
+import Teaser from '../components/shared/Teaser'
 
 export default function Services() {
   return (

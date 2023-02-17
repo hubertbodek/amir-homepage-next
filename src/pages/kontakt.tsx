@@ -3,8 +3,8 @@ import type { InferGetStaticPropsType } from 'next'
 import { MapPinIcon } from '@heroicons/react/24/outline'
 // import { MapPinIcon, PhoneIcon, EnvelopeIcon, BriefcaseIcon } from '@heroicons/react/24/outline'
 
-import ContactFormWithMap from 'shared/components/sections/ContactFormWithMap'
-import Teaser from 'shared/components/Teaser'
+import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
+import Teaser from 'components/shared/Teaser'
 
 export default function Contact({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (

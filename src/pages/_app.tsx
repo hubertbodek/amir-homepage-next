@@ -2,7 +2,7 @@ import type { AppProps } from 'next/app'
 import { Sora } from '@next/font/google'
 
 import 'styles/globals.css'
-import Layout from 'app/components/layout'
+import Layout from 'components/shared/layout'
 
 const sora = Sora({
   subsets: ['latin', 'latin-ext'],

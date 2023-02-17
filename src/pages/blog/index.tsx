@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import Teaser from 'shared/components/Teaser'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
+
+import Teaser from 'components/shared/Teaser'
 
 export default function Blog({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
