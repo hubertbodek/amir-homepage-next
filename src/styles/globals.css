@@ -4,3 +4,8 @@
 @import './components/index.css';
 @import 'tailwindcss/utilities';
 @import './utilities/index.css';
+
+:root {
+  --header-height: theme('height.28');
+  --header-height-shrinked: theme('height.20');
+}

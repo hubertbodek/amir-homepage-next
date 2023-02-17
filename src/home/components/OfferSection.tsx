@@ -42,7 +42,7 @@ export default function OfferSection() {
     <section className="amir-container mx-auto py-24 px-4">
       <h2 className="text-h2 text-left uppercase font-bold text-primary-100 mb-8 flex items-center space-x-6">
         Nasze produkty
-        <span className="h-0.5 bg-primary-100/20 flex-1 ml-8" />
+        <span className="h-0.5 bg-gray-900/80 flex-1 ml-8" />
       </h2>
       <div className="grid md:grid-cols-12 gap-x-9 gap-y-8 py-4">
         <aside className="col-span-3 flex flex-col justify-between items-start">

@@ -23,9 +23,9 @@ export default function Teaser({
   return (
     <div className={`relative w-full ${specific ? 'h-96' : 'h-[600px]'}`}>
       {faded ? (
-        <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-b from-primary/90 via-primary-100/95 to-primary-100"></div>
+        <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-b from-black/70 via-black/80 to-black"></div>
       ) : (
-        <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-primary/90 to-primary-100"></div>
+        <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/70 to-black"></div>
       )}
       <Image
         src={image.src}

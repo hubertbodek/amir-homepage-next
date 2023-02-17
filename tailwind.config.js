@@ -12,6 +12,7 @@ module.exports = {
           DEFAULT: '#0177B3',
           100: '#0ea5e9',
         },
+        dark: '#1a1a1a',
         tertiary: {
           DEFAULT: '#73450E',
           100: '#733410',

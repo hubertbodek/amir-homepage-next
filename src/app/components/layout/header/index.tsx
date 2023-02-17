@@ -3,11 +3,12 @@ import Link from 'next/link'
 
 import sitemap from 'app/constants/sitemap'
 import MyLink from 'app/components/MyLink'
+import HeaderWrapper from 'app/components/layout/header/HeaderWrapper'
 import logo from '@public/images/logo.png'
 
 function Header() {
   return (
-    <nav className="absolute top-0 left-0 z-30 py-8 bg-transperent text-light w-full">
+    <HeaderWrapper>
       <div className="amir-container mx-auto flex justify-between items-center">
         <div className="aspect-[256/62] relative h-9">
           <Link href="/">
@@ -35,7 +36,7 @@ function Header() {
           ))}
         </ul>
       </div>
-    </nav>
+    </HeaderWrapper>
   )
 }
 

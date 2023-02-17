@@ -3,11 +3,13 @@ import Teaser from '../shared/components/Teaser'
 
 export default function OurWork({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <Teaser
-      image={{ src: '/images/marketing/corten.webp', alternativeText: 'Perforacja' }}
-      title="Realizacje"
-      specific
-    />
+    <>
+      <Teaser
+        image={{ src: '/images/marketing/corten.webp', alternativeText: 'Perforacja' }}
+        title="Realizacje"
+        specific
+      />
+    </>
   )
 }
 
