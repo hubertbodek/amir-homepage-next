@@ -6,8 +6,8 @@ export default function OurWork({ pageData }: InferGetStaticPropsType<typeof get
     <>
       <Teaser
         image={{ src: '/images/marketing/corten.webp', alternativeText: 'Perforacja' }}
-        title="Realizacje"
-        specific
+        title="Nasze realizacje - Dowód na nasze doświadczenie i kreatywność"
+        label="Realizacje"
       />
     </>
   )

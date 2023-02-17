@@ -6,8 +6,8 @@ export default function Services() {
     <>
       <Teaser
         image={{ src: '/images/marketing/spaw.jpeg', alternativeText: 'Perforacja' }}
-        title="Usługi"
-        specific
+        title="Skorzystaj z naszego doświadczenia"
+        label="Usługi"
       />
     </>
   )

@@ -11,8 +11,8 @@ export default function About({
     <>
       <Teaser
         image={{ src: '/images/marketing/perforation.webp', alternativeText: 'Wzór' }}
-        title="O nas"
-        specific
+        label="O nas"
+        title="Poznaj nas i naszą historię"
       />
       <section className="my-20 amir-container">
         <h2 className="text-h2 max-w-3xl text-left">{headline}</h2>

@@ -10,8 +10,7 @@ export default function Blog({ pageData }: InferGetStaticPropsType<typeof getSta
         <Teaser
           image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
           title="Blog"
-          specific
-          faded
+          label="Blog"
         />
         <section className="amir-container mx-auto grid md:grid-cols-6 py-10 gap-x-6 gap-y-8 -mt-20 relative z-10">
           x

@@ -28,7 +28,8 @@ export default function Home({
     <>
       <Hero
         image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
-        title="Lorem ipsum dolor sit, amet consectetur."
+        title="Innowacyjne rozwiązania metalurgiczne"
+        description="Odkryj naszą ofertę innowacyjnych rozwiązań. Oferujemy wyroby metalowe oraz specjalistyczne usługi metalurgiczne, które zaspokoją Twoje potrzeby."
       >
         <Button theme="light" href="/oferta" className="mt-5">
           Sprawdź ofertę

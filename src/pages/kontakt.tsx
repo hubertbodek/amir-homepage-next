@@ -16,8 +16,8 @@ export default function Contact({ pageData }: InferGetStaticPropsType<typeof get
     <>
       <Teaser
         image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
-        title="Kontakt"
-        specific
+        title="Jesteśmy do Twojej dyspozycji!"
+        label="Kontakt"
       />
       <ContactFormWithMap />
       <section className="my-20 amir-container mx-auto px-4 grid gap-y-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4 justify-center items-start">

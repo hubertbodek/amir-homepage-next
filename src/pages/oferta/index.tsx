@@ -7,8 +7,8 @@ export default function Offer({ pageData }: InferGetStaticPropsType<typeof getSt
     <>
       <Teaser
         image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
-        title="Oferta"
-        specific
+        title="Wybierz to, czego potrzebujesz"
+        label="Oferta"
       />
     </>
   )
