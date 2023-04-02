@@ -7,8 +7,9 @@ interface SideTeaserProps {
   label: string
   title: string
   description: string
-  buttonText: string
+  buttonText?: string
   images: ImageModel[]
+  reversed?: boolean
 }
 
 export default function SideTeaser({
@@ -17,10 +18,15 @@ export default function SideTeaser({
   description,
   buttonText,
   images,
+  reversed = false,
 }: SideTeaserProps) {
   return (
     <section className="amir-container my-16 md:my-32 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 items-center">
-      <div className="relative h-60 md:h-96 lg:h-[600px] max-md:order-last">
+      <div
+        className={`relative h-60 md:h-96 lg:h-[600px] max-md:order-last ${
+          reversed ? 'order-last' : ''
+        }`}
+      >
         {images.map((image, idx) => (
           <Image
             key={image.src}
@@ -39,9 +45,11 @@ export default function SideTeaser({
         <span className="text-orange-700 uppercase text-sm">{label}</span>
         <h2 className="text-h2 font-semibold mt-2 mb-8 max-w-lg md:-ml-6">{title}</h2>
         <p className="lg:text-lg text-gray-800">{description}</p>
-        <Button className="my-8" theme="primary">
-          {buttonText}
-        </Button>
+        {buttonText && (
+          <Button className="my-8" theme="primary">
+            {buttonText}
+          </Button>
+        )}
       </div>
     </section>
   )

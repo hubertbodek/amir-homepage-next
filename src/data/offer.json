@@ -1,0 +1,74 @@
+{
+  "copyText": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe hic quas provident ipsum vel! Cum qui totam eum deserunt laborum eos, enim quis quod fugiat, dolorum autem alias quibusdam vitae dolorem maxime corrupti nihil iusto perferendis facere praesentium repudiandae? Similique officiis ex unde consectetur. Perferendis consequuntur, maxime omnis ipsam nisi autem ut fuga qui molestias doloribus officia rem repellat ratione ipsa porro vel accusamus sit in temporibus quos. Iure nobis dolore nostrum earum voluptatem consectetur obcaecati eius incidunt corrupti accusantium.",
+  "sideTeaser": {
+    "label": "Lorem ipsum dolor sit amet.",
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quaerat.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia at dolore tenetur? Minima modi debitis id et blanditiis, sunt corrupti quibusdam nobis obcaecati. Quo alias quibusdam quod fuga reprehenderit praesentium, doloribus voluptates. Corrupti repudiandae pariatur sapiente quasi rerum rem, porro quisquam minima eaque officia.",
+    "images": [
+      {
+        "src": "/images/offer/siatki-zgrzewane.jpeg",
+        "alternativeText": "Siatki zgrzewane"
+      },
+      {
+        "src": "/images/offer/perforacja.jpeg",
+        "alternativeText": "Perforacja"
+      }
+    ]
+  },
+  "items": [
+    {
+      "url": "/oferta/siatki-zgrzewane",
+      "image": {
+        "src": "/images/realisations/siatka5-min.jpeg",
+        "alternativeText": "Siatki zgrzewane"
+      },
+      "title": "Siatki zgrzewane",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+    },
+    {
+      "url": "/oferta/siatki-plecione",
+      "image": {
+        "src": "/images/realisations/karb2-min.jpg",
+        "alternativeText": "Siatki plecione"
+      },
+      "title": "Siatki plecione (karbowane)",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+    },
+    {
+      "url": "/oferta/dennice",
+      "image": {
+        "src": "/images/realisations/dennica2-min.jpeg",
+        "alternativeText": "Dennice ze stali nierdzewnej"
+      },
+      "title": "Dennice ze stali nierdzewnej",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+    },
+    {
+      "url": "/oferta/tkaniny-metalowe",
+      "image": {
+        "src": "/images/offer/tkanina.jpeg",
+        "alternativeText": "Tkaniny metalowe"
+      },
+      "title": "Tkaniny metalowe",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+    },
+    {
+      "url": "/oferta/siatki-cieto-ciagnione",
+      "image": {
+        "src": "/images/realisations/siatka-cc2-min.jpg",
+        "alternativeText": "Siatki cięto-ciągnione"
+      },
+      "title": "Siatki cięto-ciągnione",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+    },
+    {
+      "url": "/oferta/blacha-perforowana",
+      "image": {
+        "src": "/images/realisations/perf2-min.jpg",
+        "alternativeText": "Blacha perforowana"
+      },
+      "title": "Blacha perforowana",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+    }
+  ]
+}

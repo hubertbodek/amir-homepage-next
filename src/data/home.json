@@ -28,19 +28,19 @@
         "title": "Blacha perforowana - nieskończone mozliwości",
         "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
         "learnMoreUrl": "/",
-        "imageUrl": "/images/marketing/corten02.webp"
+        "imageUrl": "/images/realisations/dennica-min.jpeg"
       },
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
         "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
         "learnMoreUrl": "/",
-        "imageUrl": "/images/marketing/perf-sheet-2.webp"
+        "imageUrl": "/images/realisations/mapa2-min.jpg"
       },
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
         "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
         "learnMoreUrl": "/",
-        "imageUrl": "/images/marketing/perf-sheet.webp"
+        "imageUrl": "/images/realisations/siatka-cc-min.jpeg"
       }
     ]
   },
@@ -77,42 +77,74 @@
     "cards": [
       {
         "image": {
-          "src": "/images/marketing/brama.jpeg",
-          "alternativeText": "Brama"
+          "src": "/images/realisations/stolik3-min.jpg",
+          "alternativeText": "Stolik"
         },
-        "title": "Brama",
+        "title": "Stolik",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
       },
       {
         "image": {
-          "src": "/images/marketing/brama.jpeg",
-          "alternativeText": "Brama"
+          "src": "/images/realisations/stolik-karb3-min.jpg",
+          "alternativeText": "Stolik"
         },
-        "title": "Brama",
+        "title": "Stolik karbowany",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
       },
       {
         "image": {
-          "src": "/images/marketing/brama.jpeg",
-          "alternativeText": "Brama"
+          "src": "/images/realisations/stolik-drewno1-min.jpg",
+          "alternativeText": "Stolik - drewno"
         },
-        "title": "Brama",
+        "title": "Stolik - drewno",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
       },
       {
         "image": {
-          "src": "/images/marketing/brama.jpeg",
-          "alternativeText": "Brama"
+          "src": "/images/realisations/stojak1-min.jpg",
+          "alternativeText": "Stojak"
         },
-        "title": "Brama",
+        "title": "Stojak",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
       },
       {
         "image": {
-          "src": "/images/marketing/brama.jpeg",
-          "alternativeText": "Brama"
+          "src": "/images/realisations/skrzynka22-min.jpg",
+          "alternativeText": "Skrzynka pocztowa"
         },
-        "title": "Brama",
+        "title": "Skrzynka pocztowa",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+      },
+      {
+        "image": {
+          "src": "/images/realisations/paw3-min.jpg",
+          "alternativeText": "Paw wycinany laserowo"
+        },
+        "title": "Paw wycinany laserowo",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+      },
+      {
+        "image": {
+          "src": "/images/realisations/karb2-min.jpg",
+          "alternativeText": "Półka karbowana"
+        },
+        "title": "Półka karbowana",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+      },
+      {
+        "image": {
+          "src": "/images/realisations/mapa1-min.jpg",
+          "alternativeText": "Mapa"
+        },
+        "title": "Mapa",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
+      },
+      {
+        "image": {
+          "src": "/images/realisations/magn-min.jpg",
+          "alternativeText": "Tablica magnetyczna"
+        },
+        "title": "Tablica magnetyczna",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
       }
     ]

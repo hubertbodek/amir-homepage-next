@@ -11,7 +11,7 @@ import type { SideBySideProps } from 'components/home/SideBySide'
 import SideBySide from 'components/home/SideBySide'
 import ServicesSection from 'components/home/ServicesSection'
 import Hero from 'components/shared/Hero'
-import OfferSection from 'components/home/OfferSection'
+import OfferSection from 'components/shared/OfferSection'
 import DesktopCarousel from 'components/shared/carousel/Carousel'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import Button from 'components/shared/Button'
@@ -82,7 +82,7 @@ export default function Home({
           ))}
         </DesktopCarousel>
         <div className="mx-auto flex justify-center items-center mb-12">
-          <Button theme="primary">Zobacz pozostałe</Button>
+          <Button theme="primary">Zobacz wszystkie</Button>
         </div>
       </section>
       <section className="max-w-7xl mx-auto px-4 my-40">
