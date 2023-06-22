@@ -1,0 +1,46 @@
+{
+  "sideTeaser": {
+    "label": "Lorem ipsum dolor sit amet.",
+    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quaerat.",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia at dolore tenetur? Minima modi debitis id et blanditiis, sunt corrupti quibusdam nobis obcaecati. Quo alias quibusdam quod fuga reprehenderit praesentium, doloribus voluptates. Corrupti repudiandae pariatur sapiente quasi rerum rem, porro quisquam minima eaque officia.",
+    "images": [
+      {
+        "src": "/images/offer/siatki-zgrzewane.jpeg",
+        "alternativeText": "Siatki zgrzewane"
+      },
+      {
+        "src": "/images/offer/perforacja.jpeg",
+        "alternativeText": "Perforacja"
+      }
+    ]
+  },
+  "services": {
+    "headline": "Lorem ipsum dolor sit amet consectetur elit.",
+    "items": [
+      {
+        "title": "Blacha perforowana - nieskończone mozliwości",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
+        "learnMoreUrl": "/",
+        "imageUrl": "/images/marketing/corten.webp"
+      },
+      {
+        "title": "Blacha perforowana - nieskończone mozliwości",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
+        "learnMoreUrl": "/",
+        "imageUrl": "/images/realisations/dennica-min.jpeg"
+      },
+      {
+        "title": "Blacha perforowana - nieskończone mozliwości",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
+        "learnMoreUrl": "/",
+        "imageUrl": "/images/realisations/mapa2-min.jpg"
+      },
+      {
+        "title": "Blacha perforowana - nieskończone mozliwości",
+        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
+        "learnMoreUrl": "/",
+        "imageUrl": "/images/realisations/siatka-cc-min.jpeg"
+      }
+    ]
+  }
+}

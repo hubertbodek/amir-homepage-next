@@ -1,6 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import type { LinkProps } from 'next/link'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
 
 interface MyLinkProps extends LinkProps {
@@ -10,7 +12,7 @@ interface MyLinkProps extends LinkProps {
 }
 
 function MyLink({ className = '', activeClassName, children, ...props }: MyLinkProps) {
-  const { pathname } = useRouter()
+  const pathname = usePathname()
   const [activeClass, setActiveClass] = useState<string>('')
 
   useEffect(() => {

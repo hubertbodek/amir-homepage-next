@@ -1,4 +1,5 @@
-import type { InferGetStaticPropsType } from 'next'
+'use client'
+
 import {
   ChartBarSquareIcon,
   // Cog8ToothIcon,
@@ -21,9 +22,9 @@ import homeData from 'data/home.json'
 import SideTeaser from 'components/shared/sections/SideTeaser'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
-export default function Home({
-  pageData: { products, sideTeaser, perks, realisations, blog },
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+const { products, sideTeaser, perks, realisations, blog } = homeData
+
+export default function Page() {
   return (
     <>
       <Hero
@@ -101,9 +102,4 @@ export default function Home({
       <ContactFormWithMap />
     </>
   )
-}
-export const getStaticProps = async () => {
-  return {
-    props: { pageData: homeData },
-  }
 }
