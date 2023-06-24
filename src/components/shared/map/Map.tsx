@@ -1,3 +1,5 @@
+'use client'
+
 import { useMemo } from 'react'
 
 import { GoogleMap, MarkerF, useLoadScript } from '@react-google-maps/api'

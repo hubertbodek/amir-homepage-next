@@ -1,9 +1,7 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
-
 import Teaser from 'components/shared/Teaser'
 
-export default function Blog({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Blog() {
   return (
     <>
       <div className="bg-gradient-to-b from-primary-100 via-primary-100 to-primary">
@@ -43,32 +41,3 @@ export default function Blog({ pageData }: InferGetStaticPropsType<typeof getSta
     </>
   )
 }
-
-export const getStaticProps = async (context: GetStaticPropsContext) => {
-  return {
-    props: { pageData: {} },
-  }
-}
-
-// export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-//   const page = context.query.p
-//   if (!page) {
-//     const response = await getArticles()
-
-//     return {
-//       props: {
-//         articles: response.articles.data,
-//         pagination: response.articles.meta,
-//       },
-//     }
-//   }
-
-//   const response = await getArticles({ page: Number(page) })
-
-//   return {
-//     props: {
-//       articles: response.articles.data,
-//       pagination: response.articles.meta,
-//     },
-//   }
-// }

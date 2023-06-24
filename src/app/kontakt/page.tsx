@@ -1,5 +1,3 @@
-import type { InferGetStaticPropsType } from 'next'
-
 import {
   MapPinIcon,
   PhoneIcon,
@@ -11,7 +9,7 @@ import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 import Teaser from 'components/shared/Teaser'
 import { createElement } from 'react'
 
-export default function Contact({ pageData }: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function Contact() {
   return (
     <>
       <Teaser
@@ -98,9 +96,3 @@ const PersonDetails = ({
     <p className="text-subtitle text-gray-600">{responsibilites}</p>
   </div>
 )
-
-export const getStaticProps = async () => {
-  return {
-    props: { pageData: {} },
-  }
-}
