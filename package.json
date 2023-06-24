@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.13",
-    "@next/font": "^13.4.4",
     "@react-google-maps/api": "^2.18.1",
     "@vercel/analytics": "^0.1.11",
     "class-variance-authority": "^0.6.0",

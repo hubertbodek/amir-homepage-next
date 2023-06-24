@@ -1,5 +1,5 @@
 import type { AppProps } from 'next/app'
-import { Sora } from '@next/font/google'
+import { Sora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react'
 
 import 'styles/globals.css'
