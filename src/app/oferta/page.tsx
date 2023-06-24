@@ -1,15 +1,12 @@
-import type { InferGetStaticPropsType } from 'next'
-import React from 'react'
-
 import SideTeaser from 'components/shared/sections/SideTeaser'
 import Teaser from 'components/shared/Teaser'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
-import data from 'data/offer.json'
+import data from './data.json'
 
-export default function Offer({
-  pageData: { copyText, sideTeaser, items },
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+const { copyText, sideTeaser, items } = data
+
+export default function Offer() {
   return (
     <>
       <Teaser
@@ -35,10 +32,4 @@ export default function Offer({
       <ContactFormWithMap />
     </>
   )
-}
-
-export const getStaticProps = async () => {
-  return {
-    props: { pageData: data },
-  }
 }

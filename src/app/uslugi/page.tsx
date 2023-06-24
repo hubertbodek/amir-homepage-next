@@ -1,15 +1,13 @@
-import type { InferGetStaticPropsType } from 'next'
-
 import SideTeaser from 'components/shared/sections/SideTeaser'
-import Teaser from '../components/shared/Teaser'
-
-import servicesData from 'data/services.json'
+import Teaser from 'components/shared/Teaser'
 import SideBySide, { type SideBySideProps } from 'components/home/SideBySide'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
-export default function Services({
-  pageData: { sideTeaser, services },
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+import servicesData from './data.json'
+
+const { sideTeaser, services } = servicesData
+
+export default function Services() {
   return (
     <>
       <Teaser
@@ -24,10 +22,4 @@ export default function Services({
       <ContactFormWithMap />
     </>
   )
-}
-
-export const getStaticProps = async () => {
-  return {
-    props: { pageData: { ...servicesData } },
-  }
 }

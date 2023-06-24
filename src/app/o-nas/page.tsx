@@ -1,12 +1,9 @@
-import type { InferGetStaticPropsType } from 'next'
-
 import Teaser from 'components/shared/Teaser'
+import aboutData from './data.json'
 
-import aboutData from 'data/about.json'
+const { headline } = aboutData
 
-export default function About({
-  pageData: { headline },
-}: InferGetStaticPropsType<typeof getStaticProps>) {
+export default function About() {
   return (
     <>
       <Teaser
@@ -19,10 +16,4 @@ export default function About({
       </section>
     </>
   )
-}
-
-export const getStaticProps = async () => {
-  return {
-    props: { pageData: aboutData },
-  }
 }

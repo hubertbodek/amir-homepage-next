@@ -17,10 +17,10 @@ import DesktopCarousel from 'components/shared/carousel/Carousel'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import Button from 'components/shared/Button'
 import PerforationPattern from 'components/shared/patterns/PerforationPattern'
-
-import homeData from 'data/home.json'
 import SideTeaser from 'components/shared/sections/SideTeaser'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
+
+import homeData from 'app/data.json'
 
 const { products, sideTeaser, perks, realisations, blog } = homeData
 

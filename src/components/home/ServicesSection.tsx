@@ -1,6 +1,5 @@
-import React from 'react'
-import servicesImg from '@public/images/marketing/uslugi.webp'
 import Image from 'next/image'
+import servicesImg from '@public/images/marketing/uslugi.webp'
 import Button from 'components/shared/Button'
 
 export default function ServicesSection() {
