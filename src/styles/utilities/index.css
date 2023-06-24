@@ -16,7 +16,7 @@
 
   .image-overlay::before {
     content: '';
-    @apply block absolute h-full w-full max-md:bg-primary/70 md:bg-gradient-to-r from-transparent to-primary-100 z-20;
+    @apply block absolute h-full w-full max-md:bg-primary/70 md:bg-gradient-to-r from-transparent to-primary z-20;
   }
 
   .image-overlay::after {

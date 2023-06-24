@@ -1,7 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ['class'],
-  content: ['.src/pages/**/*.{ts,tsx}', '.src/components/**/*.{ts,tsx}', '.src/app/**/*.{ts,tsx}'],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
   theme: {
     container: {
       center: true,
@@ -82,37 +87,4 @@ module.exports = {
     },
   },
   plugins: [require('tailwindcss-animate')],
-}
-
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        primary: {
-          DEFAULT: '#0A2130',
-          100: '#0C2736',
-        },
-        secondary: {
-          DEFAULT: '#0177B3',
-          100: '#0ea5e9',
-        },
-        dark: '#1a1a1a',
-        tertiary: {
-          DEFAULT: '#73450E',
-          100: '#733410',
-          200: '#592411',
-          300: '#40170E',
-          400: '#260A07',
-        },
-        light: '#EDEDED',
-      },
-      boxShadow: {
-        'inner-lg': 'inset -1px 2px 3px 0 rgba(0, 0, 0, 0.2)',
-        'inner-xl': 'inset -1px 2px 4px 0 rgba(0, 0, 0, 0.3)',
-      },
-    },
-  },
-  plugins: [],
 }

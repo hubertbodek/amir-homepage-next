@@ -4,7 +4,7 @@ import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 import data from './data.json'
 
-const { copyText, sideTeaser, items } = data
+const { copyText, sideTeaser, main } = data
 
 export default function Offer() {
   return (
@@ -17,13 +17,10 @@ export default function Offer() {
       <p className="mx-auto max-w-prose px-4 py-24 text-subtitle">{copyText}</p>
       <SideTeaser {...sideTeaser} reversed />
       <section className="amir-container mx-auto my-24 md:my-36">
-        <h2 className="text-h2 mb-8 font-bold">Lorem ipsum dolor sit amet.</h2>
-        <p className="max-w-prose mb-6">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque debitis suscipit
-          totam id pariatur vero sapiente in praesentium voluptatibus labore!
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
-          {items.map((item, idx) => (
+        <h2 className="text-h2 mb-8 font-bold">{main.header}</h2>
+        <p className="max-w-prose mb-6">{main.description}</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8">
+          {main.items.map((item, idx) => (
             <VerticalOverlayCard key={`item--${idx}`} {...item} overlay />
           ))}
         </div>
