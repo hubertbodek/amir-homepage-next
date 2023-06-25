@@ -20,11 +20,11 @@ const MyLink = forwardRef<React.ElementRef<typeof Link>, MyLinkProps>(function M
   const [activeClass, setActiveClass] = useState<string>('')
 
   useEffect(() => {
-    if (!activeClassName) {
+    if (!activeClassName || typeof props.href !== 'string') {
       return
     }
 
-    pathname === props.href ? setActiveClass(activeClassName) : setActiveClass('')
+    pathname.includes(props.href) ? setActiveClass(activeClassName) : setActiveClass('')
   }, [activeClassName, pathname, props.href])
 
   return (

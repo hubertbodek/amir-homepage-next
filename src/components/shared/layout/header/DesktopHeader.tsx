@@ -15,7 +15,7 @@ import logo from '@public/images/logo.png'
 
 export default function DesktopHeader() {
   return (
-    <div className="amir-container mx-auto flex justify-between items-center">
+    <div className="amir-container mx-auto justify-between items-center hidden md:flex">
       <div className="aspect-[256/62] relative h-9">
         <Link href="/">
           <Image

@@ -7,10 +7,6 @@ export default function useHeader() {
   const [isScrollingDown, setIsScrollingDown] = useState(false)
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
-      return
-    }
-
     let oldScrollY = window.scrollY
 
     function scrollHandler() {

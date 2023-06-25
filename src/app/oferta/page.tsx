@@ -14,8 +14,7 @@ export default function Offer() {
         title="Wybierz to, czego potrzebujesz"
         label="Oferta"
       />
-      <p className="mx-auto max-w-prose px-4 py-24 text-subtitle">{copyText}</p>
-      <SideTeaser {...sideTeaser} reversed />
+      <p className="mx-auto max-w-prose px-4 my-24 text-subtitle">{copyText}</p>
       <section className="amir-container mx-auto my-24 md:my-36">
         <h2 className="text-h2 mb-8 font-bold">{main.header}</h2>
         <p className="max-w-prose mb-6">{main.description}</p>
