@@ -71,7 +71,7 @@ export default function Page() {
       <ServicesSection />
       <section className="my-36">
         <h2 className="relative amir-container text-h2 text-center uppercase font-bold text-neutral-800">
-          <div className="absolute -top-6 right-0 md:right-1/4 h-16 md:h-36 w-32 md:w-56 z-0 text-primary-100">
+          <div className="absolute -top-6 right-0 md:right-1/4 h-16 md:h-36 w-32 md:w-56 z-0 text-primary">
             <PerforationPattern fill="fill-sky-600/30" />
           </div>
           {realisations.title}

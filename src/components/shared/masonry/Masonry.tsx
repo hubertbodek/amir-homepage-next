@@ -23,7 +23,7 @@ export default function Masonry({ items }: MasonryProps) {
               height={300}
               className="h-auto object-contain w-full rounded"
             />
-            <div className="absolute top-0 left-0 z-10 bg-primary-100/10 group-hover:bg-transparent max-lg:bg-gradient-to-b group-hover:lg:bg-gradient-to-b from-transparent via-primary-100/10 to-primary-100/80 w-full h-full transition duration-300" />
+            <div className="absolute top-0 left-0 z-10 bg-primary/10 group-hover:bg-transparent max-lg:bg-gradient-to-b group-hover:lg:bg-gradient-to-b from-transparent via-primary/10 to-primary/80 w-full h-full transition duration-300" />
             <span className="text-h4 absolute bottom-0 left-0 w-full lg:translate-y-full group-hover:lg:translate-y-0 transition ease-out duration-300 text-gray-100 z-20 px-5 pb-2">
               {item.name}
             </span>

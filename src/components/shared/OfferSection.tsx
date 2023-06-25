@@ -7,7 +7,7 @@ export default function OfferSection() {
 
   return (
     <section className="amir-container mx-auto py-24 px-4">
-      <h2 className="text-h2 text-left uppercase font-bold text-primary-100 md:mb-8 flex items-center space-x-6">
+      <h2 className="text-h2 text-left uppercase font-bold text-primary md:mb-8 flex items-center space-x-6">
         Nasza oferta
         <span className="h-0.5 bg-gray-900/80 flex-1 ml-8" />
       </h2>

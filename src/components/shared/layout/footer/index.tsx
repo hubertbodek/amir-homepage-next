@@ -9,7 +9,7 @@ const { columns } = footerData
 
 function Footer() {
   return (
-    <footer className="bg-primary-100 text-light px-4">
+    <footer className="bg-primary text-light px-4">
       <div className="amir-container py-12 flex justify-between mx-auto !px-0 max-lg:flex-col">
         <div className="mb-8">
           <Link href="/">

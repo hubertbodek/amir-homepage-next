@@ -4,7 +4,7 @@ import Teaser from 'components/shared/Teaser'
 export default function Blog() {
   return (
     <>
-      <div className="bg-gradient-to-b from-primary-100 via-primary-100 to-primary">
+      <div className="bg-gradient-to-b from-primary via-primary to-primary">
         <Teaser
           image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
           title="Blog"
