@@ -6,8 +6,18 @@
   }
 
   body {
+    @apply bg-light;
+
     & > * {
-      @apply bg-light;
+      /* @apply bg-light; */
+    }
+  }
+
+  ul.custom-list {
+    li::before {
+      content: '\00B7';
+
+      @apply inline-block text-blue-900 text-lg mr-2;
     }
   }
 }

@@ -10,6 +10,8 @@ export interface HeroProps {
 }
 
 export default function Hero({ image, title, label }: HeroProps) {
+  const isImageTypeofString = typeof image.src === 'string'
+
   return (
     <div className="relative w-full h-[480px]">
       <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/70 to-black" />
@@ -17,6 +19,7 @@ export default function Hero({ image, title, label }: HeroProps) {
         src={image.src}
         alt={image.alternativeText}
         fill
+        placeholder={!isImageTypeofString ? 'blur' : undefined}
         className="object-cover object-center"
         priority
       />

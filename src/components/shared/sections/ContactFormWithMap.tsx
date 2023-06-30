@@ -7,7 +7,10 @@ const DynamicMap = dynamic(() => import('../map/Map'), {
 
 export default function ContactFormWithMap() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px] 2xl:amir-container gap-x-4 my-24">
+    <div
+      id="contact-form"
+      className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px] 2xl:amir-container gap-x-4 my-24"
+    >
       <div className="max-w-lg py-12 mx-auto px-4">
         <h2 className="text-h2 font-semibold text-primary mb-8 uppercase">
           Skontaktuj się z nami!
