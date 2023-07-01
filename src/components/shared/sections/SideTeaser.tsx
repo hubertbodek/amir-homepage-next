@@ -29,7 +29,7 @@ export default function SideTeaser({
       >
         {images.map((image, idx) => (
           <Image
-            key={image.src}
+            key={`side-teaser-image-${idx}`}
             src={image.src}
             alt={image.alternativeText}
             fill
