@@ -1,0 +1,61 @@
+{
+  "teaser": {
+    "image": "/images/offer/siatki-zgrzewane.jpeg"
+  },
+  "content": [
+    {
+      "__typename": "SideTeaser",
+      "label": "Zastosowanie.",
+      "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quaerat.",
+      "description": "Szerokie zastosowanie znalazła w branzy architektonicznej dzięki możliwości uzyskania wrażenia głębi i perspektywy, co daje dodatkową atrakcyjność wizualną i estetyczną. Dzięki trójwymiarowemu efektowi, siatka cięto-ciągniona staje się nie tylko funkcjonalnym rozwiązaniem, ale również elementem dekoracyjnym.  ",
+      "images": [
+        {
+          "src": "/images/marketing/orange-fence.jpeg",
+          "alternativeText": "Cutter"
+        },
+        {
+          "src": "/images/marketing/siatki.jpeg",
+          "alternativeText": "Cutter"
+        }
+      ]
+    },
+    {
+      "__typename": "Prose",
+      "heading": "Inne zastosowania siatki cięto-ciągnionej.",
+      "text": "Siatka cięto-ciągniona może być stosowana jako elewacja budynku, element ochronny na rusztowaniach, balustradach czy schodach. Jest nie tylko trwała, ale również estetyczna. W zakładach przemysłowych może pełnić formę ochrony maszyn. Zapewni nie tylko fizyczną ochronę, ale także umożliwi swobodny przepływ powietrza i światła. Generalnie znajduje one swoje zastosowanie w wielu sektorach przemysłu."
+    },
+    {
+      "__typename": "ContactCta",
+      "image": {
+        "src": "/images/marketing/handshake.jpeg",
+        "width": 400,
+        "height": 300
+      },
+      "heading": "Zainteresowany współpracą?",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores consequatur, amet non voluptatum quasi fugit, esse sit voluptatem possimus consectetur nisi corporis excepturi necessitatibus, facere dolore deleniti fugiat perferendis cupiditate?"
+    },
+    {
+      "__typename": "IconCardsSection",
+      "cards": [
+        {
+          "icon": "container",
+          "title": "Materiały",
+          "description": "Mamy szeroki wybór materiałów, takich jak stal zwykła, ocynkowana, aluminium i stal nierdzewna. Siatki te możemy zaoferować również wykończone poprzez lakierowanie proszkowe w dowolnym kolorze."
+        },
+        {
+          "icon": "param",
+          "title": "Parametry",
+          "description": "Jeżeli chodzi o parametry mamy w ofercie, od najdrobniejszych stosowanych m.in. w filtrach, aż po bardzo duże architektoniczne."
+        },
+        {
+          "icon": "arrow-right-left",
+          "title": "Dopasowanie",
+          "description": "Siatki oferowane są w dowolnych arkuszach lub w zwojach. Umożliwia to łatwe dopasowanie siatki do konkretnego projektu, dzięki czemu można osiągnąć pożądane efekty."
+        }
+      ]
+    },
+    {
+      "__typename": ""
+    }
+  ]
+}
