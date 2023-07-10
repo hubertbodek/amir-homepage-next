@@ -1,8 +1,8 @@
 import siatkaCcTeaserImg from '@public/images/marketing/metal-pattern.jpeg'
 
-import { getFileContent } from 'lib/static-data'
-import BlockMapper, { type BlockProps } from 'components/blocks/Block'
+// import BlockMapper, { type BlockProps } from 'components/blocks/Block'
 import Teaser from 'components/shared/Teaser'
+import { getOffers } from '@sanity/schemas/api/services'
 
 const offers = [
   { slug: 'siatka-cieto-ciagniona', title: 'Siatka cięto-ciągniona', teaserImg: siatkaCcTeaserImg },
@@ -21,30 +21,21 @@ interface OfferParams {
 }
 
 export default async function Offer({ params }: OfferParams) {
-  const data = await getFileContent({
-    dir: 'app/oferta/[slug]/data',
-    filename: params.slug,
-  })
+  const offer = await getOffers()
 
-  const getOffer = (name: string) => {
-    const offer = offers.find((offer) => offer.slug === name)
-
-    return offer
-  }
-
-  const offer = getOffer(params.slug)
+  console.log(offer)
 
   return (
     <>
       {offer && (
         <Teaser
-          image={{ src: offer.teaserImg, alternativeText: offer.title }}
-          title={offer.title}
+          image={{ src: siatkaCcTeaserImg, alternativeText: 'Teaser' }}
+          title="Oferta"
           label="Oferta"
         />
       )}
 
-      <BlockMapper blocks={data.content as BlockProps[]} />
+      {/* <BlockMapper blocks={data.content as BlockProps[]} /> */}
     </>
   )
 }
