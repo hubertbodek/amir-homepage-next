@@ -6,6 +6,7 @@ import Button from 'components/shared/Button'
 import useSideBySideTheme from 'hooks/themes/useSideBySideTheme'
 import { useMemo, useRef } from 'react'
 import useIntersectionObserver from 'hooks/useIntersectionObserver'
+import getImageSizes from 'utlis/getImageSizes'
 
 export interface SideBySideItemProps {
   title: string
@@ -69,7 +70,13 @@ export default function SideBySideItem({
       </div>
       <div className={`${styles.imageContainer} h-64 md:h-[668px] relative`}>
         <div className="absolute top-0 h-full w-full shadow-2xl shadow-secondary-100/20">
-          <Image src={imageUrl} alt="Produkt" fill className="object-cover object-center" />
+          <Image
+            src={imageUrl}
+            alt="Produkt"
+            sizes={getImageSizes('98vw', '30vw', '510px')}
+            fill
+            className="object-cover object-center"
+          />
         </div>
       </div>
     </div>

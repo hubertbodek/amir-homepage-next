@@ -7,11 +7,11 @@
     "images": [
       {
         "src": "/images/marketing/orange-fence.jpeg",
-        "alternativeText": "Cutter"
+        "alt": "Cutter"
       },
       {
         "src": "/images/marketing/siatki.jpeg",
-        "alternativeText": "Cutter"
+        "alt": "Cutter"
       }
     ]
   },
@@ -78,7 +78,7 @@
       {
         "image": {
           "src": "/images/realisations/stolik3-min.jpg",
-          "alternativeText": "Stolik"
+          "alt": "Stolik"
         },
         "title": "Stolik",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -86,7 +86,7 @@
       {
         "image": {
           "src": "/images/realisations/stolik-karb3-min.jpg",
-          "alternativeText": "Stolik"
+          "alt": "Stolik"
         },
         "title": "Stolik karbowany",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -94,7 +94,7 @@
       {
         "image": {
           "src": "/images/realisations/stolik-drewno1-min.jpg",
-          "alternativeText": "Stolik - drewno"
+          "alt": "Stolik - drewno"
         },
         "title": "Stolik - drewno",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -102,7 +102,7 @@
       {
         "image": {
           "src": "/images/realisations/stojak1-min.jpg",
-          "alternativeText": "Stojak"
+          "alt": "Stojak"
         },
         "title": "Stojak",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -110,7 +110,7 @@
       {
         "image": {
           "src": "/images/realisations/skrzynka22-min.jpg",
-          "alternativeText": "Skrzynka pocztowa"
+          "alt": "Skrzynka pocztowa"
         },
         "title": "Skrzynka pocztowa",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -118,7 +118,7 @@
       {
         "image": {
           "src": "/images/realisations/paw3-min.jpg",
-          "alternativeText": "Paw wycinany laserowo"
+          "alt": "Paw wycinany laserowo"
         },
         "title": "Paw wycinany laserowo",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -126,7 +126,7 @@
       {
         "image": {
           "src": "/images/realisations/karb2-min.jpg",
-          "alternativeText": "Półka karbowana"
+          "alt": "Półka karbowana"
         },
         "title": "Półka karbowana",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -134,7 +134,7 @@
       {
         "image": {
           "src": "/images/realisations/mapa1-min.jpg",
-          "alternativeText": "Mapa"
+          "alt": "Mapa"
         },
         "title": "Mapa",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -142,7 +142,7 @@
       {
         "image": {
           "src": "/images/realisations/magn-min.jpg",
-          "alternativeText": "Tablica magnetyczna"
+          "alt": "Tablica magnetyczna"
         },
         "title": "Tablica magnetyczna",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, et."
@@ -154,17 +154,17 @@
     "description": "",
     "items": [
       {
-        "image": { "src": "/images/marketing/brama2.jpeg", "alternativeText": "Brama" },
+        "image": { "src": "/images/marketing/brama2.jpeg", "alt": "Brama" },
         "title": "Wpis 1",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab, fuga enim neque nostrum nemo!"
       },
       {
-        "image": { "src": "/images/marketing/brama2.jpeg", "alternativeText": "Brama" },
+        "image": { "src": "/images/marketing/brama2.jpeg", "alt": "Brama" },
         "title": "Wpis 1",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab, fuga enim neque nostrum nemo!"
       },
       {
-        "image": { "src": "/images/marketing/brama2.jpeg", "alternativeText": "Brama" },
+        "image": { "src": "/images/marketing/brama2.jpeg", "alt": "Brama" },
         "title": "Wpis 1",
         "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At ab, fuga enim neque nostrum nemo!"
       }

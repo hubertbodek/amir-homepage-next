@@ -1,6 +1,6 @@
 import { type StaticImageData } from 'next/image'
 
-export interface ImageModel {
+export interface StaticImageModel {
   src: string | StaticImageData
-  alternativeText: string
+  alt: string
 }

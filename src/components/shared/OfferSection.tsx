@@ -1,6 +1,7 @@
 import Button from 'components/shared/Button'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import getImageSizes from 'utlis/getImageSizes'
 
 export default function OfferSection() {
   const [activeItem, setActiveItem] = useState<number>(0)
@@ -37,7 +38,13 @@ export default function OfferSection() {
                 activeItem === idx ? 'translate-x-0' : 'translate-x-[150%]'
               }`}
             >
-              <Image src={offer.imageUrl} alt={offer.title} fill className="shadow-xl y-4" />
+              <Image
+                src={offer.imageUrl}
+                sizes={getImageSizes('95vw', '65vw', '960px')}
+                alt={offer.title}
+                fill
+                className="shadow-xl y-4"
+              />
             </div>
           ))}
         </div>

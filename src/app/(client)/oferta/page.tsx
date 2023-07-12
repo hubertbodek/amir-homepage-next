@@ -10,7 +10,7 @@ export default function Offer() {
   return (
     <>
       <Teaser
-        image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
+        image={{ src: '/images/marketing/metal-pattern.jpeg', alt: 'Perforacja' }}
         title="Wybierz to, czego potrzebujesz"
         label="Oferta"
       />

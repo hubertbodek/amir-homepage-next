@@ -7,11 +7,11 @@
     "images": [
       {
         "src": "/images/offer/siatki-zgrzewane.jpeg",
-        "alternativeText": "Siatki zgrzewane"
+        "alt": "Siatki zgrzewane"
       },
       {
         "src": "/images/offer/perforacja.jpeg",
-        "alternativeText": "Perforacja"
+        "alt": "Perforacja"
       }
     ]
   },
@@ -23,7 +23,7 @@
         "url": "/oferta/siatka-cieto-ciagniona",
         "image": {
           "src": "/images/realisations/siatka5-min.jpeg",
-          "alternativeText": "Siatki zgrzewane"
+          "alt": "Siatki zgrzewane"
         },
         "title": "Siatka cięto-ciągniona",
         "description": "funkcjonalność i estetyka w architekturze oraz przemyśle."
@@ -32,7 +32,7 @@
         "url": "/oferta/dennice",
         "image": {
           "src": "/images/realisations/dennica2-min.jpeg",
-          "alternativeText": "Dennice ze stali nierdzewnej"
+          "alt": "Dennice ze stali nierdzewnej"
         },
         "title": "Dennice",
         "description": "różnorodność rozmiarów i trwałość dla projektów przemysłowych i transportowych."
@@ -41,7 +41,7 @@
         "url": "/oferta/blacha-perforowana",
         "image": {
           "src": "/images/offer/tkanina.jpeg",
-          "alternativeText": "Tkaniny metalowe"
+          "alt": "Tkaniny metalowe"
         },
         "title": "Blacha perforowana",
         "description": "nowoczesna ozdoba i praktyczne rozwiązanie w różnych branżach."
@@ -50,7 +50,7 @@
         "url": "/oferta/siatka-pleciona",
         "image": {
           "src": "/images/realisations/siatka-cc2-min.jpg",
-          "alternativeText": "Siatki cięto-ciągnione"
+          "alt": "Siatki cięto-ciągnione"
         },
         "title": "Siatka pleciona",
         "description": "wszechstronne zastosowanie w przemyśle i architekturze."
@@ -59,7 +59,7 @@
         "url": "/oferta/tkaniny-metalowe",
         "image": {
           "src": "/images/realisations/perf2-min.jpg",
-          "alternativeText": "Blacha perforowana"
+          "alt": "Blacha perforowana"
         },
         "title": "Tkaniny metalowe",
         "description": "stosowane jako osłony, moskitiery, filtry, sita oraz jako elementy dekoracyjne."
@@ -68,7 +68,7 @@
         "url": "/oferta/siatka-zgrzewana",
         "image": {
           "src": "/images/realisations/perf2-min.jpg",
-          "alternativeText": "Blacha perforowana"
+          "alt": "Blacha perforowana"
         },
         "title": "Siatka zgrzewana",
         "description": "lekka, sztywna konstrukcja i konkurencyjna cena w przemyśle i architekturze."
@@ -77,7 +77,7 @@
         "url": "/oferta/sprezyny",
         "image": {
           "src": "/images/realisations/perf2-min.jpg",
-          "alternativeText": "Blacha perforowana"
+          "alt": "Blacha perforowana"
         },
         "title": "Sprężyny",
         "description": "lekka, sztywna konstrukcja i konkurencyjna cena w przemyśle i architekturze."

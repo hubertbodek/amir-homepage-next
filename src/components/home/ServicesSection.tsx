@@ -7,7 +7,13 @@ export default function ServicesSection() {
     <div className="h-[684px] relative text-light bg-primary">
       <div className="md:mb-12 h-full w-full relative">
         <div className="image-overlay absolute top-0 left-0 h-full w-full z-10">
-          <Image src={servicesImg} alt="Spawacz" fill className="object-cover object-center" />
+          <Image
+            src={servicesImg}
+            alt="Spawacz"
+            fill
+            sizes="100vw"
+            className="object-cover object-center"
+          />
         </div>
         <div className="amir-container mx-auto !px-0 lg:!px-16 relative flex h-full items-center justify-center md:justify-end z-30">
           <div className="flex flex-col items-center justify-center">

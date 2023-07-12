@@ -25,14 +25,7 @@ export default function MobileHeader() {
     <div className="flex md:hidden items-center px-4 w-full justify-between">
       <div className="aspect-[256/62] relative h-9">
         <Link href="/">
-          <Image
-            src={logo}
-            alt="Logo"
-            sizes="(max-width: 768px) 25vw,
-              (max-width: 1200px) 15vw,
-              10vw"
-            fill
-          />
+          <Image src={logo} alt="Logo" width={256} height={62} />
         </Link>
       </div>
       <Sheet>

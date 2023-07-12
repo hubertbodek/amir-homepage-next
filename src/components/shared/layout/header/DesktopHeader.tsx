@@ -18,14 +18,7 @@ export default function DesktopHeader() {
     <div className="amir-container mx-auto justify-between items-center hidden md:flex">
       <div className="aspect-[256/62] relative h-9">
         <Link href="/">
-          <Image
-            src={logo}
-            alt="Logo"
-            sizes="(max-width: 768px) 25vw,
-              (max-width: 1200px) 15vw,
-              10vw"
-            fill
-          />
+          <Image src={logo} alt="Logo" width={256} height={62} />
         </Link>
       </div>
       <NavigationMenu>

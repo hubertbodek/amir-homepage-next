@@ -22,7 +22,7 @@ export interface Format {
 
 export interface StrapiImageModel {
   name: string
-  alternativeText: string
+  alt: string
   caption: string
   width: number
   height: number

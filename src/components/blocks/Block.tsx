@@ -18,16 +18,16 @@ const blocks = {
 
 type TypeName = keyof typeof blocks
 
-export type BlockProps = {
-  __typename: TypeName
+export type BlockModel = {
+  _type: TypeName
 } & Parameters<typeof blocks[TypeName]>[0]
 
 const Block = blocksMapperFactory(blocks)
 
-export default function BlockMapper({ blocks }: { blocks: BlockProps[] }) {
+export default function BlockMapper({ blocks }: { blocks: BlockModel[] }) {
   return (
     <>
-      {blocks?.map(({ __typename: typeName, ...props }, index) => (
+      {blocks?.map(({ _type: typeName, ...props }, index) => (
         <Block key={`${typeName as string}--${index}`} typeName={typeName} props={props} />
       ))}
     </>
