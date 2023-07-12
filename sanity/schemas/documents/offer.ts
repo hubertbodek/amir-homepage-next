@@ -1,6 +1,7 @@
 import { defineType } from 'sanity'
 import { type ImageData } from '../objects/image-data'
 import { type BlockModel } from 'components/blocks/Block'
+import { blockTypes } from '../blocks'
 
 export interface OfferDocument {
   title: string
@@ -39,7 +40,7 @@ export default defineType({
       name: 'blocks',
       title: 'Blocks',
       type: 'array',
-      of: [{ type: 'SideTeaser' }, { type: 'Prose' }],
+      of: blockTypes,
     },
   ],
 })

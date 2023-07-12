@@ -16,6 +16,8 @@ const icons = {
   'arrow-right-left': ArrowRightLeft,
 } as const
 
+export const iconsList = Object.keys(icons)
+
 export type IconType = keyof typeof icons
 
 export default function Icon({ icon: type, className }: { icon: IconType; className?: string }) {

@@ -10,14 +10,11 @@ export default function blocksMapperFactory<TMap extends ComponentMap>(contentTy
     typeName: TypeName
     props: Parameters<TMap[TypeName]>[0]
   }) {
-    console.log({ typeName, props })
     const Component = contentTypeMap[typeName]
 
     if (!Component) {
       return null
     }
-
-    console.log({ typeName })
 
     return createElement(Component, props)
   }
