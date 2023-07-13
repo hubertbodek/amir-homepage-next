@@ -1,21 +1,22 @@
 import { groq } from 'next-sanity'
-import { client } from '../client'
+import { clientFetch } from '../client'
+import { type ImageData } from '@sanity/schemas/objects/image-data'
 
-interface OffersResponse {
-  slug: {
-    current: string
-  }
-  mainImageUrl: string
+interface Offer {
+  title: string
+  slug: string
+  mainImage: ImageData
 }
 
 const getOffers = async () => {
   const query = groq`*[_type == "offer"]{
+    title,
     "slug": slug.current,
     "mainImage": mainImage
   }`
-  const offers = await client.fetch(query)
+  const offers = await clientFetch<Offer[]>(query)
 
-  return offers as OffersResponse[]
+  return offers
 }
 
 export default getOffers

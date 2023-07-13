@@ -1,9 +1,8 @@
 // import siatkaCcTeaserImg from '@public/images/marketing/metal-pattern.jpeg'
+import { getOffers, getOfferBySlug } from '@sanity/api/services'
 
 import BlockMapper from 'components/blocks/Block'
 import Teaser from 'components/shared/Teaser'
-import { getOffers } from '@sanity/api/services'
-import getOfferBySlug from '@sanity/api/services/getOfferBySlug'
 
 interface OfferParams {
   params: {
@@ -18,7 +17,7 @@ export default async function Offer({ params }: OfferParams) {
 
   return (
     <>
-      <Teaser image={offer.mainImage} title="Oferta" label="Oferta" />
+      <Teaser image={offer.mainImage} title={offer.title} label="Oferta" />
       <BlockMapper blocks={offer.blocks} />
     </>
   )
@@ -27,5 +26,5 @@ export default async function Offer({ params }: OfferParams) {
 export async function generateStaticParams() {
   const offers = await getOffers()
 
-  return offers.map((offer) => ({ slug: offer.slug.current }))
+  return offers.map((offer) => ({ slug: offer.slug }))
 }

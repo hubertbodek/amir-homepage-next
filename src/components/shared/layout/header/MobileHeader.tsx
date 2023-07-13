@@ -1,3 +1,6 @@
+'use client'
+
+import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu } from 'lucide-react'
@@ -13,10 +16,9 @@ import {
   AccordionTrigger,
   AccordionContent,
 } from 'components/ui/accordion'
-import sitemap from 'constants/sitemap'
-import React from 'react'
+import type { Sitemap } from 'constants/sitemap'
 
-export default function MobileHeader() {
+export default function MobileHeader({ sitemap }: { sitemap: Sitemap }) {
   const sheetTriggerRef = React.useRef<HTMLButtonElement>(null)
 
   const closeSheet = () => sheetTriggerRef.current?.click()

@@ -1,14 +1,23 @@
-'use client'
-
+import { getOffers } from '@sanity/api/services'
+import getSitemap from 'constants/sitemap'
 import DesktopHeader from './DesktopHeader'
-import HeaderWrapper from './HeaderWrapper'
 import MobileHeader from './MobileHeader'
+import HeaderWrapper from './HeaderWrapper'
 
-function Header() {
+async function Header() {
+  const offers = await getOffers()
+
+  const offerSubroutes = offers.map((offer) => ({
+    title: offer.title,
+    link: `/oferta/${offer.slug}`,
+  }))
+
+  const sitemap = getSitemap({ offerSubroutes })
+
   return (
     <HeaderWrapper>
-      <MobileHeader />
-      <DesktopHeader />
+      <MobileHeader sitemap={sitemap} />
+      <DesktopHeader sitemap={sitemap} />
     </HeaderWrapper>
   )
 }
