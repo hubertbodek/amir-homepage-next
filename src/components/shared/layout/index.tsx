@@ -8,6 +8,7 @@ interface LayoutProps {
 function Layout({ children }: LayoutProps) {
   return (
     <>
+      {/* @ts-expect-error Async Server Component */}
       <Header />
       <main className="min-h-screen">{children}</main>
       <Footer />

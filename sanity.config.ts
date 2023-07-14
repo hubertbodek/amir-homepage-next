@@ -1,15 +1,26 @@
-import { defineConfig } from 'sanity'
+import { defineConfig, isDev } from 'sanity'
+import { visionTool } from '@sanity/vision'
 import { deskTool } from 'sanity/desk'
 import { schemaTypes } from './sanity/schemas'
+import { structure } from './sanity/structure'
+import { table } from '@sanity/table'
+
+const devOnlyPlugins = [visionTool()]
 
 export default defineConfig({
   name: 'default',
   title: 'Amir Admin',
-  projectId: '940pe5u1',
-  dataset: 'production',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET ?? 'production',
   basePath: '/admin',
   apiVersion: '2023-07-10',
-  plugins: [deskTool()],
+  plugins: [
+    table(),
+    deskTool({
+      structure,
+    }),
+    ...(isDev ? devOnlyPlugins : []),
+  ],
   schema: {
     types: schemaTypes,
   },

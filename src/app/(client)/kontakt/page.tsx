@@ -13,7 +13,7 @@ export default function Contact() {
   return (
     <>
       <Teaser
-        image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
+        image={{ src: '/images/marketing/metal-pattern.jpeg', alt: 'Perforacja' }}
         title="Jesteśmy do Twojej dyspozycji!"
         label="Kontakt"
       />

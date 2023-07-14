@@ -21,7 +21,7 @@ export default function ArticleCard({
   slug,
   isLatest = false,
 }: ArticleCardProps) {
-  const { url, alternativeText } = image.data.attributes
+  const { url, alt } = image.data.attributes
   const articleUrl = `/blog/${slug}`
 
   return (
@@ -53,7 +53,7 @@ export default function ArticleCard({
           Czytaj
         </Button>
       </div>
-      <Image src={url} alt={alternativeText} fill className="object-cover object-center z-0" />
+      <Image src={url} alt={alt} fill className="object-cover object-center z-0" />
     </article>
   )
 }

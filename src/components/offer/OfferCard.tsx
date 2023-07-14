@@ -2,6 +2,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+import offerCardImg from '@public/images/marketing/tkanina.png'
+
 export default function OfferCard() {
   return (
     <article>
@@ -10,7 +12,7 @@ export default function OfferCard() {
           <span className="text-hover-effect">Siatki zgrzewane</span>
         </h3>
         <div className="group relative h-56 md:h-80 hover:scale-105 transition duration-300">
-          <Image src="/images/marketing/tkanina.png" alt="tkanina" fill />
+          <Image src={offerCardImg} alt="tkanina" fill />
         </div>
       </Link>
     </article>

@@ -1,9 +1,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import type { ImageModel } from '../../../types/ImageModel'
+import type { StaticImageModel } from '../../../types/StaticImageModel'
+import getImageSizes from 'utlis/getImageSizes'
 
 export interface VerticalOverlayCardProps {
-  image: ImageModel
+  image: StaticImageModel
   title: string
   url?: string
   description?: string
@@ -22,13 +23,14 @@ export default function VerticalOverlayCard({
   overlay = false,
 }: VerticalOverlayCardProps) {
   return (
-    <div
-      className={`group relative w-full h-[486px] overflow-hidden shadow-lg hover:shadow-2xl transition rounded ${className}`}
-    >
-      <Link href={url}>
+    <Link href={url} className="h-full w-full">
+      <div
+        className={`group relative w-full h-[486px] overflow-hidden shadow-lg hover:shadow-2xl transition rounded ${className}`}
+      >
         <Image
           src={image.src}
-          alt={image.alternativeText}
+          alt={image.alt}
+          sizes={getImageSizes('95vw', '45vw', '305px')}
           fill
           className="object-cover object-center group-hover:scale-110 transition duration-300 ease-out"
         />
@@ -40,7 +42,7 @@ export default function VerticalOverlayCard({
           <p className="text-gray-300/90">{description}</p>
           {children}
         </div>
-      </Link>
-    </div>
+      </div>
+    </Link>
   )
 }

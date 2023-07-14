@@ -7,7 +7,7 @@ export default function About() {
   return (
     <>
       <Teaser
-        image={{ src: '/images/marketing/perforation.webp', alternativeText: 'Wzór' }}
+        image={{ src: '/images/marketing/perforation.webp', alt: 'Wzór' }}
         label="O nas"
         title="Poznaj nas i naszą historię"
       />

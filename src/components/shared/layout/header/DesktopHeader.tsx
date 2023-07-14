@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 
@@ -5,61 +7,30 @@ import {
   NavigationMenu,
   NavigationMenuList,
   NavigationMenuItem,
-  NavigationMenuTrigger,
-  NavigationMenuContent,
   NavigationMenuLink,
 } from 'components/ui/navigation-menu'
 import MyLink from 'components/shared/MyLink'
-import sitemap from 'constants/sitemap'
 import logo from '@public/images/logo.png'
+import type { Sitemap } from 'constants/sitemap'
+import CollapsibleItem from './CollapsibleItem'
 
-export default function DesktopHeader() {
+export default function DesktopHeader({ sitemap }: { sitemap: Sitemap }) {
   return (
     <div className="amir-container mx-auto justify-between items-center hidden md:flex">
       <div className="aspect-[256/62] relative h-9">
         <Link href="/">
-          <Image
-            src={logo}
-            alt="Logo"
-            sizes="(max-width: 768px) 25vw,
-              (max-width: 1200px) 15vw,
-              10vw"
-            fill
-          />
+          <Image src={logo} alt="Logo" width={256} height={62} />
         </Link>
       </div>
       <NavigationMenu>
         <NavigationMenuList>
-          {sitemap.map((item) => (
-            <NavigationMenuItem key={item.title}>
-              {item.subroutes ? (
-                <>
-                  <MyLink
-                    href={item.link}
-                    className="underline-animation px-3 py-2"
-                    activeClassName="text-secondary-100"
-                  >
-                    <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
-                  </MyLink>
-                  <NavigationMenuContent className="bg-primary shadow-lg text-white px-1 py-2">
-                    <ul className="min-w-[250px] flex flex-col">
-                      {item.subroutes.map((subroute) => (
-                        <li key={subroute.title} className="px-3 py-2">
-                          <NavigationMenuLink asChild>
-                            <MyLink
-                              href={subroute.link}
-                              className="underline-animation py-2"
-                              activeClassName="text-secondary-100"
-                            >
-                              {subroute.title}
-                            </MyLink>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                  </NavigationMenuContent>
-                </>
-              ) : (
+          {sitemap.map((item) => {
+            if (item.subroutes) {
+              return <CollapsibleItem key={item.title} item={item} />
+            }
+
+            return (
+              <NavigationMenuItem key={item.title}>
                 <NavigationMenuLink asChild>
                   <MyLink
                     href={item.link}
@@ -69,9 +40,9 @@ export default function DesktopHeader() {
                     {item.title}
                   </MyLink>
                 </NavigationMenuLink>
-              )}
-            </NavigationMenuItem>
-          ))}
+              </NavigationMenuItem>
+            )
+          })}
         </NavigationMenuList>
       </NavigationMenu>
     </div>

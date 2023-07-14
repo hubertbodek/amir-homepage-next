@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import React from 'react'
 
-import type { ImageModel } from '../../types/ImageModel'
+import type { StaticImageModel } from '../../types/StaticImageModel'
 
 export interface HeroProps {
-  image: ImageModel
+  image: StaticImageModel
   title: string
   description?: string
   children?: React.ReactNode
@@ -16,8 +16,9 @@ export default function Hero({ image, title, description, children }: HeroProps)
       <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/70 to-black" />
       <Image
         src={image.src}
-        alt={image.alternativeText}
+        alt={image.alt}
         fill
+        sizes="100vw"
         className="object-cover object-center"
         priority
       />

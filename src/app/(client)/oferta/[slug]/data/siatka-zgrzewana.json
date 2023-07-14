@@ -11,11 +11,11 @@
       "images": [
         {
           "src": "/images/marketing/orange-fence.jpeg",
-          "alternativeText": "Cutter"
+          "alt": "Cutter"
         },
         {
           "src": "/images/marketing/siatki.jpeg",
-          "alternativeText": "Cutter"
+          "alt": "Cutter"
         }
       ]
     },

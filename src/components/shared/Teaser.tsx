@@ -1,25 +1,27 @@
 import Image from 'next/image'
 import React from 'react'
 
-import type { ImageModel } from '../../types/ImageModel'
+import type { StaticImageModel } from '../../types/StaticImageModel'
+import { type ImageData } from '@sanity/schemas/objects/image-data'
+import { prepareImg } from 'lib/prepareImg'
 
 export interface HeroProps {
-  image: ImageModel
+  image: StaticImageModel | ImageData
   label: string
   title: string
 }
 
 export default function Hero({ image, title, label }: HeroProps) {
-  const isImageTypeofString = typeof image.src === 'string'
+  const img = prepareImg(image, 'Zdjęcie główne oferty')
 
   return (
     <div className="relative w-full h-[480px]">
       <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/70 to-black" />
       <Image
-        src={image.src}
-        alt={image.alternativeText}
+        src={img.source.src}
+        alt={img.source.alt}
+        sizes="100vw"
         fill
-        placeholder={!isImageTypeofString ? 'blur' : undefined}
         className="object-cover object-center"
         priority
       />

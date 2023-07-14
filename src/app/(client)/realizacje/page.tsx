@@ -11,7 +11,7 @@ export default function OurWork() {
   return (
     <>
       <Teaser
-        image={{ src: '/images/marketing/corten.webp', alternativeText: 'Perforacja' }}
+        image={{ src: '/images/marketing/corten.webp', alt: 'Perforacja' }}
         title="Nasze realizacje - Dowód na nasze doświadczenie i kreatywność"
         label="Realizacje"
       />

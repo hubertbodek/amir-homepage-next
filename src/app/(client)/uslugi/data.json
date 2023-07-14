@@ -6,11 +6,11 @@
     "images": [
       {
         "src": "/images/offer/siatki-zgrzewane.jpeg",
-        "alternativeText": "Siatki zgrzewane"
+        "alt": "Siatki zgrzewane"
       },
       {
         "src": "/images/offer/perforacja.jpeg",
-        "alternativeText": "Perforacja"
+        "alt": "Perforacja"
       }
     ]
   },

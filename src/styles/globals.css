@@ -9,6 +9,7 @@
   :root {
     --header-height: theme('height.28');
     --header-height-shrinked: theme('height.20');
+    --header-bg-shrinked: '#0f172a';
 
     --background: 0 0% 100%;
     --foreground: 222.2 47.4% 11.2%;

@@ -6,7 +6,7 @@ export default function Blog() {
     <>
       <div className="bg-gradient-to-b from-primary via-primary to-primary">
         <Teaser
-          image={{ src: '/images/marketing/metal-pattern.jpeg', alternativeText: 'Perforacja' }}
+          image={{ src: '/images/marketing/metal-pattern.jpeg', alt: 'Perforacja' }}
           title="Blog"
           label="Blog"
         />

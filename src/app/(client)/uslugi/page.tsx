@@ -11,7 +11,7 @@ export default function Services() {
   return (
     <>
       <Teaser
-        image={{ src: '/images/marketing/spaw.jpeg', alternativeText: 'Perforacja' }}
+        image={{ src: '/images/marketing/spaw.jpeg', alt: 'Perforacja' }}
         title="Skorzystaj z naszego doświadczenia"
         label="Usługi"
       />
