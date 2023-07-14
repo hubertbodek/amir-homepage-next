@@ -18,8 +18,8 @@ export default function TableContainer({ title, description, table }: TableProps
 
   return (
     <section className="amir-container mx-auto py-24 px-4">
-      <h3 className="text-h3 text-left">{title}</h3>
-      <p className="max-w-prose text-xl">{description}</p>
+      <h3 className="text-h3 text-left font-bold mb-3 text-gray-900">{title}</h3>
+      <p className="max-w-prose text-lg mb-10">{description}</p>
       <Table>
         <TableHeader>
           <TableRow>

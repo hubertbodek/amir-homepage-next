@@ -3,13 +3,16 @@ import Prose from 'components/shared/Prose'
 import ContactCta from 'components/shared/sections/ContactCta'
 import IconCardsSection from 'components/shared/sections/IconCardsSection'
 import NumberedItems from 'components/shared/sections/NumberedItems'
+import FullWidthTeaser from 'components/shared/sections/FullWidthTeaser'
+import ImageGridSection from 'components/shared/sections/ImageGridSection'
 import TableContainer from 'components/shared/TableContainer'
 
 import blocksMapperFactory from 'lib/block-factory'
 
 const blocks = {
-  // Teaser,
+  FullWidthTeaser,
   SideTeaser,
+  ImageGridSection,
   Prose,
   ContactCta,
   IconCardsSection,

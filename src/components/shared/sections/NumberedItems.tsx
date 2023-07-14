@@ -1,4 +1,4 @@
-import Button from '../Button'
+// import Button from '../Button'
 import BitCircle from '../icon/icons/BitCircle'
 
 interface NumberedItemsProps {
@@ -19,9 +19,9 @@ export default function NumberedItems({ heading, description, listItems }: Numbe
           </ListItem>
         ))}
       </ol>
-      <Button theme="secondary" className="text-black" href="#contact-form">
+      {/* <Button theme="primary" className="text-black" href="#contact-form">
         Skontaktuj się z nami
-      </Button>
+      </Button> */}
     </section>
   )
 }
