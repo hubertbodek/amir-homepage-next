@@ -3,16 +3,18 @@ import Prose from 'components/shared/Prose'
 import ContactCta from 'components/shared/sections/ContactCta'
 import IconCardsSection from 'components/shared/sections/IconCardsSection'
 import NumberedItems from 'components/shared/sections/NumberedItems'
+import TableContainer from 'components/shared/TableContainer'
 
 import blocksMapperFactory from 'lib/block-factory'
 
 const blocks = {
   // Teaser,
-  SideTeaser, // done
-  Prose, // done
-  ContactCta, // done
-  IconCardsSection, // done
+  SideTeaser,
+  Prose,
+  ContactCta,
+  IconCardsSection,
   NumberedItems,
+  TableContainer,
 }
 
 type TypeName = keyof typeof blocks

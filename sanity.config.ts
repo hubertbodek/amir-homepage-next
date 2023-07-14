@@ -3,6 +3,7 @@ import { visionTool } from '@sanity/vision'
 import { deskTool } from 'sanity/desk'
 import { schemaTypes } from './sanity/schemas'
 import { structure } from './sanity/structure'
+import { table } from '@sanity/table'
 
 const devOnlyPlugins = [visionTool()]
 
@@ -14,6 +15,7 @@ export default defineConfig({
   basePath: '/admin',
   apiVersion: '2023-07-10',
   plugins: [
+    table(),
     deskTool({
       structure,
     }),
