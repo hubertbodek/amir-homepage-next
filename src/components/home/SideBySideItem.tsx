@@ -1,18 +1,20 @@
 'use client'
 
 import Image from 'next/image'
+import { useMemo, useRef } from 'react'
 
+import type { ImageData } from '@sanity/schemas/objects/image-data'
 import Button from 'components/shared/Button'
 import useSideBySideTheme from 'hooks/themes/useSideBySideTheme'
-import { useMemo, useRef } from 'react'
 import useIntersectionObserver from 'hooks/useIntersectionObserver'
 import getImageSizes from 'utlis/getImageSizes'
+import { prepareImg } from 'lib/prepareImg'
 
 export interface SideBySideItemProps {
   title: string
   description: string
   learnMoreUrl: string
-  imageUrl: string
+  image: string | ImageData
   index: number
   light?: boolean
 }
@@ -21,7 +23,7 @@ export default function SideBySideItem({
   title,
   description,
   learnMoreUrl,
-  imageUrl,
+  image,
   index,
   light = false,
 }: SideBySideItemProps) {
@@ -30,6 +32,7 @@ export default function SideBySideItem({
   const entry = useIntersectionObserver(ref, { threshold: 0.4, freezeOnceVisible: true })
   const isVisible = !!entry?.isIntersecting
   const isReversed = index % 2 === 0
+  const imageTypeofString = typeof image === 'string'
 
   const animationClass = useMemo(() => {
     let translate = 'translate-x-28'
@@ -64,15 +67,17 @@ export default function SideBySideItem({
         >
           {description}
         </p>
-        <Button theme={light ? 'primary' : 'secondary'} href={learnMoreUrl} arrow>
-          Dowiedz sie wiecej
-        </Button>
+        {!!learnMoreUrl && (
+          <Button theme={light ? 'primary' : 'secondary'} href={learnMoreUrl} arrow>
+            Dowiedz sie wiecej
+          </Button>
+        )}
       </div>
       <div className={`${styles.imageContainer} h-64 md:h-[668px] relative`}>
         <div className="absolute top-0 h-full w-full shadow-2xl shadow-secondary-100/20">
           <Image
-            src={imageUrl}
-            alt="Produkt"
+            src={imageTypeofString ? image : prepareImg(image, 'Produkt').source.src}
+            alt={imageTypeofString ? 'Produkt' : prepareImg(image, 'Produkt').source.alt}
             sizes={getImageSizes('98vw', '30vw', '510px')}
             fill
             className="object-cover object-center"

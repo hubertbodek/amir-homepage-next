@@ -1,8 +1,9 @@
 import Image from 'next/image'
 
+import { prepareImg } from 'lib/prepareImg'
+import { twMerge } from 'tailwind-merge'
 import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { type StaticImageModel } from 'types/StaticImageModel'
-import { prepareImg } from 'lib/prepareImg'
 import Button from 'components/shared/Button'
 
 interface SideTeaserProps {
@@ -22,6 +23,8 @@ export default function SideTeaser({
   images,
   reversed = false,
 }: SideTeaserProps) {
+  const singleImage = images.length === 1
+
   return (
     <section className="amir-container my-16 md:my-32 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 items-center">
       <div
@@ -37,19 +40,21 @@ export default function SideTeaser({
             <Image
               {...img.source}
               key={`side-teaser-image-${idx}`}
-              sizes="384px"
+              sizes="500px"
               fill
-              className={`object-cover max-w-sm object-center rounded shadow-lg ${
-                idx === 0
+              className={twMerge(
+                'object-cover object-center rounded shadow-lg brightness-75',
+                idx !== 0
                   ? '-mt-6 md:-mt-12 -ml-6 md:-ml-12 lg:-ml-0 lg:mr-auto'
-                  : 'ml-auto max-md:-mr-6'
-              }`}
+                  : 'ml-auto max-md:-mr-6',
+                singleImage ? 'max-md:max-w-[100%] max-md:!mx-0' : 'max-w-sm'
+              )}
             />
           )
         })}
       </div>
       <div className="flex flex-col items-start md:pl-6">
-        <span className="text-orange-700 uppercase text-sm">{label}</span>
+        <span className="text-orange-800 font-semibold uppercase text-sm">{label}</span>
         <h2 className="text-h2 font-semibold mt-2 mb-8 max-w-lg md:-ml-6">{title}</h2>
         <p className="lg:text-lg text-gray-800">{description}</p>
         {buttonText && (
