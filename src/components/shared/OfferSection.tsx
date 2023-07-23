@@ -1,90 +1,23 @@
 import Button from 'components/shared/Button'
 import Image from 'next/image'
-import React, { useState } from 'react'
-import getImageSizes from 'utlis/getImageSizes'
+import img from '@public/images/marketing/perf-sheet.webp'
 
 export default function OfferSection() {
-  const [activeItem, setActiveItem] = useState<number>(0)
-
   return (
-    <section className="amir-container mx-auto py-24 px-4">
-      <h2 className="text-h2 text-left uppercase font-bold text-primary md:mb-8 flex items-center space-x-6">
-        Nasza oferta
-        <span className="h-0.5 bg-gray-900/80 flex-1 ml-8" />
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-x-9 gap-y-8 py-4">
-        <aside className="md:col-span-3 flex flex-col justify-between items-start">
-          <ul className="md:space-y-2 max-md:flex flex-wrap max-md:text-sm gap-x-3">
-            {offers.map((offer, idx) => (
-              <li key={`${idx}--${offer.title}`}>
-                <button
-                  onClick={() => setActiveItem(idx)}
-                  className={`btn-secondary py-2 ${idx === activeItem ? 'btn-active' : ''}`}
-                >
-                  {offer.title}
-                </button>
-              </li>
-            ))}
-          </ul>
-          <Button theme="primary" className="max-md:hidden px-6" href="/oferta">
-            Dowiedz się więcej
-          </Button>
-        </aside>
-        <div className="md:col-span-9 relative h-[440px] overflow-hidden">
-          {offers.map((offer, idx) => (
-            <div
-              key={`offerimage-${idx}`}
-              className={`absolute top-0 py-2 left-0 h-full w-full duration-700 transition ${
-                activeItem === idx ? 'translate-x-0' : 'translate-x-[150%]'
-              }`}
-            >
-              <Image
-                src={offer.imageUrl}
-                sizes={getImageSizes('95vw', '65vw', '960px')}
-                alt={offer.title}
-                fill
-                className="shadow-xl y-4"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-      <Button theme="primary" className="md:hidden px-6 w-full" href="/oferta">
-        Dowiedz się więcej
-      </Button>
-    </section>
+    <div className="bg-2-colors-to-vertical">
+      <section className="amir-container mx-auto py-24 px-4 flex flex-col items-center">
+        <h2 className="text-h2 text-center mx-auto font-bold text-primary md:mb-4 space-x-6">
+          Lorem ipsum dolor sit amet.
+        </h2>
+        <p className="text-md text-center max-w-prose mx-auto">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat iste nesciunt ducimus
+          voluptatibus maxime doloremque.
+        </p>
+        <Button theme="primary" className="px-6 my-8 mx-auto" href="/oferta">
+          Zobacz ofertę
+        </Button>
+        <Image src={img} alt="blacah" />
+      </section>
+    </div>
   )
 }
-
-const offers = [
-  {
-    title: 'Siatki zgrzewane',
-    url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet.webp',
-  },
-  {
-    title: 'Siatki plecione',
-    url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.webp',
-  },
-  {
-    title: 'Siatki cięto-ciągnione',
-    url: '/oferta',
-    imageUrl: '/images/marketing/perf-sheet-2.webp',
-  },
-  {
-    title: 'Dennice',
-    url: '/oferta',
-    imageUrl: '/images/marketing/corten.webp',
-  },
-  {
-    title: 'Tkaniny metalowe',
-    url: '/oferta',
-    imageUrl: '/images/marketing/siatka.png',
-  },
-  {
-    title: 'Blachy perforowane',
-    url: '/oferta',
-    imageUrl: '/images/marketing/siatki.jpeg',
-  },
-]

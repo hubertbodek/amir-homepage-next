@@ -56,7 +56,7 @@ export default function SideTeaser({
       <div className="flex flex-col items-start md:pl-6">
         <span className="text-orange-800 font-semibold uppercase text-sm">{label}</span>
         <h2 className="text-h2 font-semibold mt-2 mb-8 max-w-lg md:-ml-6">{title}</h2>
-        <p className="lg:text-lg text-gray-800">{description}</p>
+        <p className="lg:text-lg text-gray-800">{handleBreakLine(description)}</p>
         {buttonText && (
           <Button className="my-8" theme="primary">
             {buttonText}
@@ -65,4 +65,17 @@ export default function SideTeaser({
       </div>
     </section>
   )
+}
+
+const handleBreakLine = (text: string) => {
+  const lines = text.split('\n')
+
+  if (lines.length === 1) return text
+
+  return lines.map((line, idx) => (
+    <span key={`line--${idx}`} className="block mb-4">
+      {line}
+      <br />
+    </span>
+  ))
 }

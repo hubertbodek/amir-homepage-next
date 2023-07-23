@@ -32,4 +32,17 @@
       rgba(255, 255, 255, 0) 100%
     ) !important;
   }
+
+  .bg-2-colors-to-vertical {
+    --treshold: 33%;
+    --color: #d4d4d4;
+
+    background: linear-gradient(
+      to top,
+      var(--color) 0%,
+      var(--color) var(--treshold),
+      transparent var(--treshold),
+      transparent 100%
+    );
+  }
 }

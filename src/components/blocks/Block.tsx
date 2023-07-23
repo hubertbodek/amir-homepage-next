@@ -7,6 +7,7 @@ import FullWidthTeaser from 'components/shared/sections/FullWidthTeaser'
 import ImageGridSection from 'components/shared/sections/ImageGridSection'
 import TableContainer from 'components/shared/TableContainer'
 import SideBySide from 'components/shared/sections/SideBySideSection'
+import LogoContentSection from 'components/shared/sections/LogoContentSection'
 
 import blocksMapperFactory from 'lib/block-factory'
 
@@ -20,6 +21,7 @@ const blocks = {
   NumberedItems,
   TableContainer,
   SideBySide,
+  LogoContentSection,
 }
 
 type TypeName = keyof typeof blocks
