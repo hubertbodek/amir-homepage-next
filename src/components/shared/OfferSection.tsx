@@ -1,6 +1,6 @@
 import Button from 'components/shared/Button'
 import Image from 'next/image'
-import img from '@public/images/marketing/perf-sheet.webp'
+import img from '@public/images/marketing/ogrod.jpg'
 
 export default function OfferSection() {
   return (
@@ -16,7 +16,7 @@ export default function OfferSection() {
         <Button theme="primary" className="px-6 my-8 mx-auto" href="/oferta">
           Zobacz ofertę
         </Button>
-        <Image src={img} alt="blacah" />
+        <Image src={img} alt="Ogród" className="rounded shadow-xl brightness-95" />
       </section>
     </div>
   )
