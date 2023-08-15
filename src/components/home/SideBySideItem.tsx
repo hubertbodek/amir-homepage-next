@@ -9,6 +9,7 @@ import useSideBySideTheme from 'hooks/themes/useSideBySideTheme'
 import useIntersectionObserver from 'hooks/useIntersectionObserver'
 import getImageSizes from 'utlis/getImageSizes'
 import { prepareImg } from 'lib/prepareImg'
+import { twMerge } from 'tailwind-merge'
 
 export interface SideBySideItemProps {
   title: string
@@ -33,6 +34,7 @@ export default function SideBySideItem({
   const isVisible = !!entry?.isIntersecting
   const isReversed = index % 2 === 0
   const imageTypeofString = typeof image === 'string'
+  const isContained = !imageTypeofString && image.contain
 
   const animationClass = useMemo(() => {
     let translate = 'translate-x-28'
@@ -74,13 +76,18 @@ export default function SideBySideItem({
         )}
       </div>
       <div className={`${styles.imageContainer} h-64 md:h-[668px] relative`}>
-        <div className="absolute top-0 h-full w-full shadow-2xl shadow-secondary-100/20">
+        <div
+          className={twMerge(
+            'absolute top-0 h-full w-full',
+            !isContained && 'shadow-2xl shadow-secondary-100/20'
+          )}
+        >
           <Image
             src={imageTypeofString ? image : prepareImg(image, 'Produkt').source.src}
             alt={imageTypeofString ? 'Produkt' : prepareImg(image, 'Produkt').source.alt}
             sizes={getImageSizes('98vw', '30vw', '510px')}
             fill
-            className="object-cover object-center"
+            className={twMerge('object-center', isContained ? 'object-contain' : 'object-cover')}
           />
         </div>
       </div>

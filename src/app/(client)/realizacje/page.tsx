@@ -3,9 +3,14 @@ import shuffleArray from 'utlis/shuffleArray'
 import Masonry from 'components/shared/masonry/Masonry'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 import realisationsData from './data.json'
+import type { Metadata } from 'next'
 
 const { items } = realisationsData
 const shuffledItems = shuffleArray(items)
+
+export const metadata: Metadata = {
+  title: 'Realizacje',
+}
 
 export default function OurWork() {
   return (

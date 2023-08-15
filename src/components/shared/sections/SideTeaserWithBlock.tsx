@@ -1,29 +1,30 @@
 import Image from 'next/image'
+import type { PortableTextBlock } from '@portabletext/types'
+import { PortableText } from '@portabletext/react'
 
 import { prepareImg } from 'lib/prepareImg'
 import { twMerge } from 'tailwind-merge'
 import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { type StaticImageModel } from 'types/StaticImageModel'
-import { handleBreakLine } from 'lib/break-line'
 import Button from 'components/shared/Button'
 
-interface SideTeaserProps {
+interface SideTeaserWithBlockProps {
   label: string
   title: string
-  description: string
+  description: PortableTextBlock[]
   buttonText?: string
   images: ImageData[] | StaticImageModel[]
   reversed?: boolean
 }
 
-export default function SideTeaser({
+export default function SideTeaserWithBlock({
   label,
   title,
   description,
   buttonText,
   images,
   reversed = false,
-}: SideTeaserProps) {
+}: SideTeaserWithBlockProps) {
   const singleImage = images.length === 1
 
   return (
@@ -34,6 +35,7 @@ export default function SideTeaser({
         }`}
       >
         {images.map((image, idx) => {
+          console.log(image)
           const img = prepareImg(image, 'Side Teaser Image')
 
           return (
@@ -42,6 +44,7 @@ export default function SideTeaser({
               {...img.source}
               key={`side-teaser-image-${idx}`}
               sizes="500px"
+              quality={'quality' in image ? image.quality : 75}
               fill
               className={twMerge(
                 'object-cover object-center rounded shadow-lg brightness-75',
@@ -57,7 +60,9 @@ export default function SideTeaser({
       <div className="flex flex-col items-start md:pl-6">
         <span className="text-orange-800 font-semibold uppercase text-sm">{label}</span>
         <h2 className="text-h2 font-semibold mt-2 mb-8 max-w-lg md:-ml-6">{title}</h2>
-        <p className="lg:text-lg text-gray-800">{handleBreakLine(description)}</p>
+        <div className="lg:text-lg text-gray-800 prose prose-slate prose-li:marker:text-sky-800">
+          <PortableText value={description} />
+        </div>
         {buttonText && (
           <Button className="my-8" theme="primary">
             {buttonText}

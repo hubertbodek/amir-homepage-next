@@ -1,7 +1,12 @@
+import type { Metadata } from 'next'
 import Teaser from 'components/shared/Teaser'
 import getAboutUsPage from '@sanity/api/services/getAboutUs'
 import BlockMapper from 'components/blocks/Block'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
+
+export const metadata: Metadata = {
+  title: 'O nas',
+}
 
 export default async function About() {
   const aboutUsData = await getAboutUsPage()

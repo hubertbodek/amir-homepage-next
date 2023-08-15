@@ -4,10 +4,15 @@ import {
   EnvelopeIcon,
   BuildingLibraryIcon,
 } from '@heroicons/react/24/outline'
+import type { Metadata } from 'next'
+import { createElement } from 'react'
 
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 import Teaser from 'components/shared/Teaser'
-import { createElement } from 'react'
+
+export const metadata: Metadata = {
+  title: 'Kontakt',
+}
 
 export default function Contact() {
   return (

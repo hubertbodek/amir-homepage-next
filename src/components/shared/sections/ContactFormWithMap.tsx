@@ -11,8 +11,8 @@ export default function ContactFormWithMap() {
       id="contact-form"
       className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px] 2xl:amir-container gap-x-4 my-24"
     >
-      <div className="max-w-lg py-12 mx-auto px-4">
-        <h2 className="text-h2 font-semibold text-primary mb-8 uppercase">
+      <div className="py-12 mx-auto px-4">
+        <h2 className="text-h2 font-semibold text-sky-900 mb-8 uppercase">
           Skontaktuj się z nami!
         </h2>
         <p className="text-subtitle text-gray-600 mb-5">

@@ -1,5 +1,10 @@
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
+import type { Metadata } from 'next'
 import Teaser from 'components/shared/Teaser'
+
+export const metadata: Metadata = {
+  title: 'Blog',
+}
 
 export default function Blog() {
   return (

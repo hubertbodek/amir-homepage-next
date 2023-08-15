@@ -1,4 +1,5 @@
 import { getOfferPage, getOffers } from '@sanity/api/services'
+import type { Metadata } from 'next'
 
 import Teaser from 'components/shared/Teaser'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
@@ -8,6 +9,10 @@ import { prepareImg } from 'lib/prepareImg'
 import data from './data.json'
 
 const { main } = data
+
+export const metadata: Metadata = {
+  title: 'Oferta',
+}
 
 export default async function Offer() {
   const [{ title, description, blocks }, offers] = await Promise.all([getOfferPage(), getOffers()])

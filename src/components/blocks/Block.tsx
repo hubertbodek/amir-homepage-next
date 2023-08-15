@@ -1,4 +1,5 @@
 import SideTeaser from 'components/shared/sections/SideTeaser'
+import SideTeaserWithBlock from 'components/shared/sections/SideTeaserWithBlock'
 import Prose from 'components/shared/Prose'
 import ContactCta from 'components/shared/sections/ContactCta'
 import IconCardsSection from 'components/shared/sections/IconCardsSection'
@@ -8,12 +9,14 @@ import ImageGridSection from 'components/shared/sections/ImageGridSection'
 import TableContainer from 'components/shared/TableContainer'
 import SideBySide from 'components/shared/sections/SideBySideSection'
 import LogoContentSection from 'components/shared/sections/LogoContentSection'
+import RowsSection from 'components/shared/sections/RowsSection'
 
 import blocksMapperFactory from 'lib/block-factory'
 
 const blocks = {
   FullWidthTeaser,
   SideTeaser,
+  SideTeaserWithBlock,
   ImageGridSection,
   Prose,
   ContactCta,
@@ -22,6 +25,7 @@ const blocks = {
   TableContainer,
   SideBySide,
   LogoContentSection,
+  RowsSection,
 }
 
 type TypeName = keyof typeof blocks

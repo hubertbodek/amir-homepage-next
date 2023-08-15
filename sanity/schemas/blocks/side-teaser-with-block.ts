@@ -1,8 +1,8 @@
 import { defineType } from 'sanity'
 
 export default defineType({
-  name: 'SideTeaser',
-  title: 'Side Teaser',
+  name: 'SideTeaserWithBlock',
+  title: 'Side Teaser With Block',
   type: 'object',
   fields: [
     {
@@ -18,7 +18,8 @@ export default defineType({
     {
       name: 'description',
       title: 'Description',
-      type: 'text',
+      type: 'array',
+      of: [{ type: 'block' }],
     },
     {
       name: 'buttonText',
@@ -35,12 +36,6 @@ export default defineType({
       name: 'reversed',
       title: 'Reversed',
       type: 'boolean',
-    },
-    {
-      name: 'test',
-      title: 'Test Text',
-      type: 'array',
-      of: [{ type: 'block' }],
     },
   ],
 })
