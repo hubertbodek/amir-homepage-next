@@ -18,7 +18,7 @@ export const structure = (S: StructureBuilder) =>
     .title('Base')
     .items([
       S.listItem()
-        .title('Single Pages')
+        .title('Strony')
         .child(S.list().title('Pages').items(getSinglePages(S))),
       ...S.documentTypeListItems().filter(filterDocuments),
     ])

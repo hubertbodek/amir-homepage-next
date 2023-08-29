@@ -14,8 +14,6 @@ export default function TableContainer({ title, description, table }: TableProps
   const headItems = rows[0]
   const bodyItems = rows.slice(1)
 
-  console.log({ headItems, bodyItems })
-
   return (
     <section className="amir-container mx-auto py-24 px-4">
       <h3 className="text-h3 text-left font-bold mb-3 text-gray-900">{title}</h3>

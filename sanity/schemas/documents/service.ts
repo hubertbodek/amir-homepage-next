@@ -13,8 +13,8 @@ export interface OfferDocument {
 }
 
 export default defineType({
-  name: 'offer',
-  title: 'Oferty',
+  name: 'service',
+  title: 'Usługi',
   type: 'document',
   fields: [
     {

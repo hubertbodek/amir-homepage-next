@@ -2,7 +2,7 @@ import { blockTypes } from '../blocks'
 
 const offerListPage = {
   name: 'OfferListPage',
-  title: 'Offer List Page',
+  title: 'Oferta',
   type: 'document',
   fields: [
     {

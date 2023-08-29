@@ -2,7 +2,7 @@ import { blockTypes } from '../blocks'
 
 const aboutUsPage = {
   name: 'AboutUsPage',
-  title: 'About Us Page',
+  title: 'O nas',
   type: 'document',
   fields: [
     {

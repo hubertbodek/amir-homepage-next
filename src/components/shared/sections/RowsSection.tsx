@@ -22,15 +22,13 @@ export default function RowsSection({ title, rows }: RowsSectionProps) {
       <h3 className="text-h3 block amir-container mb-10 font-bold text-blue-950">{title}</h3>
       {rows.map((row, i) => (
         <div key={`row--${i}`} className="amir-container grid grid-cols-fluid gap-y-8 gap-x-6">
-          <h4 className="col-span-full text-h4 text-orange-950 font-semibold mt-12 -mb-6">
-            {row.title}
-          </h4>
+          <h4 className="col-span-full text-h4 text-orange-950 font-semibold mt-12">{row.title}</h4>
           {row.items.map((rowItem, i) => {
             const img = prepareImg(rowItem.image, 'Row Item Image')
 
             return (
               <div key={i}>
-                <div className="h-28">
+                <div className="h-36 mb-4">
                   <Image
                     src={img.source.src}
                     alt={img.source.alt}

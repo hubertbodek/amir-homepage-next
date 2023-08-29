@@ -35,7 +35,6 @@ export default function SideTeaserWithBlock({
         }`}
       >
         {images.map((image, idx) => {
-          console.log(image)
           const img = prepareImg(image, 'Side Teaser Image')
 
           return (
