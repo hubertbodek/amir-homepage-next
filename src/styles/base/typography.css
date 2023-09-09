@@ -1,6 +1,6 @@
 @layer base {
   .text-h1 {
-    @apply text-5xl lg:text-6xl;
+    @apply text-4xl lg:text-6xl;
   }
 
   .text-h2 {

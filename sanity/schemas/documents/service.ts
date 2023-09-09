@@ -3,7 +3,7 @@ import { type ImageData } from '../objects/image-data'
 import { type BlockModel } from 'components/blocks/Block'
 import { blockTypes } from '../blocks'
 
-export interface OfferDocument {
+export interface ServiceDocument {
   title: string
   slug: {
     current: string

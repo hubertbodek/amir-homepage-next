@@ -1,3 +1,6 @@
 export { default as getOffers } from './getOffers'
 export { default as getOfferBySlug } from './getOfferBySlug'
 export { default as getOfferPage } from './getOfferListPage'
+export { default as getServices } from './getServices'
+export { default as getServiceBySlug } from './getServiceBySlug'
+export { default as getServicePage } from './getServiceListPage'

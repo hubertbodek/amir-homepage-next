@@ -12,7 +12,7 @@ interface NumberedItemsProps {
 export default function NumberedItems({ heading, description, listItems }: NumberedItemsProps) {
   return (
     <section className="my-40 amir-container mx-auto px-4 grid grid-cols-2 items-center">
-      <div className="col-span-1">
+      <div className="col-span-2 md:col-span-1">
         <h4 className="text-2xl font-bold text-sky-800 mb-3">{heading}</h4>
         <p className="max-w-prose mb-10">{description}</p>
         <ol className="space-y-1 mb-4">
@@ -23,7 +23,7 @@ export default function NumberedItems({ heading, description, listItems }: Numbe
           ))}
         </ol>
       </div>
-      <div className="col-span-1">
+      <div className="max-md:hidden col-span-1">
         <Image src={illustration} alt="Ilustracja" className="max-h-[16rem]" />
       </div>
     </section>
