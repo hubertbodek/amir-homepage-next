@@ -14,9 +14,9 @@ export default function ContactCta({ image, heading, description }: ContactCtaPr
   const img = prepareImg(image, 'Contact Cta Image')
 
   return (
-    <section className="amir-container mx-auto my-40 flex gap-x-10">
+    <section className="amir-container mx-auto my-40 flex max-md:flex-col gap-x-10">
       <Image
-        className="flex-1 rounded"
+        className="flex-1 rounded object-contain max-md:mb-8"
         src={img.source.src}
         alt={img.source.alt}
         width={img.dimensions?.width}
