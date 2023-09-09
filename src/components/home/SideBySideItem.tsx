@@ -37,14 +37,14 @@ export default function SideBySideItem({
   const isContained = !imageTypeofString && image.contain
 
   const animationClass = useMemo(() => {
-    let translate = 'translate-x-28'
+    let translate = 'md:translate-x-28'
 
     if (isReversed) {
-      translate = '-translate-x-28'
+      translate = 'md:-translate-x-28'
     }
 
-    const baseClass = 'transition-all duration-1000 ease-out'
-    const varClass = isVisible ? 'transition-all ease-out' : `${translate} opacity-0`
+    const baseClass = 'md:transition-all duration-1000 ease-out'
+    const varClass = isVisible ? 'md:transition-all ease-out' : `${translate} opacity-0`
 
     return `${baseClass} ${varClass}`
   }, [isReversed, isVisible])
