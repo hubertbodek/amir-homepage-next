@@ -63,7 +63,7 @@ export default function SideBySideItem({
           {title}
         </h3>
         <p
-          className={`text-lg md:text-2xl mb-4 font-light ${
+          className={`text-base md:text-2xl mb-4 font-light ${
             light ? 'text-neutral-600' : 'text-neutral-300'
           }`}
         >

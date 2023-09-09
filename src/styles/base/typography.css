@@ -16,7 +16,7 @@
   }
 
   .text-subtitle {
-    @apply text-base leading-7;
+    @apply text-sm lg:text-base leading-7;
   }
 
   .underline-animation {

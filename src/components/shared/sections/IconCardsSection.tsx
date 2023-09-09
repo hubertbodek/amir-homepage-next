@@ -9,7 +9,7 @@ interface IconCardProps {
 export default function IconCardsSection({ cards }: { cards: IconCardProps[] }) {
   return (
     <section className="amir-container mx-auto my-20">
-      <div className="grid grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {cards.map((card) => (
           <IconCard key={card.title} {...card} />
         ))}
