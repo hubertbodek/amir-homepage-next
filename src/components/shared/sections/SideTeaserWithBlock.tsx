@@ -36,7 +36,6 @@ export default function SideTeaserWithBlock({
       >
         {images.map((image, idx) => {
           const img = prepareImg(image, 'Side Teaser Image')
-          console.log(image)
 
           return (
             // eslint-disable-next-line jsx-a11y/alt-text
