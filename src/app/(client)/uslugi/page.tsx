@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 
 import Teaser from 'components/shared/Teaser'
-import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
 import { getServicePage, getServices } from '@sanity/api/services'
+import { prepareImg } from 'lib/prepareImg'
 import BlockMapper from 'components/blocks/Block'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
-import { prepareImg } from 'lib/prepareImg'
+import Button from 'components/shared/Button'
 
 export const metadata: Metadata = {
   title: 'Usługi',
@@ -32,7 +32,7 @@ export default async function Services() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus error, distinctio saepe
           veritatis modi nostrum!
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
           {offers.map((item, idx) => (
             <VerticalOverlayCard
               key={`item--${idx}`}
@@ -42,10 +42,24 @@ export default async function Services() {
               overlay
             />
           ))}
+          <CustomService />
         </div>
       </section>
       <BlockMapper blocks={blocks} />
-      <ContactFormWithMap />
     </>
+  )
+}
+
+const CustomService = () => {
+  return (
+    <div className="h-full w-full px-5 py-6 bg-neutral-200 border border-primary/30 shadow-lg rounded flex flex-col justify-end items-start">
+      <h3 className="text-h3 font-bold mb-2">Kompleksowa usługa</h3>
+      <p className="text-gray-600 mb-3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatem.
+      </p>
+      <Button href="/kontakt" theme="primary">
+        Skontaktuj się!
+      </Button>
+    </div>
   )
 }

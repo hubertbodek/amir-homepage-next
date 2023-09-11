@@ -36,6 +36,7 @@ export default function SideTeaserWithBlock({
       >
         {images.map((image, idx) => {
           const img = prepareImg(image, 'Side Teaser Image')
+          console.log(image)
 
           return (
             // eslint-disable-next-line jsx-a11y/alt-text
@@ -63,7 +64,7 @@ export default function SideTeaserWithBlock({
           <PortableText value={description} />
         </div>
         {buttonText && (
-          <Button className="my-8" theme="primary">
+          <Button className="my-8" theme="primary" href="/kontakt">
             {buttonText}
           </Button>
         )}

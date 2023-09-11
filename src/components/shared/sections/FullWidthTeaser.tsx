@@ -20,12 +20,8 @@ export default function FullWidthTeaser({ title, description }: FullWidthTeaserP
         }}
       />
       <div className="relative z-20 amir-container mx-auto">
-        <h3 className="text-h3 font-bold text-gray-100 mb-6">Lorem ipsum dolor sit amet.</h3>
-        <p className="max-w-3xl text-lg text-gray-200 mb-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut asperiores dignissimos harum
-          iure mollitia doloremque cumque, autem corporis laudantium ipsum, cum fuga minima
-          accusamus fugiat dolore provident? Doloribus, quae! Velit?
-        </p>
+        <h3 className="text-h3 font-bold text-gray-100 mb-6">{title}</h3>
+        <p className="max-w-3xl text-lg text-gray-200 mb-3">{description}</p>
         <Button theme="secondary" className="text-secondary-100" href="/kontakt">
           Skontaktuj się z nami
         </Button>

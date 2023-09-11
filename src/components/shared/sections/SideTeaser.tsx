@@ -59,7 +59,7 @@ export default function SideTeaser({
         <h2 className="text-h2 font-semibold mt-2 mb-8 max-w-lg md:-ml-6">{title}</h2>
         <p className="lg:text-lg text-gray-800">{handleBreakLine(description)}</p>
         {buttonText && (
-          <Button className="my-8" theme="primary">
+          <Button className="my-8" theme="primary" href="/kontakt">
             {buttonText}
           </Button>
         )}

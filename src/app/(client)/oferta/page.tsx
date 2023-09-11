@@ -28,7 +28,7 @@ export default async function Offer() {
       <section className="amir-container mx-auto my-24 md:my-36">
         <h2 className="text-h2 mb-8 font-bold">{main.header}</h2>
         <p className="max-w-prose mb-6">{main.description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
           {offers.map((item, idx) => (
             <VerticalOverlayCard
               key={`item--${idx}`}
