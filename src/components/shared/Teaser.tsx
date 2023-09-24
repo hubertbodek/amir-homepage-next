@@ -22,6 +22,7 @@ export default function Hero({ image, title, label }: HeroProps) {
         alt={img.source.alt}
         sizes="100vw"
         fill
+        quality={50}
         className="object-cover object-center"
         priority
       />

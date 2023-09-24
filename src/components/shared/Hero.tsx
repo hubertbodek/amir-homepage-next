@@ -19,7 +19,8 @@ export default function Hero({ image, title, description, children }: HeroProps)
         alt={image.alt}
         fill
         sizes="100vw"
-        className="object-cover object-center"
+        quality={50}
+        className="object-cover object-center blur-sm"
         priority
       />
       <div className="amir-container mx-auto h-full flex justify-start items-center">

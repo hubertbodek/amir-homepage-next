@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import Teaser from 'components/shared/Teaser'
 
-import { getServicePage, getServices } from '@sanity/api/services'
+import { getGenericPage, getServices } from '@sanity/api/services'
 import { prepareImg } from 'lib/prepareImg'
 import BlockMapper from 'components/blocks/Block'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default async function Services() {
   const [{ title, description, blocks }, offers] = await Promise.all([
-    getServicePage(),
+    getGenericPage('ServicesListPage'),
     getServices(),
   ])
 

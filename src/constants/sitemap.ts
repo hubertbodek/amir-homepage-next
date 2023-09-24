@@ -6,6 +6,7 @@ interface Subroute {
 interface Options {
   offerSubroutes?: Subroute[]
   serviceSubroutes?: Subroute[]
+  categorySubroutes?: Subroute[]
 }
 
 const getSitemap = (options?: Options) => [
@@ -18,6 +19,11 @@ const getSitemap = (options?: Options) => [
     title: 'Usługi',
     link: '/uslugi',
     subroutes: options?.serviceSubroutes ?? [],
+  },
+  {
+    title: 'Produkty',
+    link: '/produkty',
+    subroutes: options?.categorySubroutes ?? [],
   },
   {
     title: 'Realizacje',

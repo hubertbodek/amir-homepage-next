@@ -1,4 +1,4 @@
-import { getOfferPage, getOffers } from '@sanity/api/services'
+import { getGenericPage, getOffers } from '@sanity/api/services'
 import type { Metadata } from 'next'
 
 import Teaser from 'components/shared/Teaser'
@@ -15,7 +15,10 @@ export const metadata: Metadata = {
 }
 
 export default async function Offer() {
-  const [{ title, description, blocks }, offers] = await Promise.all([getOfferPage(), getOffers()])
+  const [{ title, description, blocks }, offers] = await Promise.all([
+    getGenericPage('OfferListPage'),
+    getOffers(),
+  ])
 
   return (
     <>
