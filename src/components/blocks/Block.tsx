@@ -32,7 +32,7 @@ type TypeName = keyof typeof blocks
 
 export type BlockModel = {
   _type: TypeName
-} & Parameters<typeof blocks[TypeName]>[0]
+} & Parameters<(typeof blocks)[TypeName]>[0]
 
 const Block = blocksMapperFactory(blocks)
 
