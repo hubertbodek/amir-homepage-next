@@ -17,7 +17,13 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+  modal,
+}: {
+  children: React.ReactNode
+  modal: React.ReactNode
+}) {
   return (
     <html lang="en" style={{ fontFamily: sora.style.fontFamily }}>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -27,8 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0d3564" />
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#ffffff"></meta>
-      <body suppressHydrationWarning>
+      <body suppressHydrationWarning className="overflow-x-hidden">
         <Layout>{children}</Layout>
+        {modal}
       </body>
       <Analytics />
     </html>

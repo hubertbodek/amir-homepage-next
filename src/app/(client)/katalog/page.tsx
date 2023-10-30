@@ -18,8 +18,6 @@ export default async function Products() {
     getCategories(),
   ])
 
-  console.log(categories)
-
   return (
     <>
       <Teaser image={{ src: img, alt: 'Perforacja' }} title={title} label="Produkty" />
@@ -37,7 +35,7 @@ export default async function Products() {
             key={category.slug}
             title={category.title}
             image={prepareImg(category.mainImage, '').source}
-            url={`/produkty/${category.slug}`}
+            url={`/katalog/${category.slug}`}
             overlay
           />
         ))}

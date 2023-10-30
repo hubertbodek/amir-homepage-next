@@ -21,8 +21,8 @@ const getSitemap = (options?: Options) => [
     subroutes: options?.serviceSubroutes ?? [],
   },
   {
-    title: 'Produkty',
-    link: '/produkty',
+    title: 'Katalog',
+    link: '/katalog',
     subroutes: options?.categorySubroutes ?? [],
   },
   {

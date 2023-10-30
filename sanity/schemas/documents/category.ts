@@ -1,5 +1,6 @@
 import { defineType } from 'sanity'
 import { type ImageData } from '../objects/image-data'
+import { type ProductDocument } from '../documents/product'
 
 export interface CategoryDocument {
   title: string
@@ -7,6 +8,7 @@ export interface CategoryDocument {
     current: string
   }
   mainImage: ImageData
+  products: ProductDocument[]
 }
 
 export default defineType({
@@ -32,12 +34,6 @@ export default defineType({
       name: 'mainImage',
       title: 'Main image',
       type: 'ImageData',
-    },
-    {
-      name: 'products',
-      title: 'Produkty',
-      type: 'array',
-      of: [{ type: 'Product' }],
     },
   ],
 })

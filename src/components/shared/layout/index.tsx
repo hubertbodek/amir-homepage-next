@@ -10,7 +10,7 @@ function Layout({ children }: LayoutProps) {
     <>
       {/* @ts-expect-error Async Server Component */}
       <Header />
-      <main className="min-h-screen overflow-x-hidden">{children}</main>
+      <main className="min-h-screen">{children}</main>
       <Footer />
     </>
   )
