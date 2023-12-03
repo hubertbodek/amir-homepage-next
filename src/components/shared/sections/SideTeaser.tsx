@@ -27,7 +27,7 @@ export default function SideTeaser({
   const singleImage = images.length === 1
 
   return (
-    <section className="amir-container my-16 md:my-32 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 items-center">
+    <section className="amir-container overflow-hidden my-16 md:my-32 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 items-center">
       <div
         className={`relative h-60 md:h-96 lg:h-[600px] max-md:order-last ${
           reversed ? 'order-last' : ''
