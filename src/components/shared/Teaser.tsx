@@ -1,22 +1,36 @@
 import Image from 'next/image'
 import React from 'react'
 
+import Button from 'components/shared/Button'
 import type { StaticImageModel } from '../../types/StaticImageModel'
 import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { prepareImg } from 'lib/prepareImg'
+import { cn } from 'lib/utils'
 
 export interface HeroProps {
   image: StaticImageModel | ImageData
   label: string
   title: string
+  href?: string
+  description?: string
+  centered?: boolean
+  fluid?: boolean
 }
 
-export default function Hero({ image, title, label }: HeroProps) {
+export default function Hero({
+  image,
+  title,
+  href,
+  description,
+  label,
+  centered,
+  fluid,
+}: HeroProps) {
   const img = prepareImg(image, 'Zdjęcie główne oferty')
 
   return (
-    <div className="relative w-full h-[480px]">
-      <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/70 to-black" />
+    <div className={cn('relative w-full', fluid ? 'min-h-[480px] pt-24 pb-16' : 'h-[480px]')}>
+      <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/80 to-black" />
       <Image
         src={img.source.src}
         alt={img.source.alt}
@@ -27,9 +41,23 @@ export default function Hero({ image, title, label }: HeroProps) {
         priority
       />
       <div className="amir-container mx-auto h-full flex justify-start items-center">
-        <div className="max-w-3xl relative z-20 text-left mt-20">
+        <div
+          className={cn(
+            'relative z-20 text-left mt-20',
+            centered && 'mx-auto',
+            fluid ? 'max-w-6xl' : 'max-w-3xl'
+          )}
+        >
           <span className="text-gray-400 inline-block mb-3 max-md:text-sm uppercase">{label}</span>
           <h1 className="text-h1 text-light mb-6">{title}</h1>
+          {description && (
+            <p className="text-subtitle text-light max-w-prose line-clamp-4 mb-8">{description}</p>
+          )}
+          {href && (
+            <Button theme="light" href={href} className="px-10">
+              Czytaj
+            </Button>
+          )}
         </div>
       </div>
     </div>

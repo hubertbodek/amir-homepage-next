@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-const SHRINK_TRESHOOLD = 65
+const SHRINK_TRESHOOLD = 40
 const HIDE_TRESHOOLD = 300
 
 export default function useHeader() {

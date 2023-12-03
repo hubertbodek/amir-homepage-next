@@ -7,7 +7,7 @@ interface FooterColumnProps {
 
 export default function FooterColumn({ headline, items }: FooterColumnProps) {
   return (
-    <div className="lg:w-44">
+    <div className="lg:w-52">
       <h4 className="text-h4 uppercase font-semibold mb-3">{headline}</h4>
       <ul className="space-y-2 text-gray-300">
         {items.map((item) => (

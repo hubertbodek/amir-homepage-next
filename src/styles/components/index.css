@@ -1,7 +1,6 @@
 @import './slider.css';
 @import './btn.css';
 @import './carousel.css';
-@import './article-card.css';
 
 @layer components {
   .featured-section {

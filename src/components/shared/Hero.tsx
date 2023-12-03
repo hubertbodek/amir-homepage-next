@@ -2,15 +2,17 @@ import Image from 'next/image'
 import React from 'react'
 
 import type { StaticImageModel } from '../../types/StaticImageModel'
+import { cn } from 'lib/utils'
 
 export interface HeroProps {
   image: StaticImageModel
   title: string
+  label?: string
   description?: string
   children?: React.ReactNode
 }
 
-export default function Hero({ image, title, description, children }: HeroProps) {
+export default function Hero({ image, title, label, description, children }: HeroProps) {
   return (
     <div className="relative w-full h-[600px]">
       <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/70 to-black" />
@@ -23,10 +25,20 @@ export default function Hero({ image, title, description, children }: HeroProps)
         className="object-cover object-center blur-sm"
         priority
       />
-      <div className="amir-container mx-auto h-full flex justify-start items-center">
-        <div className="max-w-3xl relative z-20">
-          <h1 className="text-h1 text-light mb-6">{title}</h1>
-          <p className="text-subtitle text-neutral-300 max-w-xl">{description}</p>
+      <div
+        className={cn(
+          'amir-container mx-auto h-full flex justify-start items-center',
+          label ? 'pt-20' : 'pt-10'
+        )}
+      >
+        <div className="max-w-6xl relative z-20">
+          {label && (
+            <span className="text-gray-400 inline-block mb-3 max-md:text-sm uppercase">
+              {label}
+            </span>
+          )}
+          <h1 className="text-h1 text-light mb-6 line-clamp-2">{title}</h1>
+          <p className="text-subtitle text-neutral-300 max-w-xl line-clamp-4">{description}</p>
           {children}
         </div>
       </div>
