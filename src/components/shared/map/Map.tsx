@@ -3,6 +3,7 @@
 import { useMemo } from 'react'
 
 import { GoogleMap, MarkerF, useLoadScript } from '@react-google-maps/api'
+import MapLoader from './MapLoader'
 
 const Map = () => {
   const { isLoaded } = useLoadScript({
@@ -265,7 +266,7 @@ const Map = () => {
     ],
   }
 
-  if (!isLoaded) return <div>Loading...</div>
+  if (!isLoaded) return <MapLoader />
 
   return (
     <GoogleMap zoom={11} options={options} center={center} mapContainerClassName="h-full w-full">

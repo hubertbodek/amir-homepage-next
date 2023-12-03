@@ -2,18 +2,26 @@
 
 import { useEffect, useState } from 'react'
 
+const SHRINK_TRESHOOLD = 65
+const HIDE_TRESHOOLD = 300
+
 export default function useHeader() {
-  const [isShrinked, setIsShrinked] = useState(false)
-  const [isScrollingDown, setIsScrollingDown] = useState(false)
+  const [isShrinked, setIsShrinked] = useState<boolean | null>(null)
+  const [isScrollingDown, setIsScrollingDown] = useState<boolean | null>(null)
+
+  useEffect(() => {
+    setIsShrinked(window.scrollY > SHRINK_TRESHOOLD)
+    setIsScrollingDown(window.scrollY > HIDE_TRESHOOLD)
+  }, [])
 
   useEffect(() => {
     let oldScrollY = window.scrollY
 
     function scrollHandler() {
       const scrollY = window.scrollY
-      setIsShrinked(window.pageYOffset > 65)
+      setIsShrinked(window.scrollY > SHRINK_TRESHOOLD)
 
-      window.pageYOffset > 300 && scrollY > oldScrollY
+      window.scrollY > HIDE_TRESHOOLD && scrollY > oldScrollY
         ? setIsScrollingDown(true)
         : setIsScrollingDown(false)
 

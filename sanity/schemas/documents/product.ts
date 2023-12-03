@@ -12,6 +12,9 @@ export interface ProductDocument extends SanityDocument {
   images: ImageData[]
   description?: PortableTextBlock[]
   allegroUrl?: string
+  category: {
+    title: string
+  }
 }
 
 export default defineType({

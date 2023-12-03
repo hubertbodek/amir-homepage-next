@@ -1,10 +1,10 @@
-import Image from 'next/image'
 import getProductBySlug from '@sanity/api/services/getProductBySlug'
 import { PortableText } from '@portabletext/react'
 
 import Teaser from 'components/shared/Teaser'
 import { prepareImg } from 'lib/prepareImg'
 import Button from 'components/shared/Button'
+import ImageGallery from 'components/shared/ImageGallery'
 
 interface ProductPageParams {
   params: {
@@ -22,24 +22,15 @@ export default async function Product({ params }: ProductPageParams) {
 
   return (
     <>
-      <Teaser image={mainImage} title={product.title} label="Produkt" />
+      <Teaser image={mainImage} title={product.title} label={product.category.title} />
       <section className="py-10 amir-container gap-12 flex">
         <div className="flex-1 flex flex-col gap-8">
-          {product.images.map((image, idx) => {
-            const img = prepareImg(image, 'Zdjęcie produktu')
-
-            return (
-              <Image
-                key={`${img.source.alt}${idx}`}
-                src={img.source.src}
-                alt={img.source.alt}
-                {...img.dimensions}
-                className="object-contain object-center w-full h-auto rounded-lg shadow-lg"
-              />
-            )
-          })}
+          <ImageGallery images={product.images} />
         </div>
-        <div className="flex-1 py-8 h-auto self-start sticky top-20">
+        <div className="flex-1 h-auto self-start">
+          <span className="text-orange-700 uppercase inline-block mb-2 text-xs">
+            {product.category.title}
+          </span>
           <h2 className="text-h2 font-bold mb-4">{product.title}</h2>
           {!!product.description && (
             <div className="text-gray-800 prose prose-slate prose-li:marker:text-sky-800 mb-8">

@@ -37,14 +37,14 @@ export default function SideBySideItem({
   const isContained = !imageTypeofString && image.contain
 
   const animationClass = useMemo(() => {
-    let translate = 'md:translate-x-28'
+    let translate = 'lg:translate-x-28'
 
     if (isReversed) {
-      translate = 'md:-translate-x-28'
+      translate = 'lg:-translate-x-28'
     }
 
-    const baseClass = 'transition-all duration-1000 ease-out'
-    const varClass = isVisible ? 'transition-all ease-out' : `${translate} opacity-0`
+    const baseClass = 'lg:transition-all lg:duration-1000 lg:ease-out'
+    const varClass = isVisible ? 'lg:transition-all lg:ease-out' : `${translate} lg:opacity-0`
 
     return `${baseClass} ${varClass}`
   }, [isReversed, isVisible])
@@ -56,14 +56,14 @@ export default function SideBySideItem({
     >
       <div className={`${styles.textContainer}`}>
         <h3
-          className={`text-2xl md:text-5xl mb-4 font-bold ${
+          className={`text-2xl md:text-5xl mb-4 font-bold [text-wrap:balance] ${
             light ? 'text-neutral-800' : 'text-neutral-100'
           }`}
         >
           {title}
         </h3>
         <p
-          className={`text-base md:text-2xl mb-4 font-light ${
+          className={`text-base md:text-lg mb-4 font-light [text-wrap:balance] ${
             light ? 'text-neutral-600' : 'text-neutral-300'
           }`}
         >
@@ -75,7 +75,7 @@ export default function SideBySideItem({
           </Button>
         )}
       </div>
-      <div className={`${styles.imageContainer} h-64 md:h-[668px] relative`}>
+      <div className={`${styles.imageContainer} h-64 md:h-[600px] relative`}>
         <div
           className={twMerge(
             'absolute top-0 h-full w-full',

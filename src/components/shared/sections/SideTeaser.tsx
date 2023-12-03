@@ -41,8 +41,9 @@ export default function SideTeaser({
             <Image
               {...img.source}
               key={`side-teaser-image-${idx}`}
-              sizes="500px"
+              sizes="384px"
               fill
+              quality={image.quality ?? 75}
               className={twMerge(
                 'object-cover object-center rounded shadow-lg brightness-75',
                 idx !== 0

@@ -16,7 +16,6 @@ export default function Blog() {
           label="Blog"
         />
         <section className="amir-container mx-auto grid md:grid-cols-6 py-10 gap-x-6 gap-y-8 -mt-20 relative z-10">
-          x
           {/* {articles.map((article: any, idx: number) => {
             const { image, description, title, slug } = article.attributes
 

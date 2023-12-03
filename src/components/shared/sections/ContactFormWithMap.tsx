@@ -1,15 +1,26 @@
-import ContactForm from 'components/contact/ContactForm'
+'use client'
+
 import dynamic from 'next/dynamic'
+import { useRef } from 'react'
+
+import ContactForm from 'components/contact/ContactForm'
+import useIntersectionObserver from 'hooks/useIntersectionObserver'
+import MapLoader from '../map/MapLoader'
 
 const DynamicMap = dynamic(() => import('../map/Map'), {
-  loading: () => <div>Loading...</div>,
+  loading: () => <MapLoader />,
 })
 
 export default function ContactFormWithMap() {
+  const ref = useRef<HTMLDivElement | null>(null)
+  const entry = useIntersectionObserver(ref, {})
+  const isVisible = !!entry?.isIntersecting
+
   return (
     <div
+      ref={ref}
       id="contact-form"
-      className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px] 2xl:amir-container gap-x-4 my-24"
+      className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px] amir-container gap-x-4 my-24"
     >
       <div className="py-12 mx-auto px-4">
         <h2 className="text-h2 font-semibold text-sky-900 mb-8 uppercase">
@@ -23,7 +34,7 @@ export default function ContactFormWithMap() {
       </div>
       <div className="h-full w-full p-4">
         <div className="h-full w-full overflow-hidden shadow-xl rounded-md max-md:min-h-[192px]">
-          <DynamicMap />
+          {isVisible && <DynamicMap />}
         </div>
       </div>
     </div>

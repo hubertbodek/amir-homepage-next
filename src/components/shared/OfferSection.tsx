@@ -16,7 +16,7 @@ export default function OfferSection() {
         <Button theme="primary" className="px-6 my-8 mx-auto" href="/oferta">
           Zobacz ofertę
         </Button>
-        <Image src={img} alt="Ogród" className="rounded shadow-xl brightness-95" />
+        <Image src={img} quality={75} alt="Ogród" className="rounded shadow-xl brightness-95" />
       </section>
     </div>
   )

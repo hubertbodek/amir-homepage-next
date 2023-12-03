@@ -6,12 +6,9 @@
     "buttonText": "Dowiedz się więcej",
     "images": [
       {
-        "src": "/images/marketing/siatka-cieto-ciagniona-2.jpeg",
-        "alt": "Cutter"
-      },
-      {
         "src": "/images/marketing/eiffel.webp",
-        "alt": "Cutter"
+        "alt": "Cutter",
+        "quality": 70
       }
     ]
   },
@@ -20,21 +17,21 @@
     "items": [
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
-        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
+        "description": "Odkryj kreatywne możliwości z blachą perforowaną - rewolucyjny materiał umożliwiający nieograniczone projekty i innowacyjne rozwiązania. Wykorzystaj naszą ofertę i stwórz unikalne produkty dzięki wszechstronności i jakości blach perforowanych.",
         "learnMoreUrl": "/",
         "image": "/images/marketing/corten.webp"
       },
       {
-        "title": "Blacha perforowana - nieskończone mozliwości",
-        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
+        "title": "Dennice",
+        "description": "Dennice to nieodzowne elementy jako zakończenia rur lub zbiorników, umożliwiające ich doczołowe spawanie. Znajdują zastosowanie jako zakończenie otworów w pojemnikach, kotłach czy cysternach. Mogą być również używane do osłony rur przewodzących parę lub wodę, a także w zbiornikach niskociśnieniowych. Stanowią kluczowy moduł w wielu branżach przemysłowych.",
         "learnMoreUrl": "/",
         "image": "/images/realisations/dennica-min.jpeg"
       },
       {
-        "title": "Blacha perforowana - nieskończone mozliwości",
-        "description": "Zaletami blachy perforowanej są z pewnością: możliwość dostosowania wymiarem i kształtem (na drodze odpowiedniej perforacji), odporność na uszkodzenia, liczne wariacje kolorystyczne, a także estetyczny wygląd. Ze względu na swoje fizyczne właściwości blacha posiada nieskończoną liczbę zastosowań.",
+        "title": "Siatki – szerokie zastosowania",
+        "description": "Siatki zgrzewane, cięto-ciągnione oraz plecione otaczają nas każdego dnia. Niska waga powoduje, że siatki są coraz bardziej popularnym materiałem wykorzystywanym w budownictwie, przemyśle i architekturze. Często służą jako wypełnienia balustrad, uzupełnienie wyposażenia wnętrz, elementy zewnętrzne fasad, przesłony czy pomosty lub elementy filtracyjne. Siatki to najbardziej wszechstronny materiał, a ich bezodpadowa produkcja powoduje, że są również tanie.",
         "learnMoreUrl": "/",
-        "image": "/images/realisations/mapa2-min.jpg"
+        "image": "/images/marketing/perf-sheet-2.webp"
       },
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
@@ -45,29 +42,29 @@
     ]
   },
   "perks": {
-    "title": "Lorem ipsum dolor sit amet consetur.",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad omnis adipisci quaerat magnam repellat.",
-    "buttonText": "Lorem, ipsum.",
+    "title": "Dlaczego my?",
+    "description": "Znamy nasz rynek i potrzeby naszych klientów od podszewki, poświęciliśmy mnóstwo czasu by je poznać.",
+    "buttonText": "Skontaktuj się z nami",
     "items": [
       {
         "icon": "chart",
-        "title": "Lorem, ipsum.",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos nihil, explicabo commodi quaerat veniam laboriosam minus, ex error inventore eius debitis corporis, ipsam provident itaque."
+        "title": "Kompleksowość",
+        "description": "Projekt przejęty od klienta realizujemy od A do Z. Wspólnie dobieramy najlepiej dostosowane do Twoich potrzeb materiały, doradzamy w technicznych kwestiach związanych z produktem i ostatecznie wspieramy realizację Twojego pomysłu poprzez rzetelne wykonanie zamówienia."
       },
       {
         "icon": "chart",
-        "title": "Lorem, ipsum.",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos nihil, explicabo commodi quaerat veniam laboriosam minus, ex error inventore eius debitis corporis, ipsam provident itaque."
+        "title": "Elastyczność",
+        "description": "Dzięki naszemu zapleczu technologicznemu, doświadczeniu oraz najwyższej jakości materiałom jesteśmy w stanie zrealizować najbardziej nietypowe idee. Nasze produkty są uniwersalne, stwarzają szereg możliwości, które pomagamy w pełni wykorzystać."
       },
       {
         "icon": "chart",
-        "title": "Lorem, ipsum.",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos nihil, explicabo commodi quaerat veniam laboriosam minus, ex error inventore eius debitis corporis, ipsam provident itaque."
+        "title": "Jakość",
+        "description": "Zapewniamy wysoką jakość naszych produktów. Wybieramy najlepszej jakości materiały, nie oszczędzamy na nich, a niską cenę zapewniamy poprzez optymalizację produkcji wypracowaną przez lata. Aby utrzymać najwyższy poziom ciągle się dokształcamy, inwestując zarówno w rozwój naszych wyspecjalizowanych pracowników, jak i maszyny na których pracują."
       },
       {
         "icon": "chart",
-        "title": "Lorem, ipsum.",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos nihil, explicabo commodi quaerat veniam laboriosam minus, ex error inventore eius debitis corporis, ipsam provident itaque."
+        "title": "Doświadczenie",
+        "description": "Tysiące projektów wykonanych tymi samymi rękami. Setki kontaktów biznesowych wypracowanych przez lata. To wszystko, aby móc zapewnić świetne produkty. Zaufaj naszemu doświadczeniu, skontaktuj się z nami już dziś."
       }
     ]
   },

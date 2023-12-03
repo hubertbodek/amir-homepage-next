@@ -1,3 +1,5 @@
+'use client'
+
 import MobileCarousel from 'components/shared/carousel/responsive/MobileCarousel'
 import DesktopCarousel from 'components/shared/carousel/responsive/DesktopCarousel'
 

@@ -1,11 +1,4 @@
-'use client'
-
-import {
-  ChartBarSquareIcon,
-  // Cog8ToothIcon,
-  // PuzzlePieceIcon,
-  // WrenchScrewdriverIcon,
-} from '@heroicons/react/24/outline'
+import { ChartBarSquareIcon } from '@heroicons/react/24/outline'
 
 import type { SideBySideProps } from 'components/home/SideBySide'
 
@@ -21,6 +14,7 @@ import SideTeaser from 'components/shared/sections/SideTeaser'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
 import homeData from 'app/data.json'
+import heroImage from '@public/images/marketing/metal-pattern.jpeg'
 
 const { products, sideTeaser, perks, realisations, blog } = homeData
 
@@ -28,7 +22,7 @@ export default function Page() {
   return (
     <>
       <Hero
-        image={{ src: '/images/marketing/metal-pattern.jpeg', alt: 'Perforacja' }}
+        image={{ src: heroImage, alt: 'Perforacja' }}
         title="Innowacyjne rozwiązania metalurgiczne"
         description="Odkryj naszą ofertę innowacyjnych rozwiązań. Oferujemy wyroby metalowe oraz specjalistyczne usługi metalurgiczne, które zaspokoją Twoje potrzeby."
       >
