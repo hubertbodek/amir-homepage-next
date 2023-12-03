@@ -32,7 +32,7 @@ export default function Page() {
       </Hero>
       <SideTeaser {...sideTeaser} />
       <OfferSection />
-      <div className="py-24 bg-[url('/images/abstracts/flux-bg.svg')] bg-no-repeat bg-cover">
+      <div className="py-24 bg-primary lg:bg-[url('/images/abstracts/flux-bg.svg')] bg-no-repeat bg-cover">
         <SideBySide {...(products as SideBySideProps)} />
       </div>
       <section className="my-24">
