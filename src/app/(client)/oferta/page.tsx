@@ -12,6 +12,8 @@ const { main } = data
 
 export const metadata: Metadata = {
   title: 'Oferta',
+  description:
+    'Zapoznaj się z kompleksową ofertą metalowych wyrobów i usług świadczonych przez Amir Metal. Oferujemy wysokiej jakości blachy perforowane, różnego rodzaju siatki, sprężyny i dennice. Odkryj precyzję i innowacyjność w każdym detalu - znajdź idealne rozwiązania dla swoich potrzeb metalowych.',
 }
 
 export default async function Offer() {

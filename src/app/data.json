@@ -1,8 +1,8 @@
 {
   "sideTeaser": {
-    "label": "Lorem ipsum dolor sit amet.",
-    "title": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, quaerat.",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur officia at dolore tenetur? Minima modi debitis id et blanditiis, sunt corrupti quibusdam nobis obcaecati. Quo alias quibusdam quod fuga reprehenderit praesentium, doloribus voluptates. Corrupti repudiandae pariatur sapiente quasi rerum rem, porro quisquam minima eaque officia.",
+    "label": "Precyzyjne rzemiosło",
+    "title": "Innowacje w sztuce metalurgii",
+    "description": "Odkryj nasze unikatowe podejście do metalurgii, łączące tradycję rzemiosła z nowoczesną technologią. W Amir-Metal, zaangażowanie w jakość i precyzję to nasze priorytety, co widać w każdym detalu naszych wyrobów. Zapraszamy do zapoznania się z naszymi najnowszymi projektami i usługami.",
     "buttonText": "Dowiedz się więcej",
     "images": [
       {
@@ -13,7 +13,8 @@
     ]
   },
   "products": {
-    "headline": "Lorem ipsum dolor sit amet consectetur elit.",
+    "headline": "Perfekcja w detalu - prezycja i jakość",
+    "description": "Przy każdym projekcie, który podejmujemy w Amir-Metal, dążymy do osiągnięcia perfekcji. Specjalizujemy się w dostarczaniu zaawansowanych rozwiązań metalurgicznych, które są dopasowane do specyficznych potrzeb i wymagań naszych klientów.",
     "items": [
       {
         "title": "Blacha perforowana - nieskończone mozliwości",
@@ -70,7 +71,7 @@
   },
   "realisations": {
     "title": "Nasze realizacje",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ad omnis adipisci quaerat magnam repellat.",
+    "description": "Prezentujemy wybrane realizacje - symbol naszego rzemiosła i innowacji w obróbce metalu. Odkryj wyjątkowe wyroby, które definiują przestrzeń i funkcjonalność.",
     "cards": [
       {
         "image": {

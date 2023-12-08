@@ -1,5 +1,6 @@
 import { getCategoryBySlug, getCategories } from '@sanity/api/services'
 import { type ProductDocument } from '@sanity/schemas/documents/product'
+import { type Metadata } from 'next'
 
 import Teaser from 'components/shared/Teaser'
 import { prepareImg } from 'lib/prepareImg'
@@ -20,6 +21,34 @@ export async function generateStaticParams() {
   return categories.map((category) => ({
     category: category.slug,
   }))
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { category: string }
+}): Promise<Metadata> {
+  const category = await getCategoryBySlug(params.category)
+  const img = prepareImg(category.mainImage, 'Kategoria')
+
+  return {
+    title: category.title,
+    description:
+      'Odkryj naszą szeroką gamę wysokiej jakości produktów metalowych. W Amir Metal znajdziesz precyzję wykonania i innowacyjne podejście do obróbki metalu. Zapoznaj się z naszymi produktami i znajdź idealne rozwiązanie dla Twoich potrzeb.',
+    openGraph: {
+      title: category.title,
+      description:
+        'Odkryj naszą szeroką gamę wysokiej jakości produktów metalowych. W Amir Metal znajdziesz precyzję wykonania i innowacyjne podejście do obróbki metalu. Zapoznaj się z naszymi produktami i znajdź idealne rozwiązanie dla Twoich potrzeb.',
+      url: `/blog/${category.slug.current}`,
+      images: [
+        {
+          url: img.source.src as string,
+          width: img.dimensions?.width ?? 800,
+          height: img.dimensions?.height ?? 600,
+        },
+      ],
+    },
+  }
 }
 
 export default async function Category({ params }: CategoryParams) {
@@ -54,11 +83,7 @@ const ProductTile = ({ title, slug, images }: ProductTileProps) => {
         />
         <div className="relative z-20 py-8 px-6">
           <h3 className="text-h3 text-gray-100">{title}</h3>
-          {/* <Link href={`/produkt/${slug.current}`} scroll={false}>
-            prod
-          </Link> */}
         </div>
-        {/* <p>{description}</p> */}
       </div>
     </Link>
   )

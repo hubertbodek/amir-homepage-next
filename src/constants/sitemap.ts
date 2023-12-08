@@ -9,6 +9,8 @@ interface Options {
   categorySubroutes?: Subroute[]
 }
 
+export const baseURL = 'https://amir-metal.com'
+
 const getSitemap = (options?: Options) => [
   {
     title: 'Oferta',
@@ -24,10 +26,6 @@ const getSitemap = (options?: Options) => [
     title: 'Katalog',
     link: '/katalog',
     subroutes: options?.categorySubroutes ?? [],
-  },
-  {
-    title: 'Realizacje',
-    link: '/realizacje',
   },
   {
     title: 'O nas',

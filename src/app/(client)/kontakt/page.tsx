@@ -13,6 +13,8 @@ import getContactPage from '@sanity/api/services/getContactPage'
 
 export const metadata: Metadata = {
   title: 'Kontakt',
+  description:
+    'Skontaktuj się z nami, aby rozpocząć współpracę w dziedzinie metalurgii i precyzyjnej obróbki metalu. Jesteśmy gotowi odpowiedzieć na Twoje pytania, przyjąć zlecenia i udzielić fachowej pomocy. Znajdź nasze dane kontaktowe i dołącz do grona zadowolonych klientów Amir Metal.',
 }
 
 export default async function Contact() {

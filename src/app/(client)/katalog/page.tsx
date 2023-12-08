@@ -9,7 +9,9 @@ import { getCategories, getGenericPage } from '@sanity/api/services'
 import img from '@public/images/marketing/ogrod.jpg'
 
 export const metadata: Metadata = {
-  title: 'Produkty',
+  title: 'Katalog',
+  description:
+    'Odkryj naszą szeroką gamę wysokiej jakości produktów metalowych. W Amir Metal znajdziesz precyzję wykonania i innowacyjne podejście do obróbki metalu. Zapoznaj się z naszymi produktami i znajdź idealne rozwiązanie dla Twoich potrzeb.',
 }
 
 export default async function Products() {

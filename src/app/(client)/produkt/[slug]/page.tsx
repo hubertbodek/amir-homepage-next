@@ -2,9 +2,10 @@ import getProductBySlug from '@sanity/api/services/getProductBySlug'
 import { PortableText } from '@portabletext/react'
 
 import Teaser from 'components/shared/Teaser'
-import { prepareImg } from 'lib/prepareImg'
 import Button from 'components/shared/Button'
 import ImageGallery from 'components/shared/ImageGallery'
+import { prepareImg } from 'lib/prepareImg'
+import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
 interface ProductPageParams {
   params: {
@@ -39,6 +40,7 @@ export default async function Product({ params }: ProductPageParams) {
           )}
           <a
             href={product.allegroUrl}
+            title="Kup teraz"
             target="_blank"
             rel="noreferrer"
             className="justify-self-end self-stretch mt-auto"
@@ -49,6 +51,7 @@ export default async function Product({ params }: ProductPageParams) {
           </a>
         </div>
       </section>
+      <ContactFormWithMap />
     </>
   )
 }

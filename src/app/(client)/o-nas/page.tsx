@@ -6,6 +6,8 @@ import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
 export const metadata: Metadata = {
   title: 'O nas',
+  description:
+    'Amir Metal to historia pasji i zaangażowania w metalurgię od 2004 roku. Nasza firma przekształciła się z małego biura handlowego w wysoko zaawansowaną produkcję metalowych wyrobów o doskonałej jakości. Odkryj nasze bogate doświadczenie, szeroki zakres produktów i wyspecjalizowany zespół - tworzymy innowacyjne rozwiązania z metalu dla naszych klientów.',
 }
 
 export default async function About() {

@@ -12,6 +12,8 @@ import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
 export const metadata: Metadata = {
   title: 'Blog',
+  description:
+    'Zanurz się w świat metalurgii i innowacji dzięki naszemu blogowi. Odkryj inspirujące artykuły, porady i nowinki dotyczące blach perforowanych, siatek, sprężyn i obróbki metalu. Poznaj ekspertyzę AMIRmetal - twojego partnera w świecie precyzyjnych rozwiązań metalowych.',
 }
 
 export default async function Blog() {

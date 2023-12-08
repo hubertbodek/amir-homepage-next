@@ -1,7 +1,35 @@
-import { PortableText } from '@portabletext/react'
+import { type Metadata } from 'next'
+
 import getArticleBySlug from '@sanity/api/services/getArticleBySlug'
-import Teaser from 'components/shared/Teaser'
+import { PortableText } from '@portabletext/react'
 import { prepareImg } from 'lib/prepareImg'
+import Teaser from 'components/shared/Teaser'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const article = await getArticleBySlug(params.slug)
+  const img = prepareImg(article.mainImage, 'Article Card Image')
+
+  return {
+    title: article.title,
+    description: article.description,
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      url: `/blog/${article.slug.current}`,
+      images: [
+        {
+          url: img.source.src as string,
+          width: img.dimensions?.width ?? 800,
+          height: img.dimensions?.height ?? 600,
+        },
+      ],
+    },
+  }
+}
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const article = await getArticleBySlug(params.slug)

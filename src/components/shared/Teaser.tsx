@@ -48,7 +48,7 @@ export default function Hero({
             fluid ? 'max-w-6xl' : 'max-w-3xl'
           )}
         >
-          <span className="text-gray-400 inline-block mb-3 max-md:text-sm uppercase">{label}</span>
+          <span className="inline-block mb-3 max-md:text-sm uppercase text-sky-300">{label}</span>
           <h1 className="text-h1 text-light mb-6">{title}</h1>
           {description && (
             <p className="text-subtitle text-light max-w-prose line-clamp-4 mb-8">{description}</p>

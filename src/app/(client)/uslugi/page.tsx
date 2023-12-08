@@ -10,6 +10,8 @@ import Button from 'components/shared/Button'
 
 export const metadata: Metadata = {
   title: 'Usługi',
+  description:
+    'Amir Metal oferuje szeroki zakres usług związanych z obróbką metalu. Odkryj nasze kompleksowe podejście do realizacji zleceń i zaufaj naszemu doświadczeniu w świecie metalurgii.',
 }
 
 export default async function Services() {
