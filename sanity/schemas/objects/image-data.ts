@@ -23,7 +23,7 @@ export default defineType({
       name: 'quality',
       title: 'Jakość zdjęcia (0-100)',
       description:
-        'Domyślnie 75, stosować rozważnie - zwiększa rozmiar zdjęcia co może wpłynąć na wydajność strony',
+        'Domyślnie 75, stosować rozważnie - zmienia rozmiar zdjęcia co może wpłynąć na wydajność strony',
       type: 'number',
       validation: (Rule) => Rule.min(0).max(100),
       initialValue: 75,
@@ -31,7 +31,8 @@ export default defineType({
     {
       name: 'contain',
       title: 'Contain',
-      description: 'Zdjęcie zostanie przeskalowane tak, aby całe było widoczne',
+      description:
+        'Zdjęcie zostanie przeskalowane tak, aby całe było widoczne (użwyać w ostateczności)',
       type: 'boolean',
       initialValue: false,
     },
