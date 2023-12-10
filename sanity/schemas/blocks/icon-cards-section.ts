@@ -8,7 +8,7 @@ export default defineType({
   fields: [
     {
       name: 'cards',
-      title: 'Cards',
+      title: 'Karty',
       type: 'array',
       of: [
         defineField({

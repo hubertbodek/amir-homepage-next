@@ -10,17 +10,20 @@ export interface ImageData extends SanityImageObject {
 
 export default defineType({
   name: 'ImageData',
-  title: 'Image data',
+  title: 'Zdjęcie',
   type: 'image',
   fields: [
     {
       name: 'alt',
-      title: 'Alternative text',
+      title: 'Tekst alternatywny',
+      description: 'Wymagany przez SEO - opisuje obrazek dla osób niewidomych',
       type: 'string',
     },
     {
       name: 'quality',
-      title: 'Quality (0-100)',
+      title: 'Jakość zdjęcia (0-100)',
+      description:
+        'Domyślnie 75, stosować rozważnie - zwiększa rozmiar zdjęcia co może wpłynąć na wydajność strony',
       type: 'number',
       validation: (Rule) => Rule.min(0).max(100),
       initialValue: 75,
@@ -28,6 +31,7 @@ export default defineType({
     {
       name: 'contain',
       title: 'Contain',
+      description: 'Zdjęcie zostanie przeskalowane tak, aby całe było widoczne',
       type: 'boolean',
       initialValue: false,
     },

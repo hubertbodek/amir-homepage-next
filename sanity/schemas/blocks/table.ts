@@ -5,17 +5,17 @@ const table = {
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Tytul',
       type: 'string',
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Opis',
       type: 'text',
     },
     {
       name: 'table',
-      title: 'Table',
+      title: 'Tabela',
       type: 'table',
       validation: (Rule: any) => Rule.required(),
     },

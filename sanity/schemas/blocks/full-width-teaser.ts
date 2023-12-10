@@ -4,13 +4,13 @@ const fullWidthTeaser = {
   type: 'object',
   fields: [
     {
-      title: 'Title',
+      title: 'Tytuł',
       name: 'title',
       type: 'string',
       validation: (Rule: any) => Rule.required(),
     },
     {
-      title: 'Description',
+      title: 'Opis',
       name: 'description',
       type: 'text',
       validation: (Rule: any) => Rule.required(),

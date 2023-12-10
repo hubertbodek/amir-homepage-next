@@ -7,17 +7,17 @@ const servicesListPage = {
   fields: [
     {
       name: 'title',
-      title: 'Site Title',
+      title: 'Tytuł strony',
       type: 'string',
     },
     {
       name: 'description',
-      title: 'Site Description',
+      title: 'Opis strony',
       type: 'text',
     },
     {
       name: 'blocks',
-      title: 'Blocks',
+      title: 'Bloki',
       type: 'array',
       of: blockTypes,
     },

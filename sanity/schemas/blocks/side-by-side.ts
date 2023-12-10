@@ -7,12 +7,12 @@ const sideBySide = {
   fields: [
     {
       name: 'headline',
-      title: 'Headline',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'items',
-      title: 'Items',
+      title: 'Elementy',
       type: 'array',
       of: [
         defineField({
@@ -22,22 +22,22 @@ const sideBySide = {
           fields: [
             {
               name: 'title',
-              title: 'Title',
+              title: 'Tytuł',
               type: 'string',
             },
             {
               name: 'description',
-              title: 'Description',
+              title: 'Opis',
               type: 'text',
             },
             {
               name: 'learnMoreUrl',
-              title: 'Learn More URL',
+              title: 'Dowiedz się więcej URL',
               type: 'url',
             },
             {
               name: 'image',
-              title: 'Image',
+              title: 'Zdjęcie',
               type: 'ImageData',
             },
           ],

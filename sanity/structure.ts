@@ -15,10 +15,10 @@ const filterDocuments = (listItem: ListItemBuilder) =>
 
 export const structure = (S: StructureBuilder) =>
   S.list()
-    .title('Base')
+    .title('Typy stron')
     .items([
       S.listItem()
         .title('Strony')
-        .child(S.list().title('Pages').items(getSinglePages(S))),
+        .child(S.list().title('Strony statyczne').items(getSinglePages(S))),
       ...S.documentTypeListItems().filter(filterDocuments),
     ])

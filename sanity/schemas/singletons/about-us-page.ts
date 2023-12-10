@@ -7,12 +7,12 @@ const aboutUsPage = {
   fields: [
     {
       name: 'title',
-      title: 'Site Title',
+      title: 'Tytuł strony',
       type: 'string',
     },
     {
       name: 'description',
-      title: 'Site Description',
+      title: 'Opis strony',
       type: 'text',
     },
     {

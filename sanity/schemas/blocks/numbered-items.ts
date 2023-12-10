@@ -7,17 +7,17 @@ export default defineType({
   fields: [
     {
       name: 'heading',
-      title: 'Heading',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Opis',
       type: 'text',
     },
     {
       name: 'listItems',
-      title: 'List Items',
+      title: 'Lista',
       type: 'array',
       of: [{ type: 'string' }],
     },

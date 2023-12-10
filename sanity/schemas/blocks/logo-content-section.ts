@@ -8,34 +8,34 @@ export default defineType({
   fields: [
     {
       name: 'heading',
-      title: 'Heading',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'image',
-      title: 'Image',
+      title: 'Zdjęcie',
       type: 'ImageData',
       validation: (Rule: any) => Rule.required(),
     },
     {
       name: 'paragraphs',
-      title: 'Paragraphs',
+      title: 'Paragrafy',
       type: 'array',
       of: [
         {
           name: 'paragraph',
-          title: 'Paragraph',
+          title: 'Paragraf',
           type: 'object',
           fields: [
             {
               name: 'heading',
-              title: 'Heading',
+              title: 'Tytuł',
               type: 'string',
               validation: (Rule: any) => Rule.required(),
             },
             {
               name: 'body',
-              title: 'Body',
+              title: 'Treść',
               type: 'text',
               validation: (Rule: any) => Rule.required(),
             },

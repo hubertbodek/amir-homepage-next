@@ -13,12 +13,12 @@ export default defineType({
   fields: [
     {
       name: 'heading',
-      title: 'Heading',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'text',
-      title: 'Text',
+      title: 'Tekst',
       type: 'text',
       validation: (Rule: any) => Rule.required(),
     },

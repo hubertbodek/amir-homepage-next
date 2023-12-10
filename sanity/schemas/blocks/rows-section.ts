@@ -5,42 +5,42 @@ const rowsSection = {
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'rows',
-      title: 'Rows',
+      title: 'Rzędy',
       type: 'array',
       of: [
         {
           name: 'Row',
-          title: 'Row',
+          title: 'Rząd',
           type: 'object',
           fields: [
             {
               name: 'title',
-              title: 'Title',
+              title: 'Tytuł',
               type: 'string',
             },
             {
               name: 'items',
-              title: 'Items',
+              title: 'Elementy',
               type: 'array',
               of: [
                 {
                   name: 'rowItem',
-                  title: 'Row Item',
+                  title: 'Element',
                   type: 'object',
                   fields: [
                     {
                       name: 'image',
-                      title: 'Image',
+                      title: 'Zdjęcie',
                       type: 'ImageData',
                     },
                     {
                       name: 'subtitle',
-                      title: 'Subtitle',
+                      title: 'Podtytuł',
                       type: 'string',
                     },
                   ],

@@ -25,13 +25,13 @@ export default defineType({
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'metadescription',
       title: 'Opis',
-      description: 'Opis wyświetlany w wyszukiwarce Google (nie przekraczać ok. 160 znaków)',
+      description: 'Opis wyświetlany w wyszukiwarce Google (nie przekraczać  160 znaków)',
       validation: (Rule) => Rule.max(160),
       type: 'text',
     },
@@ -53,7 +53,7 @@ export default defineType({
     },
     {
       name: 'images',
-      title: 'Images',
+      title: 'Zdjęcia',
       type: 'array',
       of: [{ type: 'ImageData' }],
       validation: (Rule) => Rule.min(1).max(10),

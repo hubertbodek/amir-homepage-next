@@ -12,28 +12,29 @@ export default defineType({
     },
     {
       name: 'title',
-      title: 'Title',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Opis',
       type: 'text',
     },
     {
       name: 'buttonText',
-      title: 'Button Text',
+      title: 'Button Tekst',
       type: 'string',
     },
     {
       name: 'images',
-      title: 'Images',
+      title: 'Zdjęcia',
       type: 'array',
       of: [{ type: 'ImageData' }],
     },
     {
       name: 'reversed',
-      title: 'Reversed',
+      title: 'Odwróć',
+      description: 'Odwróć kolejność zdjęć i tekstu',
       type: 'boolean',
     },
     {

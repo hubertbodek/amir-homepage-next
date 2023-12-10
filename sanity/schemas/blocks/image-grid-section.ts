@@ -7,17 +7,17 @@ const imageGridSection = {
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Tytuł',
       type: 'string',
     },
     {
       name: 'description',
-      title: 'Description',
+      title: 'Opis  ',
       type: 'text',
     },
     {
       name: 'images',
-      title: 'Images',
+      title: 'Zdjęcia',
       type: 'array',
       of: [{ type: 'ImageData' }],
     },
