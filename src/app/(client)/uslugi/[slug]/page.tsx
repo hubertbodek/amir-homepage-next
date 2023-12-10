@@ -1,12 +1,39 @@
-// import siatkaCcTeaserImg from '@public/images/marketing/metal-pattern.jpeg'
-import { getServiceBySlug, getServices } from '@sanity/api/services'
+import { type Metadata } from 'next'
 
+import { getServiceBySlug, getServices } from '@sanity/api/services'
 import BlockMapper from 'components/blocks/Block'
 import Teaser from 'components/shared/Teaser'
+import { prepareImg } from 'lib/prepareImg'
 
 interface ServiceParams {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const service = await getServiceBySlug(params.slug)
+  const img = prepareImg(service.mainImage, 'Zdjęcie usługi')
+
+  return {
+    title: service.title,
+    description: service.metadescription,
+    openGraph: {
+      title: service.title,
+      description: service.metadescription,
+      url: `/blog/${service.slug.current}`,
+      images: [
+        {
+          url: img.source.src as string,
+          width: img.dimensions?.width ?? 800,
+          height: img.dimensions?.height ?? 600,
+        },
+      ],
+    },
   }
 }
 

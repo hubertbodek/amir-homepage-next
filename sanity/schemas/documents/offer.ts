@@ -5,6 +5,7 @@ import { blockTypes } from '../blocks'
 
 export interface OfferDocument {
   title: string
+  metadescription: string
   slug: {
     current: string
   }
@@ -19,8 +20,15 @@ export default defineType({
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'Tytuł',
       type: 'string',
+    },
+    {
+      name: 'metadescription',
+      title: 'Opis',
+      description: 'Opis wyświetlany w wyszukiwarce Google (nie przekraczać ok. 160 znaków)',
+      validation: (Rule) => Rule.max(160),
+      type: 'text',
     },
     {
       name: 'slug',

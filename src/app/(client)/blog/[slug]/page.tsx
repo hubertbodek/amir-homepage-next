@@ -15,10 +15,10 @@ export async function generateMetadata({
 
   return {
     title: article.title,
-    description: article.description,
+    description: article.metadescription,
     openGraph: {
       title: article.title,
-      description: article.description,
+      description: article.metadescription,
       url: `/blog/${article.slug.current}`,
       images: [
         {
@@ -39,7 +39,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <>
       <Teaser image={preparedMainImage.source} title={article.title} label="Artykuł" centered />
-      <div className="mx-auto max-w-3xl prose my-20">
+      <div className="mx-auto max-w-3xl prose my-20 px-4">
         <PortableText value={article.text} />
       </div>
     </>

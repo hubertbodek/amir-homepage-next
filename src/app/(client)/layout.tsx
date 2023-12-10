@@ -17,13 +17,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
-  children,
-  modal,
-}: {
-  children: React.ReactNode
-  modal: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" style={{ fontFamily: sora.style.fontFamily }}>
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -35,7 +29,6 @@ export default function RootLayout({
       <meta name="theme-color" content="#ffffff"></meta>
       <body suppressHydrationWarning className="overflow-x-hidden">
         <Layout>{children}</Layout>
-        {modal}
       </body>
       <Analytics />
     </html>

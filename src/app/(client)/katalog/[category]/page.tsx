@@ -23,6 +23,9 @@ export async function generateStaticParams() {
   }))
 }
 
+const defaultMetadescription =
+  'Odkryj naszą szeroką gamę wysokiej jakości produktów metalowych. W Amir Metal znajdziesz precyzję wykonania i innowacyjne podejście do obróbki metalu. Zapoznaj się z naszymi produktami i znajdź idealne rozwiązanie dla Twoich potrzeb.'
+
 export async function generateMetadata({
   params,
 }: {
@@ -33,12 +36,10 @@ export async function generateMetadata({
 
   return {
     title: category.title,
-    description:
-      'Odkryj naszą szeroką gamę wysokiej jakości produktów metalowych. W Amir Metal znajdziesz precyzję wykonania i innowacyjne podejście do obróbki metalu. Zapoznaj się z naszymi produktami i znajdź idealne rozwiązanie dla Twoich potrzeb.',
+    description: category.metadescription ?? defaultMetadescription,
     openGraph: {
       title: category.title,
-      description:
-        'Odkryj naszą szeroką gamę wysokiej jakości produktów metalowych. W Amir Metal znajdziesz precyzję wykonania i innowacyjne podejście do obróbki metalu. Zapoznaj się z naszymi produktami i znajdź idealne rozwiązanie dla Twoich potrzeb.',
+      description: category.metadescription ?? defaultMetadescription,
       url: `/blog/${category.slug.current}`,
       images: [
         {

@@ -36,8 +36,8 @@ export default function Page() {
         <SideBySide {...(products as SideBySideProps)} />
       </div>
       <section className="my-24">
-        <div className="relative amir-container px-4 py-24 grid md:grid-cols-3 gap-12 items-center">
-          <div className="absolute top-12 left-0 h-56 w-56">
+        <div className="relative amir-container px-4 py-2 md:py-24 grid md:grid-cols-3 gap-12 items-center">
+          <div className="absolute top-12 left-0 h-56 w-56 max-md:hidden">
             <PerforationPattern fill="fill-sky-600/30" />
           </div>
           <div>

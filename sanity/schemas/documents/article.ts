@@ -8,7 +8,7 @@ export interface ArticleDocument {
   slug: {
     current: string
   }
-  description: string
+  metadescription: string
   mainImage: ImageData
   text: PortableTextBlock[]
 }
@@ -24,9 +24,10 @@ export default defineType({
       type: 'string',
     },
     {
-      name: 'description',
+      name: 'metadescription',
       title: 'Opis',
-      description: 'Opis wyświetlany w wyszukiwarce i na social media',
+      description: 'Opis wyświetlany w wyszukiwarce Google (nie przekraczać ok. 160 znaków)',
+      validation: (Rule) => Rule.max(160),
       type: 'text',
     },
     {

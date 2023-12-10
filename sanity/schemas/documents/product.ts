@@ -6,6 +6,7 @@ import { type SanityDocument } from '../base'
 
 export interface ProductDocument extends SanityDocument {
   title: string
+  metadescription: string
   slug: {
     current: string
   }
@@ -26,6 +27,13 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+    },
+    {
+      name: 'metadescription',
+      title: 'Opis',
+      description: 'Opis wyświetlany w wyszukiwarce Google (nie przekraczać ok. 160 znaków)',
+      validation: (Rule) => Rule.max(160),
+      type: 'text',
     },
     {
       name: 'category',
@@ -58,7 +66,7 @@ export default defineType({
     },
     {
       name: 'description',
-      title: 'Opis',
+      title: 'Opis produktu',
       type: 'array',
       of: [{ type: 'block' }],
     },

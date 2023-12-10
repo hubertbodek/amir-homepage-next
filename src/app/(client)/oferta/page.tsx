@@ -1,6 +1,6 @@
-import { getGenericPage, getOffers } from '@sanity/api/services'
 import type { Metadata } from 'next'
 
+import { getGenericPage, getOffers } from '@sanity/api/services'
 import Teaser from 'components/shared/Teaser'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import BlockMapper from 'components/blocks/Block'

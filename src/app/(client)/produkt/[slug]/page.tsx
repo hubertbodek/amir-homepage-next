@@ -1,6 +1,7 @@
-import getProductBySlug from '@sanity/api/services/getProductBySlug'
+import { type Metadata } from 'next'
 import { PortableText } from '@portabletext/react'
 
+import getProductBySlug from '@sanity/api/services/getProductBySlug'
 import Teaser from 'components/shared/Teaser'
 import Button from 'components/shared/Button'
 import ImageGallery from 'components/shared/ImageGallery'
@@ -10,6 +11,36 @@ import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 interface ProductPageParams {
   params: {
     slug: string
+  }
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string }
+}): Promise<Metadata> {
+  const product = await getProductBySlug(params.slug)
+  const firstImage = product.images[0]
+
+  const mainImage = firstImage
+    ? prepareImg(firstImage, 'Zdjęcie produktu').source
+    : { src: '/images/marketing/spaw.jpeg', alt: 'Perforacja' }
+
+  return {
+    title: product.title,
+    description: product.metadescription,
+    openGraph: {
+      title: product.title,
+      description: product.metadescription,
+      url: `/blog/${product.slug.current}`,
+      images: [
+        {
+          url: mainImage.src as string,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
   }
 }
 
