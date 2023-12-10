@@ -39,7 +39,7 @@ export default async function Blog() {
       <Hero
         image={mainImage}
         title={latestArticle?.title ?? 'Blog'}
-        description={latestArticle?.description}
+        description={latestArticle?.metadescription}
         label="Najnowszy artykuł"
       >
         <Button
@@ -52,14 +52,14 @@ export default async function Blog() {
       </Hero>
       <section className="amir-container mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 py-10 gap-x-6 gap-y-8 relative z-10">
         {articles.map((article, idx) => {
-          const { mainImage, slug, text, title, description } = article
+          const { mainImage, slug, text, title, metadescription } = article
 
           return (
             <>
               <ArticleCard
                 key={`article--${slug.current}`}
                 mainImage={mainImage}
-                description={description}
+                metadescription={metadescription}
                 title={title}
                 slug={slug}
                 text={text}

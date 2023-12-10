@@ -11,7 +11,7 @@ export default function ArticleCard({
   mainImage,
   title,
   text,
-  description,
+  metadescription,
   slug,
 }: ArticleCardProps) {
   const img = prepareImg(mainImage, 'Article Card Image')
@@ -27,7 +27,7 @@ export default function ArticleCard({
             </Link>
           </h3>
           <p className="text-subtitle text-neutral-100 justify-self-end line-clamp-3">
-            {description}
+            {metadescription}
           </p>
           <div className="inline-block mt-auto">
             <Button theme="secondary" href={articleUrl}>
