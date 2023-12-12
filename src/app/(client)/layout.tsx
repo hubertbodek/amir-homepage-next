@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Sora } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
@@ -10,27 +10,29 @@ const sora = Sora({
   display: 'swap',
 })
 
+export const viewport: Viewport = {
+  themeColor: 'black',
+}
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Amir Metal',
     default: 'Amir Metal - Innowacyjne rozwiązania metalurgiczne',
+  },
+  manifest: '/site.webmanifest',
+  icons: {
+    icon: '/favicon-32x32.png',
+    apple: '/apple-touch-icon.png',
   },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" style={{ fontFamily: sora.style.fontFamily }}>
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-      <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0d3564" />
-      <meta name="msapplication-TileColor" content="#da532c" />
-      <meta name="theme-color" content="#ffffff"></meta>
-      <body suppressHydrationWarning className="overflow-x-hidden">
+      <body className="overflow-x-hidden">
         <Layout>{children}</Layout>
+        <SpeedInsights />
       </body>
-      <SpeedInsights />
     </html>
   )
 }
