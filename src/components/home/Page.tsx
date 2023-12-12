@@ -15,8 +15,9 @@ import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 
 import homeData from 'app/data.json'
 import heroImage from '@public/images/marketing/metal-pattern.jpeg'
+import LatestBlogArticles from 'components/blog/LatestBlogArticles'
 
-const { products, sideTeaser, perks, realisations, blog } = homeData
+const { products, sideTeaser, perks, realisations } = homeData
 
 export default function Page() {
   return (
@@ -43,7 +44,7 @@ export default function Page() {
           <div>
             <h3 className="text-h2 font-semibold mb-3 inline-block text-gray-900">{perks.title}</h3>
             <p className="text-gray-600 text-lg mb-2">{perks.description}</p>
-            <Button className="!text-gray-900 font-semibold" theme="secondary">
+            <Button className="!text-gray-900 font-semibold" theme="secondary" href="/kontakt">
               {perks.buttonText}
             </Button>
           </div>
@@ -80,19 +81,7 @@ export default function Page() {
           <Button theme="primary">Zobacz wszystkie</Button>
         </div>
       </section>
-      <section className="max-w-7xl mx-auto px-4 my-40">
-        <h4 className="text-h2 text-center mb-3 font-semibold uppercase">{blog.title}</h4>
-        <p className="max-w-xl text-center mx-auto">{blog.description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
-          {blog.items.map((item, idx) => (
-            <VerticalOverlayCard key={`blogcard--${idx}`} {...item} overlay>
-              <Button theme="secondary" className="mt-4">
-                Czytaj
-              </Button>
-            </VerticalOverlayCard>
-          ))}
-        </div>
-      </section>
+      <LatestBlogArticles />
       <ContactFormWithMap />
     </>
   )

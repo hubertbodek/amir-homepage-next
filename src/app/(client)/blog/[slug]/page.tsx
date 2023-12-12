@@ -4,6 +4,7 @@ import getArticleBySlug from '@sanity/api/services/getArticleBySlug'
 import { PortableText } from '@portabletext/react'
 import { prepareImg } from 'lib/prepareImg'
 import Teaser from 'components/shared/Teaser'
+import Button from 'components/shared/Button'
 
 export async function generateMetadata({
   params,

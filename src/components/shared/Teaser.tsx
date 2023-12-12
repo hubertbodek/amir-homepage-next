@@ -15,6 +15,7 @@ export interface HeroProps {
   description?: string
   centered?: boolean
   fluid?: boolean
+  children?: React.ReactNode
 }
 
 export default function Hero({
@@ -25,6 +26,7 @@ export default function Hero({
   label,
   centered,
   fluid,
+  children,
 }: HeroProps) {
   const img = prepareImg(image, 'Zdjęcie główne oferty')
 
@@ -60,6 +62,7 @@ export default function Hero({
           )}
         </div>
       </div>
+      {children}
     </div>
   )
 }

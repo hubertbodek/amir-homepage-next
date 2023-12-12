@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/restrict-template-expressions */
 import type { Metadata } from 'next'
 
 import getArticles from '@sanity/api/services/getArticles'
@@ -55,16 +54,14 @@ export default async function Blog() {
           const { mainImage, slug, text, title, metadescription } = article
 
           return (
-            <>
-              <ArticleCard
-                key={`article--${slug.current}`}
-                mainImage={mainImage}
-                metadescription={metadescription}
-                title={title}
-                slug={slug}
-                text={text}
-              />
-            </>
+            <ArticleCard
+              key={`article--${slug.current}`}
+              mainImage={mainImage}
+              metadescription={metadescription}
+              title={title}
+              slug={slug}
+              text={text}
+            />
           )
         })}
       </section>

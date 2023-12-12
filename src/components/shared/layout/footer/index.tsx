@@ -12,7 +12,7 @@ function Footer() {
     <footer className="bg-primary text-light px-4">
       <div className="amir-container py-12 flex justify-between mx-auto max-lg:flex-col">
         <div className="mb-8">
-          <Link href="/">
+          <Link href="/" title="Logo">
             <Image src={logo} alt="Logo" width={160} height={62} className="mb-8" />
           </Link>
           <ul className="space-y-1 text-gray-300">

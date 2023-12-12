@@ -22,7 +22,7 @@ export default function ArticleCard({
       <article className="h-96 col-span-2 relative shadow-lg group border border-gray-200/20 rounded overflow-hidden">
         <div className="duration-200 absolute h-full w-full top-0 left-0 bg-primary/80 group-hover:bg-primary/75 transition z-10 flex flex-col py-10 px-6 items-start ">
           <h3 className="!text-h2 text-neutral-50 group-hover:drop-shadow-2xl transition duration-200 max-w-lg mb-5 line-clamp-3">
-            <Link href={articleUrl} className="hover:underline">
+            <Link href={articleUrl} className="hover:underline" title={title}>
               {title}
             </Link>
           </h3>

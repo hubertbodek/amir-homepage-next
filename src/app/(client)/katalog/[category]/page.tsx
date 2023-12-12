@@ -59,9 +59,7 @@ export default async function Category({ params }: CategoryParams) {
     <>
       <Teaser image={mainImage} title={title} label="Produkty" />
       <section className="amir-container grid gap-8 grid-cols-fluid py-20">
-        {products?.map((product) => (
-          <ProductTile key={product._id} {...product} />
-        ))}
+        {products?.map((product) => <ProductTile key={product._id} {...product} />)}
       </section>
     </>
   )
@@ -73,7 +71,7 @@ const ProductTile = ({ title, slug, images }: ProductTileProps) => {
   const img = prepareImg(images[0], 'Produkt')
 
   return (
-    <Link href={`/produkt/${slug.current}`} scroll={false}>
+    <Link href={`/produkt/${slug.current}`} scroll={false} title={title}>
       <div className="group aspect-square rounded-lg bg-gray-600 relative overflow-hidden flex flex-col justify-end">
         <div className="absolute inset-0 z-10 bg-primary/70 group-hover:bg-primary/60 transition-colors duration-300 will-change-transform" />
         <Image

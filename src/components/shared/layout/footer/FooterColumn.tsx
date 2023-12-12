@@ -12,7 +12,7 @@ export default function FooterColumn({ headline, items }: FooterColumnProps) {
       <ul className="space-y-2 text-gray-300">
         {items.map((item) => (
           <li key={item.title}>
-            <Link href={item.link} className="text-link">
+            <Link href={item.link} className="text-link" title={item.title}>
               {item.title}
             </Link>
           </li>

@@ -1,6 +1,6 @@
-import { Sora } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
+import { Sora } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import 'styles/globals.css'
 import Layout from 'components/shared/layout'
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning className="overflow-x-hidden">
         <Layout>{children}</Layout>
       </body>
-      <Analytics />
+      <SpeedInsights />
     </html>
   )
 }

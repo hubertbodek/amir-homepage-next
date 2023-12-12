@@ -18,7 +18,7 @@ export default function DesktopHeader({ sitemap }: { sitemap: Sitemap }) {
   return (
     <div className="amir-container mx-auto justify-between items-center hidden md:flex">
       <div className="aspect-[256/62] relative h-9">
-        <Link href="/">
+        <Link href="/" title="Logo">
           <Image src={logo} alt="Logo" width={256} height={62} />
         </Link>
       </div>
