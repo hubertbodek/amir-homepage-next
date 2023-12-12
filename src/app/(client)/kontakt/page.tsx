@@ -31,17 +31,19 @@ export default async function Contact() {
       />
       <ContactFormWithMap />
       <section className="my-20 lg:my-40 amir-container mx-auto px-4 grid gap-y-8 grid-cols-2 md:grid-cols-4 justify-between items-start">
-        <ContactDetailsItem icon={MapPinIcon}>
+        <ContactDetailsItem icon={<MapPinIcon className="h-12 w-12 text-blue-900/70" />}>
           ul. Przewóz 2 <br />
           30-716 Kraków
         </ContactDetailsItem>
-        <ContactDetailsItem icon={PhoneIcon}>
+        <ContactDetailsItem icon={<PhoneIcon className="h-12 w-12 text-blue-900/70" />}>
           <a href="tel:+48 660 26 03 99" className="text-link">
             +48 660 26 03 99
           </a>
         </ContactDetailsItem>
-        <ContactDetailsItem icon={EnvelopeIcon}>NIP: 678 275 61 80</ContactDetailsItem>
-        <ContactDetailsItem icon={BuildingLibraryIcon}>
+        <ContactDetailsItem icon={<EnvelopeIcon className="h-12 w-12 text-blue-900/70" />}>
+          NIP: 678 275 61 80
+        </ContactDetailsItem>
+        <ContactDetailsItem icon={<BuildingLibraryIcon className="h-12 w-12 text-blue-900/70" />}>
           <a href="mailto:biuro@amir-metal.com" className="text-link">
             biuro@amir-metal.com
           </a>
@@ -72,14 +74,12 @@ const ContactDetailsItem = ({
   icon,
   children,
 }: {
-  icon: (...args: any) => JSX.Element
+  icon: React.ReactNode
   children: React.ReactNode
 }) => {
-  const Icon = createElement(icon, { className: 'h-12 w-12 text-blue-900/70' })
-
   return (
     <div className="flex flex-col items-center justify-start space-y-6">
-      {Icon}
+      {icon}
       <span className="text-sm md:text-base lg:text-h4 text-primary">{children}</span>
     </div>
   )
