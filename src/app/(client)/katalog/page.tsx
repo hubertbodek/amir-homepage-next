@@ -7,6 +7,7 @@ import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import { prepareImg } from 'lib/prepareImg'
 import { getCategories, getGenericPage } from '@sanity/api/services'
 import img from '@public/images/marketing/ogrod.jpg'
+import Grid from 'components/shared/Grid'
 
 export const metadata: Metadata = {
   title: 'Katalog',
@@ -25,11 +26,11 @@ export default async function Products() {
       <Teaser image={{ src: img, alt: 'Perforacja' }} title={title} label="Produkty" />
       <p className="mx-auto max-w-prose px-4 my-24 text-subtitle">{description}</p>
       <BlockMapper blocks={blocks} />
-      <section className="amir-container grid grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-        <h2 className="text-h2 col-span-full font-bold">Lorem, ipsum dolor.</h2>
+      <Grid className="amir-container mb-8">
+        <h2 className="text-h2 col-span-full font-bold">Nasze wyroby</h2>
         <p className="max-w-xl text-subtitle text-left col-span-full">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae magnam vel, soluta
-          temporibus ipsum porro?
+          Oferujemy produkty, które wzbogacą każdą przestrzeń – <br />
+          <span className="font-semibold">od domowego zacisza po miejską dżunglę.</span>
         </p>
         {categories.map((category) => (
           <VerticalOverlayCard
@@ -41,7 +42,7 @@ export default async function Products() {
             overlay
           />
         ))}
-      </section>
+      </Grid>
     </>
   )
 }

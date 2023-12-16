@@ -3,10 +3,10 @@ import type { PortableTextBlock } from '@portabletext/types'
 import { PortableText } from '@portabletext/react'
 
 import { prepareImg } from 'lib/prepareImg'
-import { twMerge } from 'tailwind-merge'
 import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { type StaticImageModel } from 'types/StaticImageModel'
 import Button from 'components/shared/Button'
+import { cn } from 'lib/utils'
 
 interface SideTeaserWithBlockProps {
   label: string
@@ -45,11 +45,11 @@ export default function SideTeaserWithBlock({
               sizes="500px"
               quality={'quality' in image ? image.quality : 75}
               fill
-              className={twMerge(
+              className={cn(
                 'object-cover object-center rounded shadow-lg brightness-75',
                 idx !== 0
-                  ? '-mt-6 md:-mt-12 -ml-6 md:-ml-12 lg:-ml-0 lg:mr-auto'
-                  : 'ml-auto max-md:-mr-6',
+                  ? '-mt-6 md:-mt-12 -ml-6 md:-ml-12 lg:-ml-0 lg:mr-auto max-lg:hidden'
+                  : 'ml-auto',
                 singleImage ? 'max-md:max-w-[100%] max-md:!mx-0' : 'max-w-sm'
               )}
             />

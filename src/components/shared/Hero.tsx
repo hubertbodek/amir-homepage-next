@@ -35,7 +35,7 @@ export default function Hero({ image, title, label, description, children }: Her
           {label && (
             <span className="text-sky-300 inline-block mb-3 max-md:text-sm uppercase">{label}</span>
           )}
-          <h1 className="text-h1 text-light mb-6 line-clamp-2">{title}</h1>
+          <h1 className="text-h1 text-light mb-6 line-clamp-3">{title}</h1>
           <p className="text-subtitle text-neutral-300 max-w-xl line-clamp-4">{description}</p>
           {children}
         </div>

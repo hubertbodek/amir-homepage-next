@@ -4,6 +4,7 @@ import { getGenericPage, getOffers } from '@sanity/api/services'
 import Teaser from 'components/shared/Teaser'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import BlockMapper from 'components/blocks/Block'
+import Grid from 'components/shared/Grid'
 
 import { prepareImg } from 'lib/prepareImg'
 import data from './data.json'
@@ -33,9 +34,10 @@ export default async function Offer() {
       <section className="amir-container mx-auto my-24 md:my-36">
         <h2 className="text-h2 mb-8 font-bold">{main.header}</h2>
         <p className="max-w-prose mb-6">{main.description}</p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+        <Grid>
           {offers.map((item, idx) => (
             <VerticalOverlayCard
+              className="max-lg:!aspect-square max-lg:!h-auto"
               key={`item--${idx}`}
               title={item.title}
               image={prepareImg(item.mainImage, '').source}
@@ -43,7 +45,7 @@ export default async function Offer() {
               overlay
             />
           ))}
-        </div>
+        </Grid>
       </section>
       <BlockMapper blocks={blocks} />
     </>

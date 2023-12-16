@@ -1,11 +1,12 @@
 import Image from 'next/image'
 
 import { prepareImg } from 'lib/prepareImg'
-import { twMerge } from 'tailwind-merge'
+import { cn } from 'lib/utils'
 import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { type StaticImageModel } from 'types/StaticImageModel'
 import { handleBreakLine } from 'lib/break-line'
 import Button from 'components/shared/Button'
+import { twMerge } from 'tailwind-merge'
 
 interface SideTeaserProps {
   label: string
@@ -41,14 +42,14 @@ export default function SideTeaser({
             <Image
               {...img.source}
               key={`side-teaser-image-${idx}`}
-              sizes="384px"
+              sizes="500px"
+              quality={'quality' in image ? image.quality : 75}
               fill
-              quality={image.quality ?? 75}
-              className={twMerge(
+              className={cn(
                 'object-cover object-center rounded shadow-lg brightness-75',
                 idx !== 0
-                  ? '-mt-6 md:-mt-12 -ml-6 md:-ml-12 lg:-ml-0 lg:mr-auto'
-                  : 'ml-auto max-md:-mr-6',
+                  ? '-mt-6 md:-mt-12 -ml-6 md:-ml-12 lg:-ml-0 lg:mr-auto max-lg:hidden'
+                  : 'ml-auto',
                 singleImage ? 'max-md:max-w-[100%] max-md:!mx-0' : 'max-w-sm'
               )}
             />

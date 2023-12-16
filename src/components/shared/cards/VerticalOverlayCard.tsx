@@ -29,7 +29,7 @@ export default function VerticalOverlayCard({
 
   return (
     <div
-      className={`group relative w-full h-[486px] overflow-hidden shadow-lg hover:shadow-2xl transition rounded ${className}`}
+      className={`group relative w-full max-lg:aspect-square lg:h-[486px] overflow-hidden shadow-lg hover:shadow-2xl transition rounded ${className}`}
     >
       <Image
         src={img.source.src}
@@ -39,7 +39,7 @@ export default function VerticalOverlayCard({
         className="object-cover object-center group-hover:scale-110 transition duration-300 ease-out"
       />
       {overlay && (
-        <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent via-gray-900/70 to-gray-900 group-hover:opacity-90 duration-300 transition" />
+        <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent via-gray-900/70 to-gray-900 group-hover:opacity-90 duration-300 transition pointer-events-none" />
       )}
       <div className="h-full w-full absolute top-0 left-0 z-10 flex flex-col items-start justify-end px-5 overflow-hidden py-6">
         <Link

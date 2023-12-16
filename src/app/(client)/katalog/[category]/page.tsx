@@ -78,7 +78,7 @@ const ProductTile = ({ title, slug, images }: ProductTileProps) => {
           src={img.source.src}
           alt={img.source.alt}
           {...img.dimensions}
-          className="absolute inset-0 z-0 group-hover:scale-105 transition-transform duration-300"
+          className="object-cover h-full w-full absolute inset-0 z-0 group-hover:scale-105 transition-transform duration-300"
         />
         <div className="relative z-20 py-8 px-6">
           <h3 className="text-h3 text-gray-100">{title}</h3>

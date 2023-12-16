@@ -24,7 +24,12 @@ function Footer() {
         </div>
         <div className="grid max-lg:grid-cols-2 lg:col-auto lg:grid-flow-col gap-x-8 gap-y-8">
           {columns.map((column) => (
-            <FooterColumn key={column.headline} headline={column.headline} items={column.items} />
+            <FooterColumn
+              key={column.headline}
+              headline={column.headline}
+              items={column.items}
+              large={column.large}
+            />
           ))}
         </div>
       </div>

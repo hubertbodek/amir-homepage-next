@@ -7,6 +7,7 @@ import { prepareImg } from 'lib/prepareImg'
 import BlockMapper from 'components/blocks/Block'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import Button from 'components/shared/Button'
+import Grid from 'components/shared/Grid'
 
 export const metadata: Metadata = {
   title: 'Usługi',
@@ -34,7 +35,7 @@ export default async function Services() {
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus error, distinctio saepe
           veritatis modi nostrum!
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8">
+        <Grid>
           {offers.map((item, idx) => (
             <VerticalOverlayCard
               key={`item--${idx}`}
@@ -45,7 +46,7 @@ export default async function Services() {
             />
           ))}
           <CustomService />
-        </div>
+        </Grid>
       </section>
       <BlockMapper blocks={blocks} />
     </>

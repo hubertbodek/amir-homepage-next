@@ -65,13 +65,13 @@ export default function Page() {
       </section>
       <ServicesSection />
       <section className="my-36">
-        <h2 className="relative amir-container text-h2 text-center uppercase font-bold text-neutral-800">
+        <h2 className="relative px-4 amir-container text-h2 mb-3 text-center uppercase font-bold text-neutral-800">
           <div className="absolute -top-6 right-0 md:right-1/4 h-16 md:h-36 w-32 md:w-56 z-0 text-primary">
             <PerforationPattern fill="fill-sky-600/30" />
           </div>
           {realisations.title}
         </h2>
-        <p className=" mx-auto text-center max-w-xl mb-16">{realisations.description}</p>
+        <p className=" mx-auto text-center max-w-xl mb-16 px-4">{realisations.description}</p>
         <DesktopCarousel options={{ isLooped: true }}>
           {realisations.cards.map((card, idx) => (
             <VerticalOverlayCard key={`card--${idx}`} {...card} overlay />

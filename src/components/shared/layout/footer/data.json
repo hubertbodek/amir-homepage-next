@@ -36,6 +36,7 @@
     },
     {
       "headline": "Oferta",
+      "large": true,
       "items": [
         {
           "title": "Siatki zgrzewane",

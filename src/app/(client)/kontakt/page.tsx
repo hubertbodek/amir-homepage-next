@@ -49,10 +49,13 @@ export default async function Contact() {
           </a>
         </ContactDetailsItem>
       </section>
-      <section className="my-40 amir-container mx-auto px-4">
+      <section className="my-20 lg:my-40 amir-container mx-auto px-4">
         {/* <h3 className="text-h2 text-center font-bold mb-12">Zespół doradczy</h3> */}
         {page.Team.map((department) => (
-          <div key={department.name} className="grid grid-cols-2 mt-10 mb-14 gap-8">
+          <div
+            key={department.name}
+            className="grid md:grid-cols-2 mt-10 mb-14 gap-8 border border-border rounded px-8 py-10 shadow-lg"
+          >
             <h3 className="col-span-full text-h3 font-semibold uppercase">{department.name}</h3>
             {department.people.map((person) => (
               <PersonDetails
@@ -99,15 +102,15 @@ const PersonDetails = ({
   <div className="mb-4">
     <span className="text-h5 inline-block mb-2 font-semibold">{name}</span>
     <p className="text-subtitle text-sm text-gray-600">{responsibilites}</p>
-    <div className="flex my-3 items-center text-sm">
+    <div className="grid grid-cols-[20px_1fr] gap-2 my-3 items-center text-sm">
       <EnvelopeIcon className="h-5 w-5 text-blue-600/70 inline-block mr-2" />
-      <a href={`mailto:${email}`} className="text-link">
+      <a href={`mailto:${email}`} className="text-link max-md:text-xs">
         {email}
       </a>
     </div>
-    <div className="flex my-3 items-center text-sm">
+    <div className="grid grid-cols-[20px_1fr] gap-2 items-center text-sm">
       <PhoneIcon className="h-5 w-5 text-blue-600/70 inline-block mr-2" />
-      <a href={`tel:${phone}`} className="text-link">
+      <a href={`tel:${phone}`} className="text-link max-md:text-xs">
         {phone}
       </a>
     </div>
