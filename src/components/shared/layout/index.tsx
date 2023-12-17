@@ -3,12 +3,13 @@ import Header from './header'
 
 interface LayoutProps {
   children: React.ReactNode
+  solidHeader?: boolean
 }
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children, solidHeader = false }: LayoutProps) {
   return (
     <>
-      <Header />
+      <Header solid={solidHeader} />
       <main className="min-h-screen">{children}</main>
       <Footer />
     </>

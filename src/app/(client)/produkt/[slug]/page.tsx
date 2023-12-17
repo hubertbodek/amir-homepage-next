@@ -7,12 +7,15 @@ import Button from 'components/shared/Button'
 import ImageGallery from 'components/shared/ImageGallery'
 import { prepareImg } from 'lib/prepareImg'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
+import getProducts from '@sanity/api/services/getProducts'
 
 interface ProductPageParams {
   params: {
     slug: string
   }
 }
+
+export const dynamicParams = false
 
 export async function generateMetadata({
   params,
@@ -42,6 +45,14 @@ export async function generateMetadata({
       ],
     },
   }
+}
+
+export async function generateStaticParams() {
+  const products = await getProducts()
+
+  return products.map((product) => ({
+    slug: product.slug,
+  }))
 }
 
 export default async function Product({ params }: ProductPageParams) {

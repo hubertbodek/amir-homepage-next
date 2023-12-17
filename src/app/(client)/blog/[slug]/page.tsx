@@ -4,7 +4,7 @@ import getArticleBySlug from '@sanity/api/services/getArticleBySlug'
 import { PortableText } from '@portabletext/react'
 import { prepareImg } from 'lib/prepareImg'
 import Teaser from 'components/shared/Teaser'
-import Button from 'components/shared/Button'
+import getArticles from '@sanity/api/services/getArticles'
 
 export async function generateMetadata({
   params,
@@ -30,6 +30,14 @@ export async function generateMetadata({
       ],
     },
   }
+}
+
+export async function generateStaticParams() {
+  const articles = await getArticles()
+
+  return articles.map((article) => ({
+    slug: article.slug.current,
+  }))
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {

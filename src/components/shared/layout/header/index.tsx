@@ -11,7 +11,7 @@ function createSubroutes<T extends { title: string; slug: string }>(items: T[], 
   }))
 }
 
-async function Header() {
+async function Header({ solid = false }) {
   const [offers, services, categories] = await Promise.all([
     getOffers(),
     getServices(),
@@ -25,7 +25,7 @@ async function Header() {
   const sitemap = getSitemap({ offerSubroutes, serviceSubroutes, categorySubroutes })
 
   return (
-    <HeaderWrapper>
+    <HeaderWrapper solid={solid}>
       <MobileHeader sitemap={sitemap} />
       <DesktopHeader sitemap={sitemap} />
     </HeaderWrapper>

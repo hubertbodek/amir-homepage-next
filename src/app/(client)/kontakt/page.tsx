@@ -29,7 +29,6 @@ export default async function Contact() {
         title={page.title}
         label="Kontakt"
       />
-      <ContactFormWithMap />
       <section className="my-20 lg:my-40 amir-container mx-auto px-4 grid gap-y-8 grid-cols-2 md:grid-cols-4 justify-between items-start">
         <ContactDetailsItem icon={<MapPinIcon className="h-12 w-12 text-blue-900/70" />}>
           ul. Przewóz 2 <br />
@@ -49,12 +48,13 @@ export default async function Contact() {
           </a>
         </ContactDetailsItem>
       </section>
+      <ContactFormWithMap />
       <section className="my-20 lg:my-40 amir-container mx-auto px-4">
         {/* <h3 className="text-h2 text-center font-bold mb-12">Zespół doradczy</h3> */}
         {page.Team.map((department) => (
           <div
             key={department.name}
-            className="grid md:grid-cols-2 mt-10 mb-14 gap-8 border border-border rounded px-8 py-10 shadow-lg"
+            className="grid md:grid-cols-2 mt-10 mb-14 gap-8 border border-border rounded px-8 py-10 shadow-lg bg-gray-100"
           >
             <h3 className="col-span-full text-h3 font-semibold uppercase">{department.name}</h3>
             {department.people.map((person) => (
