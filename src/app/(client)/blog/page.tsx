@@ -50,7 +50,7 @@ export default async function Blog() {
         </Button>
       </Hero>
       <section className="amir-container mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 py-10 gap-x-6 gap-y-8 relative z-10">
-        {articles.map((article, idx) => {
+        {articles.map((article) => {
           const { mainImage, slug, text, title, metadescription } = article
 
           return (
