@@ -15,7 +15,9 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_VERCEL_URL || 'https://amir-metal.com/'),
+  metadataBase: new URL(
+    `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` ?? 'https://amir-metal.com/'
+  ),
   title: {
     template: '%s | Amir Metal',
     default: 'Amir Metal - Innowacyjne rozwiązania metalurgiczne',
