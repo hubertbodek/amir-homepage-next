@@ -16,6 +16,7 @@ export interface ProductDocument extends SanityDocument {
   category: {
     title: string
   }
+  price?: number
 }
 
 export default defineType({
@@ -69,6 +70,11 @@ export default defineType({
       title: 'Opis produktu',
       type: 'array',
       of: [{ type: 'block' }],
+    },
+    {
+      name: 'price',
+      title: 'Cena',
+      type: 'number',
     },
   ],
 })

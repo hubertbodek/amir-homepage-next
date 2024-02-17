@@ -14,8 +14,6 @@ export default function HeaderWrapper({
   const tw = ['bg-[var(--header-bg-shrinked)]']
   const maybeTransparent = solid ? 'bg-slate-900' : 'bg-transparent'
 
-  console.log(maybeTransparent)
-
   return (
     <nav
       className={`fixed top-0 left-0 z-30 text-light w-full flex transition-all duration-300 ${

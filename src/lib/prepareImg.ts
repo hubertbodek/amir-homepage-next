@@ -52,3 +52,5 @@ export function prepareImg(img: ImageData | StaticImageModel, fallbackAlt: strin
     },
   }
 }
+
+export type PreparedImage = ReturnType<typeof prepareImg>

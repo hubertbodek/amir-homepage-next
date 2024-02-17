@@ -2,12 +2,13 @@ import { type Metadata } from 'next'
 
 import Teaser from 'components/shared/Teaser'
 import BlockMapper from 'components/blocks/Block'
-import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 
 import { prepareImg } from 'lib/prepareImg'
-import { getCategories, getGenericPage } from '@sanity/api/services'
+import { getGenericPage } from '@sanity/api/services'
 import img from '@public/images/marketing/ogrod.jpg'
 import Grid from 'components/shared/Grid'
+import { getProductsList } from '@sanity/api/services/getProducts'
+import ProductCard from './product-card'
 
 export const metadata: Metadata = {
   title: 'Katalog',
@@ -16,9 +17,9 @@ export const metadata: Metadata = {
 }
 
 export default async function Products() {
-  const [{ title, description, blocks }, categories] = await Promise.all([
+  const [{ title, description, blocks }, products] = await Promise.all([
     getGenericPage('ProductsListPage'),
-    getCategories(),
+    getProductsList(),
   ])
 
   return (
@@ -32,17 +33,19 @@ export default async function Products() {
           Oferujemy produkty, które wzbogacą każdą przestrzeń – <br />
           <span className="font-semibold">od domowego zacisza po miejską dżunglę.</span>
         </p>
-        {categories.map((category) => (
-          <VerticalOverlayCard
-            className="max-lg:!aspect-square max-lg:!h-auto"
-            key={category.slug}
-            title={category.title}
-            image={prepareImg(category.mainImage, '').source}
-            url={`/katalog/${category.slug}`}
-            overlay
+      </Grid>
+      <div className="amir-container grid gap-x-8 gap-y-10 grid-cols-2 md:grid-cols-fluid-sm">
+        {products.map((product) => (
+          <ProductCard
+            key={product.slug.current}
+            label={product.category.title}
+            title={product.title}
+            price={product.price}
+            images={product.images}
+            url={`/produkt/${product.slug.current}`}
           />
         ))}
-      </Grid>
+      </div>
     </>
   )
 }
