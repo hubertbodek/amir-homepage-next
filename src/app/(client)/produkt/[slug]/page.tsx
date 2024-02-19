@@ -60,6 +60,8 @@ export async function generateStaticParams() {
   }))
 }
 
+export const dynamicParams = false
+
 export default async function Product({ params }: ProductPageParams) {
   const { isEnabled } = draftMode()
 
