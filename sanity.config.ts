@@ -1,11 +1,40 @@
-import { defineConfig, isDev } from 'sanity'
+import { defineConfig, isDev, type SanityDocument } from 'sanity'
 import { visionTool } from '@sanity/vision'
-import { deskTool } from 'sanity/desk'
+import { deskTool, type DefaultDocumentNodeResolver } from 'sanity/desk'
 import { schemaTypes } from './sanity/schemas'
+import { Iframe } from 'sanity-plugin-iframe-pane'
 import { structure } from './sanity/structure'
 import { table } from '@sanity/table'
 
 const devOnlyPlugins = [visionTool()]
+
+interface Doc extends SanityDocument {
+  slug: {
+    current: string
+  }
+}
+
+function getPreviewUrl(doc: Doc) {
+  let url = `/api/draft?type=${doc._type}&id=${doc._id}`
+
+  if (doc?.slug?.current) {
+    url = url + `&slug=${doc.slug.current}`
+  }
+
+  return url
+}
+
+const defaultDocumentNode: DefaultDocumentNodeResolver = (S) => {
+  return S.document().views([
+    S.view.form(),
+    S.view
+      .component(Iframe)
+      .options({
+        url: (doc: Doc) => getPreviewUrl(doc),
+      })
+      .title('Preview'),
+  ])
+}
 
 export default defineConfig({
   name: 'default',
@@ -18,6 +47,7 @@ export default defineConfig({
     table(),
     deskTool({
       structure,
+      defaultDocumentNode,
     }),
     ...(isDev ? devOnlyPlugins : []),
   ],

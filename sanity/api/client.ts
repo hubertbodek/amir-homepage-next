@@ -10,4 +10,16 @@ export const client = createClient({
   useCdn: isProd,
 })
 
+export const draftClient = createClient({
+  projectId: '940pe5u1',
+  dataset: 'production',
+  apiVersion: '2023-07-10',
+  useCdn: isProd,
+  token: process.env.SANITY_PREVIEW_TOKEN,
+  perspective: 'raw',
+})
+
 export const clientFetch = cache(client.fetch.bind(client))
+export const draftClientFetch = cache(draftClient.fetch.bind(draftClient))
+
+export const getClient = (usePreview?: boolean) => (usePreview ? draftClientFetch : clientFetch)

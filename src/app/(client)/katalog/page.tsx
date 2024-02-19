@@ -3,7 +3,6 @@ import { type Metadata } from 'next'
 import Teaser from 'components/shared/Teaser'
 import BlockMapper from 'components/blocks/Block'
 
-import { prepareImg } from 'lib/prepareImg'
 import { getGenericPage } from '@sanity/api/services'
 import img from '@public/images/marketing/ogrod.jpg'
 import Grid from 'components/shared/Grid'

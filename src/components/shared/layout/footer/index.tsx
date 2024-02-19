@@ -35,7 +35,7 @@ function Footer() {
       </div>
       <hr className="amir-container border-gray-200/10" />
       <div className="amir-container py-6 text-center">
-        <p className="text-gray-400">AMIRmetal Marcin Bodek © 2023. All Rights Reserved.</p>
+        <p className="text-gray-400">AMIRmetal Marcin Bodek © 2024. All Rights Reserved.</p>
       </div>
     </footer>
   )

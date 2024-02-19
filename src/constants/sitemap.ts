@@ -6,7 +6,6 @@ interface Subroute {
 interface Options {
   offerSubroutes?: Subroute[]
   serviceSubroutes?: Subroute[]
-  categorySubroutes?: Subroute[]
 }
 
 export const baseURL = 'https://amir-metal.com'
@@ -25,7 +24,6 @@ const getSitemap = (options?: Options) => [
   {
     title: 'Katalog',
     link: '/katalog',
-    subroutes: options?.categorySubroutes ?? [],
   },
   {
     title: 'O nas',

@@ -20,9 +20,8 @@ async function Header({ solid = false }) {
 
   const offerSubroutes = createSubroutes(offers, 'oferta')
   const serviceSubroutes = createSubroutes(services, 'uslugi')
-  const categorySubroutes = createSubroutes(categories, 'katalog')
 
-  const sitemap = getSitemap({ offerSubroutes, serviceSubroutes, categorySubroutes })
+  const sitemap = getSitemap({ offerSubroutes, serviceSubroutes })
 
   return (
     <HeaderWrapper solid={solid}>

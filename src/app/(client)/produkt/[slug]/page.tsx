@@ -1,13 +1,15 @@
 import { type Metadata } from 'next'
 import { PortableText } from '@portabletext/react'
 
-import getProductBySlug from '@sanity/api/services/getProductBySlug'
+import getProductBySlug, { getProductPreview } from '@sanity/api/services/getProductBySlug'
 import Teaser from 'components/shared/Teaser'
 import Button from 'components/shared/Button'
 import ImageGallery from 'components/shared/ImageGallery'
 import { prepareImg } from 'lib/prepareImg'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 import getProducts from '@sanity/api/services/getProducts'
+import { draftMode } from 'next/headers'
+import { notFound } from 'next/navigation'
 
 interface ProductPageParams {
   params: {
@@ -15,14 +17,17 @@ interface ProductPageParams {
   }
 }
 
-export const dynamicParams = false
-
 export async function generateMetadata({
   params,
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
   const product = await getProductBySlug(params.slug)
+
+  if (!product) {
+    return {}
+  }
+
   const firstImage = product.images[0]
 
   const mainImage = firstImage
@@ -56,7 +61,18 @@ export async function generateStaticParams() {
 }
 
 export default async function Product({ params }: ProductPageParams) {
-  const product = await getProductBySlug(params.slug)
+  const { isEnabled } = draftMode()
+
+  let product = await getProductBySlug(params.slug)
+
+  if (isEnabled && product?._id) {
+    product = await getProductPreview(product._id)
+  }
+
+  if (!product) {
+    return notFound()
+  }
+
   const firstImage = product.images[0]
 
   const mainImage = firstImage
