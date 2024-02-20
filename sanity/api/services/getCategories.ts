@@ -14,7 +14,7 @@ const getCategories = async () => {
     "slug": slug.current,
     "mainImage": mainImage
   }`
-  const offers = await clientFetch<Category[]>(query)
+  const offers = await clientFetch<Category[]>({ query })
 
   return offers
 }

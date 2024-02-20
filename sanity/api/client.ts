@@ -1,5 +1,4 @@
-import { createClient } from 'next-sanity'
-import { cache } from 'react'
+import { QueryParams, createClient } from 'next-sanity'
 
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -7,19 +6,46 @@ export const client = createClient({
   projectId: '940pe5u1',
   dataset: 'production',
   apiVersion: '2023-07-10',
-  useCdn: isProd,
+  useCdn: false,
 })
 
 export const draftClient = createClient({
   projectId: '940pe5u1',
   dataset: 'production',
   apiVersion: '2023-07-10',
-  useCdn: isProd,
+  useCdn: false,
   token: process.env.SANITY_PREVIEW_TOKEN,
   perspective: 'raw',
 })
 
-export const clientFetch = cache(client.fetch.bind(client))
-export const draftClientFetch = cache(draftClient.fetch.bind(draftClient))
+export async function clientFetch<QueryResponse>({
+  query,
+  params = {},
+  tags,
+}: {
+  query: string
+  params?: QueryParams
+  tags?: string[]
+}) {
+  return client.fetch<QueryResponse>(query, params, {
+    next: {
+      tags,
+    },
+  })
+}
 
-export const getClient = (usePreview?: boolean) => (usePreview ? draftClientFetch : clientFetch)
+export async function draftClientFetch<QueryResponse>({
+  query,
+  params = {},
+  tags,
+}: {
+  query: string
+  params?: QueryParams
+  tags?: string[]
+}) {
+  return draftClient.fetch<QueryResponse>(query, params, {
+    next: {
+      tags,
+    },
+  })
+}

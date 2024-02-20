@@ -9,9 +9,9 @@ const getCategoryBySlug = async (slug: string) => {
     ...,
     "products": *[_type=='product' && references(^._id)]
   }`
-  const offers = await clientFetch(query)
+  const offers = await clientFetch<CategoryDocument[]>({ query })
 
-  return offers[0] as CategoryDocument
+  return offers[0]
 }
 
 export default getCategoryBySlug

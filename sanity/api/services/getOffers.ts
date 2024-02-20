@@ -14,7 +14,7 @@ const getOffers = async () => {
     "slug": slug.current,
     "mainImage": mainImage
   }`
-  const offers = await clientFetch<Offer[]>(query)
+  const offers = await clientFetch<Offer[]>({ query })
 
   return offers
 }

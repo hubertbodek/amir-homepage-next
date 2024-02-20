@@ -73,7 +73,7 @@ export default async function Product({ params }: ProductPageParams) {
     return notFound()
   }
 
-  const firstImage = product.images[0]
+  const firstImage = product.images?.[0]
 
   const mainImage = firstImage
     ? prepareImg(firstImage, 'Zdjęcie produktu').source

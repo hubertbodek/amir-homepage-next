@@ -1,6 +1,6 @@
 import { defineConfig, isDev, type SanityDocument } from 'sanity'
 import { visionTool } from '@sanity/vision'
-import { deskTool, type DefaultDocumentNodeResolver } from 'sanity/desk'
+import { structureTool, type DefaultDocumentNodeResolver } from 'sanity/structure'
 import { schemaTypes } from './sanity/schemas'
 import { Iframe } from 'sanity-plugin-iframe-pane'
 import { structure } from './sanity/structure'
@@ -45,7 +45,7 @@ export default defineConfig({
   apiVersion: '2023-07-10',
   plugins: [
     table(),
-    deskTool({
+    structureTool({
       structure,
       defaultDocumentNode,
     }),

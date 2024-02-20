@@ -1,4 +1,4 @@
-import type { StructureBuilder, ListItemBuilder } from 'sanity/desk'
+import type { StructureBuilder, ListItemBuilder } from 'sanity/structure'
 import { singletons } from './schemas/singletons'
 import { SanityDocument } from 'next-sanity'
 import { Iframe } from 'sanity-plugin-iframe-pane'

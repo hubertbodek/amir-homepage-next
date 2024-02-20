@@ -14,7 +14,7 @@ const getServices = async () => {
     "slug": slug.current,
     "mainImage": mainImage
   }`
-  const offers = await clientFetch<Service[]>(query)
+  const offers = await clientFetch<Service[]>({ query })
 
   return offers
 }

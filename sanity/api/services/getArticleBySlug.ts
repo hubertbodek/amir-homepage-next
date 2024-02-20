@@ -6,9 +6,9 @@ import { type ArticleDocument } from '@sanity/schemas/documents/article'
 const getArticleBySlug = async (slug: string) => {
   const query = groq`
   *[_type == "article" && slug.current == "${slug}"]`
-  const offers = await clientFetch(query)
+  const offers = await clientFetch<ArticleDocument[]>({ query })
 
-  return offers[0] as ArticleDocument
+  return offers[0]
 }
 
 export default getArticleBySlug

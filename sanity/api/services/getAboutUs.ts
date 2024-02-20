@@ -11,7 +11,7 @@ interface AboutUsPage {
 const getAboutUsPage = async () => {
   const query = groq`*[_id == "AboutUsPage"][0]
 `
-  const offer = await clientFetch<AboutUsPage>(query)
+  const offer = await clientFetch<AboutUsPage>({ query })
 
   return offer
 }

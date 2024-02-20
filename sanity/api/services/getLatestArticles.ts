@@ -12,7 +12,7 @@ const getLatestArticles = async (amount = 3) => {
     mainImage
   }[0...${amount}]`
 
-  const articles = await clientFetch<Article[]>(query)
+  const articles = await clientFetch<Article[]>({ query })
 
   return articles
 }

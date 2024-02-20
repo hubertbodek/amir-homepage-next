@@ -13,7 +13,7 @@ type PageId = 'OfferListPage' | 'ServicesListPage' | 'ProductsListPage'
 const getGenericPage = async (pageId: PageId) => {
   const query = groq`*[_id == "${pageId}"][0]
 `
-  const page = await clientFetch<GenericPage>(query)
+  const page = await clientFetch<GenericPage>({ query })
 
   return page
 }

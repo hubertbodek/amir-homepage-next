@@ -1,11 +1,8 @@
 import { groq } from 'next-sanity'
 
-import { clientFetch, draftClientFetch, getClient } from '../client'
+import { clientFetch, draftClientFetch } from '../client'
 import { type ProductDocument } from '@sanity/schemas/documents/product'
-
-interface FetchOptions {
-  preview?: boolean
-}
+import { TAGS } from 'constants/revalidate-tags'
 
 const getProductBySlug = async (slug: string) => {
   const query = groq`
@@ -16,9 +13,9 @@ const getProductBySlug = async (slug: string) => {
     }
   }`
 
-  const products = await clientFetch(query)
+  const products = await clientFetch<ProductDocument[]>({ query, tags: [TAGS.PRODUCT] })
 
-  return products[0] as ProductDocument
+  return products[0]
 }
 
 export const getProductPreview = async (id: string) => {
@@ -30,9 +27,9 @@ export const getProductPreview = async (id: string) => {
     }
   }`
 
-  const products = await draftClientFetch(query)
+  const products = await draftClientFetch<ProductDocument[]>({ query })
 
-  return products[0] as ProductDocument
+  return products[0]
 }
 
 export default getProductBySlug

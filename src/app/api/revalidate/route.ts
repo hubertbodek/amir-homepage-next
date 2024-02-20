@@ -1,12 +1,15 @@
-import { mapContentToRevlidate, mapContentToRoute } from 'lib/map-content-to-route'
+import { TAGS } from 'constants/revalidate-tags'
+import {
+  mapContentToRevlidate,
+  mapContentToRoute,
+  replaceSlugInRoute,
+} from 'lib/map-content-to-route'
 import { parseBody } from 'next-sanity/webhook'
-import { revalidatePath } from 'next/cache'
+import { revalidatePath, revalidateTag } from 'next/cache'
 import { NextRequest } from 'next/server'
 import { Doc } from 'types/sanity-doc'
 
 const secret = process.env.SANITY_REVALIDATE_TOKEN
-
-export const dynamic = 'force-dynamic'
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,11 +35,17 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    paths.forEach((path) => revalidatePath(path, 'page'))
+    const pathsToRevalidate = paths.map((path) => replaceSlugInRoute(path, body.slug?.current))
+    pathsToRevalidate.forEach((path) => revalidatePath(path))
 
-    return new Response(JSON.stringify({ revalidated: true, now: Date.now(), paths }), {
-      status: 200,
-    })
+    console.log('Revalidated paths:', pathsToRevalidate)
+
+    return new Response(
+      JSON.stringify({ revalidated: true, now: Date.now(), paths: pathsToRevalidate }),
+      {
+        status: 200,
+      }
+    )
   } catch (error) {
     return new Response('Internal Server Error', { status: 500 })
   }
