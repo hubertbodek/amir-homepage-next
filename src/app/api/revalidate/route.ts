@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
       })
     }
 
-    paths.forEach((path) => revalidatePath(path, 'layout'))
+    paths.forEach((path) => revalidatePath(path, 'page'))
 
     return new Response(JSON.stringify({ revalidated: true, now: Date.now(), paths }), {
       status: 200,
