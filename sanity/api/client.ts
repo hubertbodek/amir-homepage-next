@@ -1,7 +1,5 @@
 import { QueryParams, createClient } from 'next-sanity'
 
-const isProd = process.env.NODE_ENV === 'production'
-
 export const client = createClient({
   projectId: '940pe5u1',
   dataset: 'production',

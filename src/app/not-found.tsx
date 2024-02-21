@@ -32,9 +32,9 @@ function NotFoundPage() {
     <html lang="en" style={{ fontFamily: sora.style.fontFamily }}>
       <body className="overflow-x-hidden">
         <Layout solidHeader>
-          <section className="amir-container pt-[var(--header-height)] flex items-center justify-center flex-col min-h-screen text-center">
-            <h1 className="text-h1 font-bold mb-5 text-sky-900">Nie znaleziono tej strony :(</h1>
-            <p className="text-lg max-w-2xl text-center mx-auto">
+          <section className="amir-container flex min-h-screen flex-col items-center justify-center pt-[var(--header-height)] text-center">
+            <h1 className="text-h1 mb-5 font-bold text-sky-900">Nie znaleziono tej strony :(</h1>
+            <p className="mx-auto max-w-2xl text-center text-lg">
               Przepraszamy, ale szukana strona nie istnieje lub została przeniesiona.
             </p>
             <Button href="/" theme="primary" className="mt-10">

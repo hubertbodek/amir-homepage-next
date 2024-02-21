@@ -1,11 +1,6 @@
-import { TAGS } from 'constants/revalidate-tags'
-import {
-  mapContentToRevlidate,
-  mapContentToRoute,
-  replaceSlugInRoute,
-} from 'lib/map-content-to-route'
+import { mapContentToRevlidate, replaceSlugInRoute } from 'lib/map-content-to-route'
 import { parseBody } from 'next-sanity/webhook'
-import { revalidatePath, revalidateTag } from 'next/cache'
+import { revalidatePath } from 'next/cache'
 import { NextRequest } from 'next/server'
 import { Doc } from 'types/sanity-doc'
 
@@ -47,6 +42,12 @@ export async function POST(request: NextRequest) {
       }
     )
   } catch (error) {
-    return new Response('Internal Server Error', { status: 500 })
+    return new Response(
+      JSON.stringify({
+        message: 'Internal Server Error',
+        error: error,
+      }),
+      { status: 500 }
+    )
   }
 }
