@@ -16,12 +16,12 @@
 
   .image-overlay::before {
     content: '';
-    @apply block absolute h-full w-full max-md:bg-primary/70 md:bg-gradient-to-r from-transparent to-primary z-20;
+    @apply absolute z-20 block h-full w-full from-transparent to-primary max-md:bg-primary/70 md:bg-gradient-to-r;
   }
 
   .image-overlay::after {
     content: '';
-    @apply block absolute h-full w-full max-md:bg-primary/70 md:bg-gradient-to-t from-transparent to-primary z-20;
+    @apply absolute z-20 block h-full w-full from-transparent to-primary max-md:bg-primary/70 md:bg-gradient-to-t;
   }
 
   .gradient-primary {

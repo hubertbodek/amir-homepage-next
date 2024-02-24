@@ -31,8 +31,8 @@ export default function Hero({
   const img = prepareImg(image, 'Zdjęcie główne oferty')
 
   return (
-    <div className={cn('relative w-full', fluid ? 'min-h-[480px] pt-24 pb-16' : 'h-[480px]')}>
-      <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/80 to-black" />
+    <div className={cn('relative w-full', fluid ? 'min-h-[480px] pb-16 pt-24' : 'h-[480px]')}>
+      <div className="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-tr from-black/80 to-black" />
       <Image
         src={img.source.src}
         alt={img.source.alt}
@@ -42,18 +42,18 @@ export default function Hero({
         className="object-cover object-center"
         priority
       />
-      <div className="amir-container mx-auto h-full flex justify-start items-center">
+      <div className="amir-container mx-auto flex h-full items-center justify-start">
         <div
           className={cn(
-            'relative z-20 text-left mt-20',
+            'relative z-20 mt-20 text-left',
             centered && 'mx-auto',
             fluid ? 'max-w-6xl' : 'max-w-3xl'
           )}
         >
-          <span className="inline-block mb-3 max-md:text-sm uppercase text-sky-300">{label}</span>
-          <h1 className="text-h1 text-light mb-6">{title}</h1>
+          <span className="mb-3 inline-block uppercase text-sky-300 max-md:text-sm">{label}</span>
+          <h1 className="text-h1 mb-6 text-light">{title}</h1>
           {description && (
-            <p className="text-subtitle text-light max-w-prose line-clamp-4 mb-8">{description}</p>
+            <p className="text-subtitle mb-8 line-clamp-4 max-w-prose text-light">{description}</p>
           )}
           {href && (
             <Button theme="light" href={href} className="px-10">

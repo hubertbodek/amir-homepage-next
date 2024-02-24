@@ -4,7 +4,7 @@ import Button from 'components/shared/Button'
 
 export default function ServicesSection() {
   return (
-    <div className="text-light bg-primary relative h-[684px]">
+    <div className="relative h-[684px] bg-primary text-light">
       <div className="relative h-full w-full md:mb-12">
         <div className="image-overlay absolute left-0 top-0 z-10 h-full w-full">
           <Image

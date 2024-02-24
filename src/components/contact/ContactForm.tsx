@@ -9,7 +9,7 @@ export default function ContactForm() {
       <InputField label="Email" />
       <InputField label="Telefon" />
       <TextArea label="Wiadomość" rows={4} />
-      <Button theme="primary" type="submit" className="w-full my-4">
+      <Button theme="primary" type="submit" className="my-4 w-full">
         Wyślij
       </Button>
     </form>

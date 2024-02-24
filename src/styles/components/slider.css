@@ -8,9 +8,9 @@
 }
 
 .swiper-slide img {
-  @apply block w-full h-full object-cover;
+  @apply block h-full w-full object-cover;
 }
 
 .mySwiper {
-  @apply mx-auto gradient-primary;
+  @apply gradient-primary mx-auto;
 }

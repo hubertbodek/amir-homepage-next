@@ -26,8 +26,8 @@ export default function CollapsibleItem({ item }: CollapsibleItemProps) {
       >
         <NavigationMenuTrigger>{item.title}</NavigationMenuTrigger>
       </MyLink>
-      <NavigationMenuContent className="bg-primary shadow-lg text-white px-1 py-2">
-        <ul className="min-w-[250px] flex flex-col">
+      <NavigationMenuContent className="bg-primary px-1 py-2 text-white shadow-lg">
+        <ul className="flex min-w-[250px] flex-col">
           {item.subroutes.map((subroute) => (
             <li key={subroute.title} className="px-3 py-2">
               <NavigationMenuLink asChild>

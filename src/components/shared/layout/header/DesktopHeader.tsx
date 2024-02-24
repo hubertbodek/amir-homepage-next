@@ -16,8 +16,8 @@ import CollapsibleItem from './CollapsibleItem'
 
 export default function DesktopHeader({ sitemap }: { sitemap: Sitemap }) {
   return (
-    <div className="amir-container mx-auto justify-between items-center hidden md:flex">
-      <div className="aspect-[256/62] relative h-9">
+    <div className="amir-container mx-auto hidden items-center justify-between md:flex">
+      <div className="relative aspect-[256/62] h-9">
         <Link href="/" title="Logo">
           <Image src={logo} alt="Logo" width={256} height={62} />
         </Link>

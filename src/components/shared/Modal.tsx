@@ -15,7 +15,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
 
   return (
     <Dialog open onOpenChange={handleOnOpenChange}>
-      <DialogContent className="p-0 max-w-7xl !rounded-sm border-none">{children}</DialogContent>
+      <DialogContent className="max-w-7xl !rounded-sm border-none p-0">{children}</DialogContent>
     </Dialog>
   )
 }

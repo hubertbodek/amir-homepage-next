@@ -52,18 +52,18 @@ export default function SideBySideItem({
   return (
     <div
       ref={ref}
-      className={`grid grid-cols-1 items-center md:grid-cols-12 gap-8 min-h-[240px] text-left ${styles.text} ${animationClass}`}
+      className={`grid min-h-[240px] grid-cols-1 items-center gap-8 text-left md:grid-cols-12 ${styles.text} ${animationClass}`}
     >
       <div className={`${styles.textContainer}`}>
         <h3
-          className={`text-2xl md:text-5xl mb-4 font-bold [text-wrap:balance] ${
+          className={`mb-4 text-2xl font-bold [text-wrap:balance] md:text-5xl ${
             light ? 'text-neutral-800' : 'text-neutral-100'
           }`}
         >
           {title}
         </h3>
         <p
-          className={`text-base md:text-lg mb-4 font-light [text-wrap:balance] ${
+          className={`mb-4 text-base font-light [text-wrap:balance] md:text-lg ${
             light ? 'text-neutral-600' : 'text-neutral-300'
           }`}
         >
@@ -75,7 +75,7 @@ export default function SideBySideItem({
           </Button>
         )}
       </div>
-      <div className={`${styles.imageContainer} h-64 md:h-[600px] relative`}>
+      <div className={`${styles.imageContainer} relative h-64 md:h-[600px]`}>
         <div
           className={twMerge(
             'absolute top-0 h-full w-full',

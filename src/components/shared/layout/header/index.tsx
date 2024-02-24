@@ -12,11 +12,7 @@ function createSubroutes<T extends { title: string; slug: string }>(items: T[], 
 }
 
 async function Header({ solid = false }) {
-  const [offers, services, categories] = await Promise.all([
-    getOffers(),
-    getServices(),
-    getCategories(),
-  ])
+  const [offers, services] = await Promise.all([getOffers(), getServices(), getCategories()])
 
   const offerSubroutes = createSubroutes(offers, 'oferta')
   const serviceSubroutes = createSubroutes(services, 'uslugi')

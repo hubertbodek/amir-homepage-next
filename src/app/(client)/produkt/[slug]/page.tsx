@@ -82,14 +82,14 @@ export default async function Product({ params }: ProductPageParams) {
   return (
     <>
       <Teaser image={mainImage} title={product.title} label={product.category.title} />
-      <section className="py-10 amir-container gap-12 flex max-lg:flex-col">
+      <section className="amir-container flex gap-12 py-10 max-lg:flex-col">
         <div className="lg:hidden">
-          <span className="text-orange-700 uppercase inline-block mb-2 text-xs">
+          <span className="mb-2 inline-block text-xs uppercase text-orange-700">
             {product.category.title}
           </span>
-          <h2 className="text-h2 font-bold mb-4">{product.title}</h2>
+          <h2 className="text-h2 mb-4 font-bold">{product.title}</h2>
         </div>
-        <div className="flex-1 flex flex-col gap-8">
+        <div className="flex flex-1 flex-col gap-8">
           <ImageGallery images={product.images} />
         </div>
         <a
@@ -97,21 +97,21 @@ export default async function Product({ params }: ProductPageParams) {
           title="Kup teraz"
           target="_blank"
           rel="noreferrer"
-          className="self-stretch mt-auto lg:hidden"
+          className="mt-auto self-stretch lg:hidden"
         >
           <Button className="mt-auto w-full" theme="primary">
             Kup teraz
           </Button>
         </a>
-        <div className="flex-1 h-auto self-start">
+        <div className="h-auto flex-1 self-start">
           <div className="max-lg:hidden">
-            <span className="text-orange-700 uppercase inline-block mb-2 text-xs">
+            <span className="mb-2 inline-block text-xs uppercase text-orange-700">
               {product.category.title}
             </span>
-            <h2 className="text-h2 font-bold mb-4">{product.title}</h2>
+            <h2 className="text-h2 mb-4 font-bold">{product.title}</h2>
           </div>
           {!!product.description && (
-            <div className="text-gray-800 prose prose-slate prose-li:marker:text-sky-800 mb-8">
+            <div className="prose prose-slate mb-8 text-gray-800 prose-li:marker:text-sky-800">
               <PortableText value={product.description} />
             </div>
           )}
@@ -120,7 +120,7 @@ export default async function Product({ params }: ProductPageParams) {
             title="Kup teraz"
             target="_blank"
             rel="noreferrer"
-            className="justify-self-end self-stretch mt-auto max-lg:hidden"
+            className="mt-auto self-stretch justify-self-end max-lg:hidden"
           >
             <Button className="mt-auto" theme="primary">
               Kup teraz

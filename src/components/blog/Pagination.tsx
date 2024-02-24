@@ -20,7 +20,7 @@ const Pagination = ({ pagination: { page, pageCount } }: PaginationProps) => {
   }
 
   return (
-    <div className="py-6 flex justify-center items-center space-x-3 md:space-x-6 mt-8">
+    <div className="mt-8 flex items-center justify-center space-x-3 py-6 md:space-x-6">
       <PaginationArrow type="previous" disabled={page === 1} />
       <MobilePagination page={page} pageCount={pageCount} />
       <ReactPaginate
@@ -92,8 +92,8 @@ const PaginationArrow = ({ type, disabled }: { type: 'previous' | 'next'; disabl
   return (
     <div
       className={`${
-        disabled ? 'bg-gray-300 opacity-20' : 'hover:bg-sky-200 hover:cursor-pointer'
-      } p-1 transition rounded-full`}
+        disabled ? 'bg-gray-300 opacity-20' : 'hover:cursor-pointer hover:bg-sky-200'
+      } rounded-full p-1 transition`}
       onClick={handlePagination}
     >
       {renderArrow()}

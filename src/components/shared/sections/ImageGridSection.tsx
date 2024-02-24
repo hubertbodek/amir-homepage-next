@@ -5,9 +5,9 @@ import React from 'react'
 
 export default function ImageGridSection({ title, description, images }: ImageGridSectionProps) {
   return (
-    <section className="amir-container py-14 my-20 my-md-40">
-      <h3 className="text-h3 font-bold text-center mb-4">{title}</h3>
-      <p className="max-w-3xl text-lg mx-auto text-center mb-10">{description}</p>
+    <section className="amir-container my-md-40 my-20 py-14">
+      <h3 className="text-h3 mb-4 text-center font-bold">{title}</h3>
+      <p className="mx-auto mb-10 max-w-3xl text-center text-lg">{description}</p>
       <div className="grid grid-cols-12 grid-rows-2 gap-4">
         {images.map((image, index) => {
           const img = prepareImg(image, '')

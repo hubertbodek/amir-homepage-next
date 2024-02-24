@@ -14,7 +14,7 @@ export default function ContactCta({ image, heading, description }: ContactCtaPr
   const img = prepareImg(image, 'Contact Cta Image')
 
   return (
-    <section className="amir-container mx-auto my-40 flex max-md:flex-col gap-x-10">
+    <section className="amir-container mx-auto my-40 flex gap-x-10 max-md:flex-col">
       <Image
         className="flex-1 rounded object-contain max-md:mb-8"
         src={img.source.src}
@@ -22,9 +22,9 @@ export default function ContactCta({ image, heading, description }: ContactCtaPr
         width={img.dimensions?.width}
         height={img.dimensions?.height}
       />
-      <div className="flex-1 flex flex-col justify-center items-start">
-        <h2 className="text-h2 font-bold mb-5">{heading}</h2>
-        <p className="text-xl mb-8">{description}</p>
+      <div className="flex flex-1 flex-col items-start justify-center">
+        <h2 className="text-h2 mb-5 font-bold">{heading}</h2>
+        <p className="mb-8 text-xl">{description}</p>
         <Button theme="primary" href="#contact-form">
           Skontaktuj się z nami
         </Button>

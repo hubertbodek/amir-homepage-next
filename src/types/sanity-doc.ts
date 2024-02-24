@@ -1,4 +1,4 @@
-import { SanityDocument } from 'next-sanity'
+import { type SanityDocument } from 'next-sanity'
 
 export interface Doc extends SanityDocument {
   slug: {

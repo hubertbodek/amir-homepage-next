@@ -15,9 +15,9 @@ export default function TableContainer({ title, description, table }: TableProps
   const bodyItems = rows.slice(1)
 
   return (
-    <section className="amir-container mx-auto py-24 px-4">
-      <h3 className="text-h3 text-left font-bold mb-3 text-gray-900">{title}</h3>
-      <p className="max-w-prose text-lg mb-10">{description}</p>
+    <section className="amir-container mx-auto px-4 py-24">
+      <h3 className="text-h3 mb-3 text-left font-bold text-gray-900">{title}</h3>
+      <p className="mb-10 max-w-prose text-lg">{description}</p>
       <Table>
         <TableHeader>
           <TableRow>

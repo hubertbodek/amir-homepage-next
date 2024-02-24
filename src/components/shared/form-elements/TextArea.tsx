@@ -20,7 +20,7 @@ export default function TextArea({
         id={id}
         name={id}
         className={`${
-          overrideClassName ?? 'rounded border border-grey px-4 py-2 placeholder:text-grey md:py-3'
+          overrideClassName ?? 'border-grey placeholder:text-grey rounded border px-4 py-2 md:py-3'
         } ${props.className ?? ''}`}
         {...props}
       />

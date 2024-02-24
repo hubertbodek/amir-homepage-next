@@ -13,8 +13,8 @@ function Layout({ children, solidHeader = false }: LayoutProps) {
   if (isEnabled) {
     return (
       <main className="relative min-h-screen">
-        <div className="fixed top-4 left-0 w-full px-10 z-50">
-          <div className="bg-green-400/60 text-white ml-auto p-2 text-center text-sm rounded-full w-52">
+        <div className="fixed left-0 top-4 z-50 w-full px-10">
+          <div className="ml-auto w-52 rounded-full bg-green-400/60 p-2 text-center text-sm text-white">
             Wersja podglądowa
           </div>
         </div>

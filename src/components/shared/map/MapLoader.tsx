@@ -1,3 +1,3 @@
-const MapLoader = () => <div className="w-full h-full bg-primary/10 animate-pulse" />
+const MapLoader = () => <div className="h-full w-full animate-pulse bg-primary/10" />
 
 export default MapLoader

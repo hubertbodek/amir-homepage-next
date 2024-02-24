@@ -20,7 +20,7 @@ export default async function About() {
         label="O nas"
         title={aboutUsData.title}
       />
-      <section className="my-20 amir-container">
+      <section className="amir-container my-20">
         <h2 className="text-h2 max-w-3xl text-left">{aboutUsData.description}</h2>
       </section>
       <BlockMapper blocks={aboutUsData.blocks} />

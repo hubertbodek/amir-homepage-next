@@ -8,14 +8,14 @@ export default function NumberedSection({
   children: React.ReactNode
 }) {
   return (
-    <div className="md:grid grid-cols-7 md:items-center my-8">
-      <div className="max-md:mr-4 max-md:mb-4 flex items-center col-span-1">
-        <span className="text-4xl md:text-6xl text-outline-1 text-outline-light text-transparent flex-shrink-1">
+    <div className="my-8 grid-cols-7 md:grid md:items-center">
+      <div className="col-span-1 flex items-center max-md:mb-4 max-md:mr-4">
+        <span className="text-outline-1 text-outline-light flex-shrink-1 text-4xl text-transparent md:text-6xl">
           0{number}
         </span>
-        <div className="hidden md:block h-[2px] mx-4 w-full bg-white"></div>
+        <div className="mx-4 hidden h-[2px] w-full bg-white md:block"></div>
       </div>
-      <p className="col-span-6 text-subtitle">{children}</p>
+      <p className="text-subtitle col-span-6">{children}</p>
     </div>
   )
 }

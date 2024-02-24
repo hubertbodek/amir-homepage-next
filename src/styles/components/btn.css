@@ -3,7 +3,7 @@
 
   &::before {
     content: '';
-    @apply absolute left-0 bottom-2 h-[2px] w-1/5 bg-secondary-100 transition-all duration-300;
+    @apply absolute bottom-2 left-0 h-[2px] w-1/5 bg-secondary-100 transition-all duration-300;
   }
 
   &.btn-active {

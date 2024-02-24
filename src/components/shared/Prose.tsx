@@ -5,10 +5,10 @@ interface ProseProps {
 
 export default function Prose({ heading, text }: ProseProps) {
   return (
-    <section className="max-w-prose text-xl mx-auto px-4 my-20 my-md-40">
-      {heading && <h2 className="text-h2 font-bold text-left mb-8">{heading}</h2>}
+    <section className="my-md-40 mx-auto my-20 max-w-prose px-4 text-xl">
+      {heading && <h2 className="text-h2 mb-8 text-left font-bold">{heading}</h2>}
       <p
-        className="max-lg:text-base !leading-7 lg:leading-8 mx-auto"
+        className="mx-auto !leading-7 max-lg:text-base lg:leading-8"
         dangerouslySetInnerHTML={{ __html: text }}
       />
     </section>

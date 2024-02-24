@@ -29,22 +29,22 @@ export default function VerticalOverlayCard({
 
   return (
     <div
-      className={`group relative w-full max-lg:aspect-square lg:h-[486px] overflow-hidden shadow-lg hover:shadow-2xl transition rounded ${className}`}
+      className={`group relative w-full overflow-hidden rounded shadow-lg transition hover:shadow-2xl max-lg:aspect-square lg:h-[486px] ${className}`}
     >
       <Image
         src={img.source.src}
         alt={img.source.alt}
         sizes={getImageSizes('95vw', '45vw', '305px')}
         fill
-        className="object-cover object-center group-hover:scale-110 transition duration-300 ease-out"
+        className="object-cover object-center transition duration-300 ease-out group-hover:scale-110"
       />
       {overlay && (
-        <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent via-gray-900/70 to-gray-900 group-hover:opacity-90 duration-300 transition pointer-events-none" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-gradient-to-b from-transparent via-gray-900/70 to-gray-900 transition duration-300 group-hover:opacity-90" />
       )}
-      <div className="h-full w-full absolute top-0 left-0 z-10 flex flex-col items-start justify-end px-5 overflow-hidden py-6">
+      <div className="absolute left-0 top-0 z-10 flex h-full w-full flex-col items-start justify-end overflow-hidden px-5 py-6">
         <Link
           href={url}
-          className="inline-block text-h3 mb-2 text-neutral-100 hover:underline"
+          className="text-h3 mb-2 inline-block text-neutral-100 hover:underline"
           title={title}
         >
           {title}

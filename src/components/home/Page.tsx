@@ -33,28 +33,28 @@ export default function Page() {
       </Hero>
       <SideTeaser {...sideTeaser} />
       <OfferSection />
-      <div className="py-24 bg-primary lg:bg-[url('/images/abstracts/flux-bg.svg')] bg-no-repeat bg-cover">
+      <div className="bg-primary bg-cover bg-no-repeat py-24 lg:bg-[url('/images/abstracts/flux-bg.svg')]">
         <SideBySide {...(products as SideBySideProps)} />
       </div>
       <section className="my-24">
-        <div className="relative amir-container px-4 py-2 md:py-24 grid md:grid-cols-3 gap-12 items-center">
-          <div className="absolute top-12 left-0 h-56 w-56 max-md:hidden">
+        <div className="amir-container relative grid items-center gap-12 px-4 py-2 md:grid-cols-3 md:py-24">
+          <div className="absolute left-0 top-12 h-56 w-56 max-md:hidden">
             <PerforationPattern fill="fill-sky-600/30" />
           </div>
           <div>
-            <h3 className="text-h2 font-semibold mb-3 inline-block text-gray-900">{perks.title}</h3>
-            <p className="text-gray-600 text-lg mb-2">{perks.description}</p>
-            <Button className="!text-gray-900 font-semibold" theme="secondary" href="/kontakt">
+            <h3 className="text-h2 mb-3 inline-block font-semibold text-gray-900">{perks.title}</h3>
+            <p className="mb-2 text-lg text-gray-600">{perks.description}</p>
+            <Button className="font-semibold !text-gray-900" theme="secondary" href="/kontakt">
               {perks.buttonText}
             </Button>
           </div>
-          <div className="md:col-span-2 grid sm:grid-cols-2 gap-x-6 gap-y-12">
+          <div className="grid gap-x-6 gap-y-12 sm:grid-cols-2 md:col-span-2">
             {perks.items.map((perk, idx) => (
               <div key={`perk--${idx}`} className="flex flex-col">
-                <span className="inline-block w-12 h-12 bg-white p-2 shadow-lg mb-4 rounded border border-gray-100">
+                <span className="mb-4 inline-block h-12 w-12 rounded border border-gray-100 bg-white p-2 shadow-lg">
                   <ChartBarSquareIcon className="h-full w-full text-sky-700" />
                 </span>
-                <span className="text-h4 font-semibold text-gray-800 mb-2 inline-block">
+                <span className="text-h4 mb-2 inline-block font-semibold text-gray-800">
                   {perk.title}
                 </span>
                 <p className="text-gray-600">{perk.description}</p>
@@ -65,19 +65,19 @@ export default function Page() {
       </section>
       <ServicesSection />
       <section className="my-36">
-        <h2 className="relative px-4 amir-container text-h2 mb-3 text-center uppercase font-bold text-neutral-800">
-          <div className="absolute -top-6 right-0 md:right-1/4 h-16 md:h-36 w-32 md:w-56 z-0 text-primary">
+        <h2 className="amir-container text-h2 relative mb-3 px-4 text-center font-bold uppercase text-neutral-800">
+          <div className="absolute -top-6 right-0 z-0 h-16 w-32 text-primary md:right-1/4 md:h-36 md:w-56">
             <PerforationPattern fill="fill-sky-600/30" />
           </div>
           {realisations.title}
         </h2>
-        <p className=" mx-auto text-center max-w-xl mb-16 px-4">{realisations.description}</p>
+        <p className=" mx-auto mb-16 max-w-xl px-4 text-center">{realisations.description}</p>
         <DesktopCarousel options={{ isLooped: true }}>
           {realisations.cards.map((card, idx) => (
             <VerticalOverlayCard key={`card--${idx}`} {...card} overlay />
           ))}
         </DesktopCarousel>
-        <div className="mx-auto flex justify-center items-center mb-12">
+        <div className="mx-auto mb-12 flex items-center justify-center">
           <Button theme="primary">Zobacz wszystkie</Button>
         </div>
       </section>

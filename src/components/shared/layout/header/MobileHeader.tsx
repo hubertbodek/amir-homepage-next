@@ -24,8 +24,8 @@ export default function MobileHeader({ sitemap }: { sitemap: Sitemap }) {
   const closeSheet = () => sheetTriggerRef.current?.click()
 
   return (
-    <div className="flex md:hidden items-center px-4 w-full justify-between">
-      <div className="aspect-[256/62] relative h-9">
+    <div className="flex w-full items-center justify-between px-4 md:hidden">
+      <div className="relative aspect-[256/62] h-9">
         <Link href="/" title="Logo">
           <Image src={logo} alt="Logo" width={256} height={62} />
         </Link>
@@ -38,9 +38,9 @@ export default function MobileHeader({ sitemap }: { sitemap: Sitemap }) {
           <Accordion
             type="single"
             collapsible
-            className="w-full text-white flex flex-col pt-2 items-start"
+            className="flex w-full flex-col items-start pt-2 text-white"
           >
-            <div className="aspect-[472/62] relative h-5 mb-5">
+            <div className="relative mb-5 aspect-[472/62] h-5">
               <Link href="/">
                 <Image
                   src={logoPlain}
@@ -57,13 +57,13 @@ export default function MobileHeader({ sitemap }: { sitemap: Sitemap }) {
                 <AccordionItem
                   key={item.link}
                   value={item.link}
-                  className="border-b-secondary-100/30 w-full"
+                  className="w-full border-b-secondary-100/30"
                 >
-                  <AccordionTrigger className="py-0 w-full">
+                  <AccordionTrigger className="w-full py-0">
                     <LinkHandler closeSheetHandler={closeSheet} item={item} />
                   </AccordionTrigger>
                   <AccordionContent>
-                    <ul className="flex flex-col divide-y-secondary-100/30 pl-2 divide-y divide-secondary/20">
+                    <ul className="divide-y-secondary-100/30 flex flex-col divide-y divide-secondary/20 pl-2">
                       {item.subroutes.map((subitem) => (
                         <li key={subitem.link} className="py-2">
                           <LinkHandler closeSheetHandler={closeSheet} item={subitem} />
@@ -103,5 +103,5 @@ const LinkHandler = ({
 )
 
 const RegularLinkItem = ({ children }: { children: React.ReactNode }) => (
-  <div className="w-full py-2 border-b border-b-secondary-100/30">{children}</div>
+  <div className="w-full border-b border-b-secondary-100/30 py-2">{children}</div>
 )

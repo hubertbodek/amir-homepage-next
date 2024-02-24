@@ -24,16 +24,16 @@ export default async function Products() {
   return (
     <>
       <Teaser image={{ src: img, alt: 'Perforacja' }} title={title} label="Produkty" />
-      <p className="mx-auto max-w-prose px-4 my-24 text-subtitle">{description}</p>
+      <p className="text-subtitle mx-auto my-24 max-w-prose px-4">{description}</p>
       <BlockMapper blocks={blocks} />
       <Grid className="amir-container mb-8">
         <h2 className="text-h2 col-span-full font-bold">Nasze wyroby</h2>
-        <p className="max-w-xl text-subtitle text-left col-span-full">
+        <p className="text-subtitle col-span-full max-w-xl text-left">
           Oferujemy produkty, które wzbogacą każdą przestrzeń – <br />
           <span className="font-semibold">od domowego zacisza po miejską dżunglę.</span>
         </p>
       </Grid>
-      <div className="amir-container grid gap-x-8 gap-y-10 grid-cols-2 md:grid-cols-fluid-sm">
+      <div className="amir-container grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-fluid-sm">
         {products.map((product) => (
           <ProductCard
             key={product.slug.current}

@@ -1,12 +1,12 @@
 'use client'
 
-import { ImageData } from '@sanity/schemas/objects/image-data'
+import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { useMediaQuery } from 'hooks/useMediaQuery'
-import { PreparedImage, prepareImg } from 'lib/prepareImg'
+import { type PreparedImage, prepareImg } from 'lib/prepareImg'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo, useState } from 'react'
-import { StaticImageModel } from 'types/StaticImageModel'
+import { type StaticImageModel } from 'types/StaticImageModel'
 import getImageSizes from 'utlis/getImageSizes'
 
 interface ProductCardProps {
@@ -41,7 +41,7 @@ export default function ProductCard({
 
   return (
     <div
-      className={`group w-full h-96 transition ${className}`}
+      className={`group h-96 w-full transition ${className}`}
       onMouseEnter={isDesktop ? showGallery : undefined}
       onMouseLeave={isDesktop ? hideGallery : undefined}
     >
@@ -52,18 +52,18 @@ export default function ProductCard({
             alt={currentImage.source.alt}
             sizes={getImageSizes('95vw', '45vw', '305px')}
             fill
-            className="object-cover object-center group-hover:scale-110 transition duration-300 ease-out"
+            className="object-cover object-center transition duration-300 ease-out group-hover:scale-110"
           />
         </Link>
-        <div className="absolute top-0 left-0 h-full w-full bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/60 group-hover:opacity-50 duration-300 transition pointer-events-none" />
+        <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-gradient-to-b from-transparent via-gray-900/20 to-gray-900/60 transition duration-300 group-hover:opacity-50" />
       </div>
-      <div className="text-primary mt-3 flex flex-col items-start">
+      <div className="mt-3 flex flex-col items-start text-primary">
         {shouldShowGallery && preparedImages.length > 1 ? (
           <ImageGallery images={preparedImages} onImageHover={setCurrentImage} />
         ) : (
-          label && <span className="text-xs text-orange-700 font-light">{label}</span>
+          label && <span className="text-xs font-light text-orange-700">{label}</span>
         )}
-        <Link href={url} className="inline-block hover:underline mt-2" title={title}>
+        <Link href={url} className="mt-2 inline-block hover:underline" title={title}>
           {title}
         </Link>
         {price && <span className="font-semibold">{price} zł</span>}
@@ -73,7 +73,7 @@ export default function ProductCard({
 }
 
 interface ImageGalleryProps {
-  images: Array<PreparedImage>
+  images: PreparedImage[]
   onImageHover: (image: PreparedImage) => void
 }
 

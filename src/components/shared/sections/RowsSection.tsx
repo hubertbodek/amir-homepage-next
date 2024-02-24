@@ -18,23 +18,23 @@ interface Row {
 
 export default function RowsSection({ title, rows }: RowsSectionProps) {
   return (
-    <section className="my-20 md:my-40 bg-white py-20">
-      <h3 className="text-h3 block amir-container mb-10 font-bold text-blue-950">{title}</h3>
+    <section className="my-20 bg-white py-20 md:my-40">
+      <h3 className="text-h3 amir-container mb-10 block font-bold text-blue-950">{title}</h3>
       {rows.map((row, i) => (
-        <div key={`row--${i}`} className="amir-container grid grid-cols-fluid gap-y-8 gap-x-6">
-          <h4 className="col-span-full text-h4 text-orange-950 font-semibold mt-12">{row.title}</h4>
+        <div key={`row--${i}`} className="amir-container grid grid-cols-fluid gap-x-6 gap-y-8">
+          <h4 className="text-h4 col-span-full mt-12 font-semibold text-orange-950">{row.title}</h4>
           {row.items.map((rowItem, i) => {
             const img = prepareImg(rowItem.image, 'Row Item Image')
 
             return (
               <div key={i}>
-                <div className="h-36 mb-4">
+                <div className="mb-4 h-36">
                   <Image
                     src={img.source.src}
                     alt={img.source.alt}
                     width={img.dimensions?.width}
                     height={img.dimensions?.height}
-                    className="h-full w-auto mx-auto object-center"
+                    className="mx-auto h-full w-auto object-center"
                   />
                 </div>
                 <p className="text-center">{rowItem.subtitle}</p>

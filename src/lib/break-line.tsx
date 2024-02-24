@@ -4,7 +4,7 @@ export const handleBreakLine = (text: string) => {
   if (lines.length === 1) return text
 
   return lines.map((line, idx) => (
-    <span key={`line--${idx}`} className="block mb-4">
+    <span key={`line--${idx}`} className="mb-4 block">
       {line}
       <br />
     </span>

@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import { useIsomorphicLayoutEffect } from './useIsomorphicLayoutEffect'
 
-type UseMediaQueryOptions = {
+interface UseMediaQueryOptions {
   defaultValue?: boolean
   initializeWithValue?: boolean
 }
@@ -46,6 +46,7 @@ export function useMediaQuery(query: string, options?: boolean | UseMediaQueryOp
     if (initializeWithValue) {
       return getMatches(query)
     }
+
     return defaultValue
   })
 
@@ -53,6 +54,7 @@ export function useMediaQuery(query: string, options?: boolean | UseMediaQueryOp
     if (IS_SERVER) {
       return defaultValue
     }
+
     return window.matchMedia(query).matches
   }
 

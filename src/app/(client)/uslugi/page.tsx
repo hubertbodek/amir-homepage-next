@@ -28,10 +28,10 @@ export default async function Services() {
         title={title}
         label="Usługi"
       />
-      <p className="mx-auto max-w-prose px-4 my-24 text-subtitle">{description}</p>
+      <p className="text-subtitle mx-auto my-24 max-w-prose px-4">{description}</p>
       <section className="amir-container mx-auto my-24 md:my-36">
         <h2 className="text-h2 mb-8 font-bold">Lorem ipsum dolor sit amet.</h2>
-        <p className="max-w-prose mb-6">
+        <p className="mb-6 max-w-prose">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus error, distinctio saepe
           veritatis modi nostrum!
         </p>
@@ -55,9 +55,9 @@ export default async function Services() {
 
 const CustomService = () => {
   return (
-    <div className="h-full w-full px-5 py-6 bg-neutral-200 border border-primary/30 shadow-lg rounded flex flex-col justify-end items-start">
-      <h3 className="text-h3 font-bold mb-2">Kompleksowa usługa</h3>
-      <p className="text-gray-600 mb-3">
+    <div className="flex h-full w-full flex-col items-start justify-end rounded border border-primary/30 bg-neutral-200 px-5 py-6 shadow-lg">
+      <h3 className="text-h3 mb-2 font-bold">Kompleksowa usługa</h3>
+      <p className="mb-3 text-gray-600">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatem.
       </p>
       <Button href="/kontakt" theme="primary">

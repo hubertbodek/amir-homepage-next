@@ -24,11 +24,11 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
   return (
     <div
       className={cn(
-        'flex flex-col lg:flex-row gap-4 sticky transition-all duration-300',
+        'sticky flex flex-col gap-4 transition-all duration-300 lg:flex-row',
         isScrollingDown ? 'top-6' : 'top-28'
       )}
     >
-      <aside className="max-lg:-mx-4 max-lg:px-4 lg:w-16 flex lg:flex-col gap-4 max-lg:order-last max-lg:overflow-x-scroll h-full lg:h-[580px] max-lg:py-3 max-lg:border-b max-lg:border-b-black/10 max-lg:shadow-lg">
+      <aside className="flex h-full gap-4 max-lg:order-last max-lg:-mx-4 max-lg:overflow-x-scroll max-lg:border-b max-lg:border-b-black/10 max-lg:px-4 max-lg:py-3 max-lg:shadow-lg lg:h-[580px] lg:w-16 lg:flex-col">
         {images.map((image, idx) => {
           const img = prepareImg(image, 'Zdjęcie produktu')
           const isActive = image.asset._ref === activeImage.asset._ref
@@ -41,8 +41,8 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
               alt={img.source.alt}
               {...img.dimensions}
               className={cn(
-                'max-lg:w-16 object-cover object-center aspect-square rounded-lg shadow-lg transition-all duration-300 cursor-pointer',
-                isActive ? 'ring-1 ring-offset-2  ring-sky-700/20' : 'brightness-50'
+                'aspect-square cursor-pointer rounded-lg object-cover object-center shadow-lg transition-all duration-300 max-lg:w-16',
+                isActive ? 'ring-1 ring-sky-700/20  ring-offset-2' : 'brightness-50'
               )}
             />
           )
@@ -53,7 +53,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
           src={preparedActiveImage.source.src}
           alt={preparedActiveImage.source.alt}
           {...preparedActiveImage.dimensions}
-          className="object-cover object-center w-full rounded-lg shadow-lg lg:h-[580px] max-lg:aspect-square"
+          className="w-full rounded-lg object-cover object-center shadow-lg max-lg:aspect-square lg:h-[580px]"
         />
       </div>
     </div>

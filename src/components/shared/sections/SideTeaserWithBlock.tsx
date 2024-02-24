@@ -28,9 +28,9 @@ export default function SideTeaserWithBlock({
   const singleImage = images.length === 1
 
   return (
-    <section className="amir-container my-16 md:my-32 grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8 items-center">
+    <section className="amir-container my-16 grid grid-cols-1 items-center gap-x-6 gap-y-8 md:my-32 md:grid-cols-2">
       <div
-        className={`relative h-60 md:h-96 lg:h-[600px] max-md:order-last ${
+        className={`relative h-60 max-md:order-last md:h-96 lg:h-[600px] ${
           reversed ? 'order-last' : ''
         }`}
       >
@@ -46,20 +46,20 @@ export default function SideTeaserWithBlock({
               quality={'quality' in image ? image.quality : 75}
               fill
               className={cn(
-                'object-cover object-center rounded shadow-lg brightness-75',
+                'rounded object-cover object-center shadow-lg brightness-75',
                 idx !== 0
-                  ? '-mt-6 md:-mt-12 -ml-6 md:-ml-12 lg:-ml-0 lg:mr-auto max-lg:hidden'
+                  ? '-ml-6 -mt-6 max-lg:hidden md:-ml-12 md:-mt-12 lg:-ml-0 lg:mr-auto'
                   : 'ml-auto',
-                singleImage ? 'max-md:max-w-[100%] max-md:!mx-0' : 'max-w-sm'
+                singleImage ? 'max-md:!mx-0 max-md:max-w-[100%]' : 'max-w-sm'
               )}
             />
           )
         })}
       </div>
       <div className="flex flex-col items-start md:pl-6">
-        <span className="text-orange-800 font-semibold uppercase text-sm">{label}</span>
-        <h2 className="text-h2 font-semibold mt-2 mb-8 max-w-lg md:-ml-6">{title}</h2>
-        <div className="lg:text-lg text-gray-800 prose prose-slate prose-li:marker:text-sky-800">
+        <span className="text-sm font-semibold uppercase text-orange-800">{label}</span>
+        <h2 className="text-h2 mb-8 mt-2 max-w-lg font-semibold md:-ml-6">{title}</h2>
+        <div className="prose prose-slate text-gray-800 prose-li:marker:text-sky-800 lg:text-lg">
           <PortableText value={description} />
         </div>
         {buttonText && (

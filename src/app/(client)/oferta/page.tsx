@@ -30,10 +30,10 @@ export default async function Offer() {
         title={title}
         label="Oferta"
       />
-      <p className="mx-auto max-w-prose px-4 my-24 text-subtitle">{description}</p>
+      <p className="text-subtitle mx-auto my-24 max-w-prose px-4">{description}</p>
       <section className="amir-container mx-auto my-24 md:my-36">
         <h2 className="text-h2 mb-8 font-bold">{main.header}</h2>
-        <p className="max-w-prose mb-6">{main.description}</p>
+        <p className="mb-6 max-w-prose">{main.description}</p>
         <Grid>
           {offers.map((item, idx) => (
             <VerticalOverlayCard

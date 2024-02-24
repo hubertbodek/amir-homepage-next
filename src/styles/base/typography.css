@@ -16,14 +16,14 @@
   }
 
   .text-subtitle {
-    @apply text-sm lg:text-base leading-7;
+    @apply text-sm leading-7 lg:text-base;
   }
 
   .underline-animation {
     @apply relative;
 
     &::before {
-      @apply content-[''] absolute w-full h-[2px] rounded bg-secondary-100 bottom-0 left-0 origin-right scale-x-0 transition duration-300;
+      @apply absolute bottom-0 left-0 h-[2px] w-full origin-right scale-x-0 rounded bg-secondary-100 transition duration-300 content-[''];
     }
 
     &:hover::before {
@@ -32,11 +32,11 @@
   }
 
   .text-link {
-    @apply hover:text-secondary transition;
+    @apply transition hover:text-secondary;
   }
 
   .text-hover-effect {
-    @apply bg-gradient-to-r from-secondary-100 to-secondary bg-no-repeat bg-left-bottom;
+    @apply bg-gradient-to-r from-secondary-100 to-secondary bg-left-bottom bg-no-repeat;
     transition: background-size 200ms ease-out;
     background-size: 0% 2px;
   }

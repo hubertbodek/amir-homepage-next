@@ -17,7 +17,7 @@
     li::before {
       content: '\00B7';
 
-      @apply inline-block text-blue-900 text-lg mr-2;
+      @apply mr-2 inline-block text-lg text-blue-900;
     }
   }
 }

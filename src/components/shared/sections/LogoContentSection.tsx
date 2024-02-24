@@ -13,10 +13,10 @@ export default function LogoContentSection({
 
   return (
     <section className="amir-container my-20 md:my-40">
-      <div className="flex flex-col items-center mx-auto justify-center gap-x-3">
+      <div className="mx-auto flex flex-col items-center justify-center gap-x-3">
         {heading && <h2 className="text-h2 font-bold text-blue-950">{heading}</h2>}
-        <div className="bg-blue-950 p-2 w-fit rounded">
-          <div className="aspect-[256/62] relative h-9">
+        <div className="w-fit rounded bg-blue-950 p-2">
+          <div className="relative aspect-[256/62] h-9">
             <Image src={logo} alt="Logo" fill />
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function LogoContentSection({
         alt={img.source.alt}
         width={img.dimensions?.width}
         height={img.dimensions?.height}
-        className="mx-auto max-h-[30rem] object-cover rounded"
+        className="mx-auto max-h-[30rem] rounded object-cover"
       />
       <div className="columns-2">
         {paragraphs?.map((paragraph, idx) => (

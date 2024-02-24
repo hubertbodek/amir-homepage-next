@@ -9,8 +9,8 @@ const { columns } = footerData
 
 function Footer() {
   return (
-    <footer className="bg-primary text-light px-4">
-      <div className="amir-container py-12 flex justify-between mx-auto max-lg:flex-col">
+    <footer className="bg-primary px-4 text-light">
+      <div className="amir-container mx-auto flex justify-between py-12 max-lg:flex-col">
         <div className="mb-8">
           <Link href="/" title="Logo">
             <Image src={logo} alt="Logo" width={160} height={62} className="mb-8" />
@@ -22,7 +22,7 @@ function Footer() {
             <li>Kontakt: email@emailemail.com</li>
           </ul>
         </div>
-        <div className="grid max-lg:grid-cols-2 lg:col-auto lg:grid-flow-col gap-x-8 gap-y-8">
+        <div className="grid gap-x-8 gap-y-8 max-lg:grid-cols-2 lg:col-auto lg:grid-flow-col">
           {columns.map((column) => (
             <FooterColumn
               key={column.headline}

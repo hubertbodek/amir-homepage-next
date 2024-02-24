@@ -14,8 +14,8 @@ export interface HeroProps {
 
 export default function Hero({ image, title, label, description, children }: HeroProps) {
   return (
-    <div className="relative w-full h-[600px]">
-      <div className="absolute w-full h-full top-0 left-0 z-10 bg-gradient-to-tr from-black/70 to-black" />
+    <div className="relative h-[600px] w-full">
+      <div className="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-tr from-black/70 to-black" />
       <Image
         src={image.src}
         alt={image.alt}
@@ -27,16 +27,16 @@ export default function Hero({ image, title, label, description, children }: Her
       />
       <div
         className={cn(
-          'amir-container mx-auto h-full flex justify-start items-center',
+          'amir-container mx-auto flex h-full items-center justify-start',
           label ? 'pt-20' : 'pt-10'
         )}
       >
-        <div className="max-w-6xl relative z-20">
+        <div className="relative z-20 max-w-6xl">
           {label && (
-            <span className="text-sky-300 inline-block mb-3 max-md:text-sm uppercase">{label}</span>
+            <span className="mb-3 inline-block uppercase text-sky-300 max-md:text-sm">{label}</span>
           )}
-          <h1 className="text-h1 text-light mb-6 line-clamp-3">{title}</h1>
-          <p className="text-subtitle text-neutral-300 max-w-xl line-clamp-4">{description}</p>
+          <h1 className="text-h1 mb-6 line-clamp-3 text-light">{title}</h1>
+          <p className="text-subtitle line-clamp-4 max-w-xl text-neutral-300">{description}</p>
           {children}
         </div>
       </div>

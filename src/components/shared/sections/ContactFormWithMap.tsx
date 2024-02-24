@@ -20,20 +20,20 @@ export default function ContactFormWithMap() {
     <div
       ref={ref}
       id="contact-form"
-      className="grid grid-cols-1 md:grid-cols-2 md:min-h-[600px] amir-container gap-x-4 lg:my-24"
+      className="amir-container grid grid-cols-1 gap-x-4 md:min-h-[600px] md:grid-cols-2 lg:my-24"
     >
-      <div className="py-12 mx-auto lg:px-4">
-        <h2 className="text-h2 font-semibold text-sky-900 mb-8 uppercase">
+      <div className="mx-auto py-12 lg:px-4">
+        <h2 className="text-h2 mb-8 font-semibold uppercase text-sky-900">
           Skontaktuj się z nami!
         </h2>
-        <p className="text-subtitle text-gray-600 mb-5">
+        <p className="text-subtitle mb-5 text-gray-600">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, minima dignissimos error
           fugit placeat sit.
         </p>
         <ContactForm />
       </div>
       <div className="h-full w-full p-4">
-        <div className="h-full w-full overflow-hidden shadow-xl rounded-md max-md:min-h-[192px]">
+        <div className="h-full w-full overflow-hidden rounded-md shadow-xl max-md:min-h-[192px]">
           {isVisible && <DynamicMap />}
         </div>
       </div>

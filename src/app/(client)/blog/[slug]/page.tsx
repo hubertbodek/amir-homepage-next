@@ -48,7 +48,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   return (
     <>
       <Teaser image={preparedMainImage.source} title={article.title} label="Artykuł" centered />
-      <div className="mx-auto max-w-3xl prose my-20 px-4">
+      <div className="prose mx-auto my-20 max-w-3xl px-4">
         <PortableText value={article.text} />
       </div>
     </>

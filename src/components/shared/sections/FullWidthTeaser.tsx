@@ -6,7 +6,7 @@ import type { FullWidthTeaser as FullWidthTeaserProps } from '@sanity/schemas/bl
 
 export default function FullWidthTeaser({ title, description }: FullWidthTeaserProps) {
   return (
-    <section className="relative w-full min-h-[24rem] py-14 px-4 flex flex-col justify-center my-20 my-md-40">
+    <section className="my-md-40 relative my-20 flex min-h-[24rem] w-full flex-col justify-center px-4 py-14">
       <Image
         alt="Mountains"
         src={handhsake}
@@ -19,9 +19,9 @@ export default function FullWidthTeaser({ title, description }: FullWidthTeaserP
           objectFit: 'cover',
         }}
       />
-      <div className="relative z-20 amir-container mx-auto">
-        <h3 className="text-h3 font-bold text-gray-100 mb-6">{title}</h3>
-        <p className="max-w-3xl text-lg text-gray-200 mb-3">{description}</p>
+      <div className="amir-container relative z-20 mx-auto">
+        <h3 className="text-h3 mb-6 font-bold text-gray-100">{title}</h3>
+        <p className="mb-3 max-w-3xl text-lg text-gray-200">{description}</p>
         <Button theme="secondary" className="text-secondary-100" href="/kontakt">
           Skontaktuj się z nami
         </Button>

@@ -14,10 +14,10 @@ export default function FooterColumn({ headline, items, large }: FooterColumnPro
         'max-lg:col-span-2': large,
       })}
     >
-      <h4 className="text-h4 uppercase font-semibold mb-3">{headline}</h4>
+      <h4 className="text-h4 mb-3 font-semibold uppercase">{headline}</h4>
       <ul
-        className={cn('text-gray-300 gap-x-4', {
-          'max-lg:grid max-lg:grid-cols-2 max-lg:gap-y-2 max-lg:items-center': large,
+        className={cn('gap-x-4 text-gray-300', {
+          'max-lg:grid max-lg:grid-cols-2 max-lg:items-center max-lg:gap-y-2': large,
         })}
       >
         {items.map((item) => (

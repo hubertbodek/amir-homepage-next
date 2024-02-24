@@ -17,8 +17,8 @@ interface CardSectionProps {
 
 export default function CardSection({ children, decorations, className = '' }: CardSectionProps) {
   return (
-    <section className={`container mx-auto lg:px-16 relative ${className}`}>
-      <div className="md:bg-primary md:shadow-lg px-4 md:px-8 py-12 relative z-10">{children}</div>
+    <section className={`container relative mx-auto lg:px-16 ${className}`}>
+      <div className="relative z-10 px-4 py-12 md:bg-primary md:px-8 md:shadow-lg">{children}</div>
       {decorations?.map((item, idx) => (
         <div
           key={idx}

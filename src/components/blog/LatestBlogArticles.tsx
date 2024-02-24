@@ -6,12 +6,12 @@ export default async function LatestBlogArticles() {
   const articles = await getLatestArticles()
 
   return (
-    <section className="max-w-7xl mx-auto px-4 my-40">
-      <h4 className="text-h2 text-center mb-3 font-semibold uppercase">
+    <section className="mx-auto my-40 max-w-7xl px-4">
+      <h4 className="text-h2 mb-3 text-center font-semibold uppercase">
         Sprawdź nasze wpisy na blogu
       </h4>
       {/* <p className="max-w-xl text-center mx-auto">{blog.description}</p> */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
+      <div className="my-12 grid grid-cols-1 gap-6 md:grid-cols-3">
         {articles.map((item, idx) => {
           return (
             <VerticalOverlayCard
@@ -28,7 +28,7 @@ export default async function LatestBlogArticles() {
           )
         })}
       </div>
-      <div className="mx-auto flex justify-center items-center mb-12">
+      <div className="mx-auto mb-12 flex items-center justify-center">
         <Button theme="primary" href="/blog">
           Zobacz blog
         </Button>
