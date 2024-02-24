@@ -1,8 +1,8 @@
 import { mapContentToRevlidate, replaceSlugInRoute } from 'lib/map-content-to-route'
 import { parseBody } from 'next-sanity/webhook'
 import { revalidatePath } from 'next/cache'
-import { NextRequest } from 'next/server'
-import { Doc } from 'types/sanity-doc'
+import { type NextRequest } from 'next/server'
+import { type Doc } from 'types/sanity-doc'
 
 const secret = process.env.SANITY_REVALIDATE_TOKEN
 
@@ -12,11 +12,13 @@ export async function POST(request: NextRequest) {
 
     if (!isValidSignature) {
       const message = 'Invalid signature'
+
       return new Response(JSON.stringify({ message, isValidSignature, body }), { status: 401 })
     }
 
     if (!body?._type) {
       const message = 'Bad Request'
+
       return new Response(JSON.stringify({ message, body }), { status: 400 })
     }
 
@@ -45,7 +47,7 @@ export async function POST(request: NextRequest) {
     return new Response(
       JSON.stringify({
         message: 'Internal Server Error',
-        error: error,
+        error,
       }),
       { status: 500 }
     )

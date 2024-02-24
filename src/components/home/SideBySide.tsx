@@ -21,7 +21,7 @@ export default function SideBySide({
     <div>
       <div className="amir-container mx-auto mb-24">
         <h2
-          className={`mx-auto text-3xl md:text-5xl text-left font-bold ${
+          className={`mx-auto text-left text-3xl font-bold md:text-5xl ${
             light ? 'text-neutral-700' : 'text-neutral-200'
           }`}
         >
@@ -33,7 +33,7 @@ export default function SideBySide({
           </p>
         )}
       </div>
-      <div className="flex flex-col gap-y-24 py-2 amir-container">
+      <div className="amir-container flex flex-col gap-y-24 py-2">
         {items.map((item, idx) => {
           return (
             <SideBySideItem key={idx} {...item} index={alignLeft ? idx * 2 : idx} light={light} />
