@@ -1,9 +1,10 @@
 import { defineType } from 'sanity'
 
 import { type ImageData } from '../objects/image-data'
-import type { PortableTextBlock } from '@portabletext/types'
+import { type PortableTextBlock } from '@portabletext/types'
+import { type SanityDocument } from '../base'
 
-export interface ArticleDocument {
+export interface ArticleDocument extends Partial<SanityDocument> {
   title: string
   slug: {
     current: string

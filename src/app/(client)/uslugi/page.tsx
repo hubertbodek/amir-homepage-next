@@ -8,6 +8,7 @@ import BlockMapper from 'components/blocks/Block'
 import VerticalOverlayCard from 'components/shared/cards/VerticalOverlayCard'
 import Button from 'components/shared/Button'
 import Grid from 'components/shared/Grid'
+import { draftMode } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'Usługi',
@@ -16,8 +17,10 @@ export const metadata: Metadata = {
 }
 
 export default async function Services() {
+  const { isEnabled } = draftMode()
+
   const [{ title, description, blocks }, offers] = await Promise.all([
-    getGenericPage('ServicesListPage'),
+    getGenericPage('ServicesListPage', isEnabled),
     getServices(),
   ])
 

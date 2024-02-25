@@ -1,5 +1,5 @@
 import { groq } from 'next-sanity'
-import { clientFetch } from '../client'
+import { clientFetch, draftClientFetch } from '../client'
 import { type BlockModel } from 'components/blocks/Block'
 
 interface GenericPage {
@@ -8,12 +8,14 @@ interface GenericPage {
   blocks: BlockModel[]
 }
 
-type PageId = 'OfferListPage' | 'ServicesListPage' | 'ProductsListPage'
+type PageId = 'OfferListPage' | 'ServicesListPage' | 'ProductsListPage' | 'ContactPage'
 
-const getGenericPage = async (pageId: PageId) => {
-  const query = groq`*[_id == "${pageId}"][0]
+const getGenericPage = async (pageId: PageId, preview?: boolean) => {
+  const query = groq`*[_id == "${preview ? 'drafts.' : ''}${pageId}"][0]
 `
-  const page = await clientFetch<GenericPage>({ query })
+  const page = preview
+    ? await draftClientFetch<GenericPage>({ query })
+    : await clientFetch<GenericPage>({ query })
 
   return page
 }

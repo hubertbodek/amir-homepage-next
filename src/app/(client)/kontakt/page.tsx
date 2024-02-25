@@ -9,6 +9,7 @@ import type { Metadata } from 'next'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 import Teaser from 'components/shared/Teaser'
 import getContactPage from '@sanity/api/services/getContactPage'
+import { draftMode } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'Kontakt',
@@ -17,7 +18,9 @@ export const metadata: Metadata = {
 }
 
 export default async function Contact() {
-  const page = await getContactPage()
+  const { isEnabled } = draftMode()
+
+  const page = await getContactPage(isEnabled)
 
   if (!page) return null
 

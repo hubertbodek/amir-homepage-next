@@ -4,6 +4,7 @@ import { getOffers, getOfferBySlug } from '@sanity/api/services'
 import BlockMapper from 'components/blocks/Block'
 import Teaser from 'components/shared/Teaser'
 import { prepareImg } from 'lib/prepareImg'
+import { draftMode } from 'next/headers'
 
 interface OfferParams {
   params: {
@@ -39,8 +40,13 @@ export async function generateMetadata({
 
 export default async function Offer({ params }: OfferParams) {
   const { slug } = params
+  const { isEnabled } = draftMode()
 
-  const offer = await getOfferBySlug(slug)
+  let offer = await getOfferBySlug(slug)
+
+  if (isEnabled && offer._id) {
+    offer = await getOfferBySlug(offer._id)
+  }
 
   return (
     <>

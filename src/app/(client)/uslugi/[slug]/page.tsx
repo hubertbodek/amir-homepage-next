@@ -4,6 +4,7 @@ import { getServiceBySlug, getServices } from '@sanity/api/services'
 import BlockMapper from 'components/blocks/Block'
 import Teaser from 'components/shared/Teaser'
 import { prepareImg } from 'lib/prepareImg'
+import { draftMode } from 'next/headers'
 
 interface ServiceParams {
   params: {
@@ -16,7 +17,12 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const service = await getServiceBySlug(params.slug)
+  const { isEnabled } = draftMode()
+  let service = await getServiceBySlug(params.slug)
+
+  if (isEnabled && service._id) {
+    service = await getServiceBySlug(service._id)
+  }
   const img = prepareImg(service.mainImage, 'Zdjęcie usługi')
 
   return {

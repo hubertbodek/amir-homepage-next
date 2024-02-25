@@ -3,6 +3,7 @@ import Teaser from 'components/shared/Teaser'
 import getAboutUsPage from '@sanity/api/services/getAboutUs'
 import BlockMapper from 'components/blocks/Block'
 import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
+import { draftMode } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'O nas',
@@ -11,7 +12,9 @@ export const metadata: Metadata = {
 }
 
 export default async function About() {
-  const aboutUsData = await getAboutUsPage()
+  const { isEnabled } = draftMode()
+
+  const aboutUsData = await getAboutUsPage(isEnabled)
 
   return (
     <>

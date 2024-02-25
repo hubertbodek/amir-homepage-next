@@ -8,6 +8,7 @@ import img from '@public/images/marketing/ogrod.jpg'
 import Grid from 'components/shared/Grid'
 import { getProductsList } from '@sanity/api/services/getProducts'
 import ProductCard from './product-card'
+import { draftMode } from 'next/headers'
 
 export const metadata: Metadata = {
   title: 'Katalog',
@@ -16,8 +17,9 @@ export const metadata: Metadata = {
 }
 
 export default async function Products() {
+  const { isEnabled } = draftMode()
   const [{ title, description, blocks }, products] = await Promise.all([
-    getGenericPage('ProductsListPage'),
+    getGenericPage('ProductsListPage', isEnabled),
     getProductsList(),
   ])
 

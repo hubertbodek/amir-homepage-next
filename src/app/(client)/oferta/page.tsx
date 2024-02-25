@@ -8,6 +8,7 @@ import Grid from 'components/shared/Grid'
 
 import { prepareImg } from 'lib/prepareImg'
 import data from './data.json'
+import { draftMode } from 'next/headers'
 
 const { main } = data
 
@@ -18,8 +19,9 @@ export const metadata: Metadata = {
 }
 
 export default async function Offer() {
+  const { isEnabled } = draftMode()
   const [{ title, description, blocks }, offers] = await Promise.all([
-    getGenericPage('OfferListPage'),
+    getGenericPage('OfferListPage', isEnabled),
     getOffers(),
   ])
 

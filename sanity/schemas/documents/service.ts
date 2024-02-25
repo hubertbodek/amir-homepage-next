@@ -1,9 +1,10 @@
 import { defineType } from 'sanity'
 import { type ImageData } from '../objects/image-data'
 import { type BlockModel } from 'components/blocks/Block'
+import { type SanityDocument } from '../base'
 import { blockTypes } from '../blocks'
 
-export interface ServiceDocument {
+export interface ServiceDocument extends Partial<SanityDocument> {
   title: string
   metadescription: string
   slug: {

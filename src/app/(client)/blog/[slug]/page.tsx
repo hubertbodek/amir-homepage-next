@@ -1,10 +1,11 @@
 import { type Metadata } from 'next'
 
-import getArticleBySlug from '@sanity/api/services/getArticleBySlug'
+import getArticleBySlug, { getArticleBySlugPreview } from '@sanity/api/services/getArticleBySlug'
 import { PortableText } from '@portabletext/react'
 import { prepareImg } from 'lib/prepareImg'
 import Teaser from 'components/shared/Teaser'
 import getArticles from '@sanity/api/services/getArticles'
+import { draftMode } from 'next/headers'
 
 export async function generateMetadata({
   params,
@@ -41,7 +42,14 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: { params: { slug: string } }) {
-  const article = await getArticleBySlug(params.slug)
+  const { isEnabled } = draftMode()
+
+  let article = await getArticleBySlug(params.slug)
+  console.log({ article })
+  if (isEnabled && article._id) {
+    article = await getArticleBySlugPreview(article._id)
+  }
+  console.log({ article })
 
   const preparedMainImage = prepareImg(article.mainImage, 'Article Card Image')
 
