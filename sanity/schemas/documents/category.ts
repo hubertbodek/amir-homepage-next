@@ -14,7 +14,7 @@ export interface CategoryDocument {
 
 export default defineType({
   name: 'category',
-  title: 'Katalog produktów',
+  title: 'Kategorie produktów',
   type: 'document',
   fields: [
     {

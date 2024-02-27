@@ -45,11 +45,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const { isEnabled } = draftMode()
 
   let article = await getArticleBySlug(params.slug)
-  console.log({ article })
   if (isEnabled && article._id) {
     article = await getArticleBySlugPreview(article._id)
   }
-  console.log({ article })
 
   const preparedMainImage = prepareImg(article.mainImage, 'Article Card Image')
 

@@ -16,10 +16,28 @@ import ContactFormWithMap from 'components/shared/sections/ContactFormWithMap'
 import homeData from 'app/data.json'
 import heroImage from '@public/images/marketing/metal-pattern.jpeg'
 import LatestBlogArticles from 'components/blog/LatestBlogArticles'
+import { getProductsList } from '@sanity/api/services/getProducts'
+import { prepareImg } from 'lib/prepareImg'
 
 const { products, sideTeaser, perks, realisations } = homeData
 
-export default function Page() {
+export default async function Page() {
+  const data = await getProductsList()
+
+  const realisationsCards = data.map((item) => {
+    const img = prepareImg(item.images[0], item.title)
+
+    return {
+      image: {
+        src: img.source.src,
+        alt: img.source.alt,
+      },
+      title: item.title,
+      description: item.metadescription,
+      url: `/produkt/${item.slug.current}`,
+    }
+  })
+
   return (
     <>
       <Hero
@@ -73,12 +91,14 @@ export default function Page() {
         </h2>
         <p className=" mx-auto mb-16 max-w-xl px-4 text-center">{realisations.description}</p>
         <DesktopCarousel options={{ isLooped: true }}>
-          {realisations.cards.map((card, idx) => (
+          {realisationsCards.map((card, idx) => (
             <VerticalOverlayCard key={`card--${idx}`} {...card} overlay />
           ))}
         </DesktopCarousel>
         <div className="mx-auto mb-12 flex items-center justify-center">
-          <Button theme="primary">Zobacz wszystkie</Button>
+          <Button theme="primary" href="/katalog">
+            Zobacz wszystkie
+          </Button>
         </div>
       </section>
       <LatestBlogArticles />

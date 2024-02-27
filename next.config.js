@@ -10,6 +10,20 @@ const nextConfig = {
       },
     ],
   },
+  rewrites: () => [
+    {
+      source: '/category/oferta',
+      destination: '/oferta',
+    },
+    {
+      source: '/category/uslugi',
+      destination: '/uslugi',
+    },
+    {
+      source: '/realizacje',
+      destination: '/katalog',
+    },
+  ],
 }
 
 module.exports = nextConfig

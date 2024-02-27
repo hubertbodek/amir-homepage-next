@@ -27,8 +27,8 @@ export default function ContactFormWithMap() {
           Skontaktuj się z nami!
         </h2>
         <p className="text-subtitle mb-5 text-gray-600">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo, minima dignissimos error
-          fugit placeat sit.
+          Skontaktuj się z nami, aby dowiedzieć się więcej o naszych usługach i produktach. Nasz
+          zespół jest zawsze gotowy, aby pomóc Ci z każdym pytaniem!
         </p>
         <ContactForm />
       </div>
