@@ -5,6 +5,7 @@ import BlockMapper from 'components/blocks/Block'
 import Teaser from 'components/shared/Teaser'
 import { prepareImg } from 'lib/prepareImg'
 import { draftMode } from 'next/headers'
+import { getOfferBySlugPreview } from '@sanity/api/services/getOfferBySlug'
 
 interface OfferParams {
   params: {
@@ -45,7 +46,7 @@ export default async function Offer({ params }: OfferParams) {
   let offer = await getOfferBySlug(slug)
 
   if (isEnabled && offer._id) {
-    offer = await getOfferBySlug(offer._id)
+    offer = await getOfferBySlugPreview(offer._id)
   }
 
   return (
