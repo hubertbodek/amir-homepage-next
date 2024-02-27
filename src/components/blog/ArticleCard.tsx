@@ -4,6 +4,7 @@ import Button from 'components/shared/Button'
 import { type ArticleDocument } from '@sanity/schemas/documents/article'
 import { prepareImg } from 'lib/prepareImg'
 import Link from 'next/link'
+import getImageSizes from 'utlis/getImageSizes'
 
 export interface ArticleCardProps extends ArticleDocument {}
 
@@ -38,6 +39,7 @@ export default function ArticleCard({
         <Image
           {...img.source}
           alt={img.source.alt}
+          sizes={getImageSizes('95vw', '40vw', '382px')}
           fill
           className="z-0 object-cover object-center"
         />

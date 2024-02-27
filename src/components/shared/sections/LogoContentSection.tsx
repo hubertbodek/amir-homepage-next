@@ -17,7 +17,7 @@ export default function LogoContentSection({
         {heading && <h2 className="text-h2 font-bold text-blue-950">{heading}</h2>}
         <div className="w-fit rounded bg-blue-950 p-2">
           <div className="relative aspect-[256/62] h-9">
-            <Image src={logo} alt="Logo" fill />
+            <Image src={logo} alt="Logo" fill sizes="50px" />
           </div>
         </div>
       </div>
