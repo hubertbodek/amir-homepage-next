@@ -38,7 +38,7 @@ export default function Hero({
         alt={img.source.alt}
         sizes="100vw"
         fill
-        quality={50}
+        quality={40}
         className="object-cover object-center"
         priority
       />

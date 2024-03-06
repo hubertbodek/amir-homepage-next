@@ -7,6 +7,7 @@ import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { useMemo, useState } from 'react'
 import { cn } from 'lib/utils'
 import useHeader from 'hooks/useHeader'
+import getImageSizes from 'utlis/getImageSizes'
 
 interface ImageGalleryProps {
   images: ImageData[]
@@ -40,6 +41,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
               src={img.source.src}
               alt={img.source.alt}
               {...img.dimensions}
+              sizes="64px"
               className={cn(
                 'aspect-square cursor-pointer rounded-lg object-cover object-center shadow-lg transition-all duration-300 max-lg:w-16',
                 isActive ? 'ring-1 ring-sky-700/20  ring-offset-2' : 'brightness-50'
@@ -52,7 +54,9 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
         <Image
           src={preparedActiveImage.source.src}
           alt={preparedActiveImage.source.alt}
-          {...preparedActiveImage.dimensions}
+          width={532}
+          height={580}
+          sizes={getImageSizes('95vw', '95vw', '532px')}
           className="w-full rounded-lg object-cover object-center shadow-lg max-lg:aspect-square lg:h-[580px]"
         />
       </div>

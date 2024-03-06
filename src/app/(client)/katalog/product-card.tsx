@@ -52,6 +52,7 @@ export default function ProductCard({
             alt={currentImage.source.alt}
             sizes={getImageSizes('95vw', '45vw', '305px')}
             fill
+            quality={65}
             className="object-cover object-center transition duration-300 ease-out group-hover:scale-110"
           />
         </Link>

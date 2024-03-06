@@ -88,6 +88,7 @@ export default async function Product({ params }: ProductPageParams) {
             {product.category.title}
           </span>
           <h2 className="text-h2 mb-4 font-bold">{product.title}</h2>
+          {product.price && <h3 className="text-h3 mb-3 font-bold">{product.price} PLN</h3>}
         </div>
         <div className="flex flex-1 flex-col gap-8">
           <ImageGallery images={product.images} />
@@ -109,6 +110,7 @@ export default async function Product({ params }: ProductPageParams) {
               {product.category.title}
             </span>
             <h2 className="text-h2 mb-4 font-bold">{product.title}</h2>
+            {product.price && <h3 className="text-h4 mb-3 font-semibold">{product.price} PLN</h3>}
           </div>
           {!!product.description && (
             <div className="prose prose-slate mb-8 text-gray-800 prose-li:marker:text-sky-800">
