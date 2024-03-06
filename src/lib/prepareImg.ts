@@ -1,6 +1,7 @@
 import { type ImageData } from '@sanity/schemas/objects/image-data'
 import { type StaticImageModel } from 'types/StaticImageModel'
 import { invariant } from './invariant'
+import placeholderImg from '@public/images/placeholder.jpg'
 
 const baseCdnUrl = 'https://cdn.sanity.io'
 const sanityProjectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
@@ -35,6 +36,20 @@ export function prepareImg(img: ImageData | StaticImageModel, fallbackAlt: strin
   }
 
   const { asset } = img
+
+  if (!asset) {
+    return {
+      source: {
+        src: placeholderImg,
+        alt: img.alt ?? fallbackAlt,
+      },
+      dimensions: {
+        width: 0,
+        height: 0,
+      },
+    }
+  }
+
   const imageInfo = extractImageInfo(asset._ref)
 
   invariant(imageInfo !== null, `Could not extract image info from asset._ref: ${asset._ref}`)

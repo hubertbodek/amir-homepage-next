@@ -31,7 +31,7 @@ export default function ImageGallery({ images }: ImageGalleryProps) {
       <aside className="flex h-full gap-4 max-lg:order-last max-lg:-mx-4 max-lg:overflow-x-scroll max-lg:border-b max-lg:border-b-black/10 max-lg:px-4 max-lg:py-3 max-lg:shadow-lg lg:h-[580px] lg:w-16 lg:flex-col">
         {images.map((image, idx) => {
           const img = prepareImg(image, 'Zdjęcie produktu')
-          const isActive = image.asset._ref === activeImage.asset._ref
+          const isActive = image.asset?._ref === activeImage.asset?._ref
 
           return (
             <Image
