@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Sora } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { CSPostHogProvider } from './providers'
 
 import 'styles/globals.css'
 import Layout from 'components/shared/layout'
@@ -32,10 +33,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" style={{ fontFamily: sora.style.fontFamily }}>
-      <body className="overflow-x-hidden">
-        <Layout>{children}</Layout>
-        <SpeedInsights />
-      </body>
+      <CSPostHogProvider>
+        <body className="overflow-x-hidden">
+          <Layout>{children}</Layout>
+          <SpeedInsights />
+        </body>
+      </CSPostHogProvider>
     </html>
   )
 }
